@@ -1,4 +1,4 @@
-# 10月27日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址  更新时间 2024-10-27 08:22:10
+# 10月28日→20.1M/S|2024年最新免费节点Free Netch订阅链接地址  更新时间 2024-10-28 10:03:36
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freenetch.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,19 +9,19 @@
 
 ### Clash订阅链接
 
-- https://freenetch.github.io/uploads/2024/10/0-20241027.yaml
-- https://freenetch.github.io/uploads/2024/10/1-20241027.yaml
-- https://freenetch.github.io/uploads/2024/10/2-20241027.yaml
-- https://freenetch.github.io/uploads/2024/10/3-20241027.yaml
-- https://freenetch.github.io/uploads/2024/10/4-20241027.yml
+- https://freenetch.github.io/uploads/2024/10/0-20241028.yaml
+- https://freenetch.github.io/uploads/2024/10/1-20241028.yaml
+- https://freenetch.github.io/uploads/2024/10/2-20241028.yaml
+- https://freenetch.github.io/uploads/2024/10/3-20241028.yaml
+- https://freenetch.github.io/uploads/2024/10/4-20241028.yml
 
 ### V2ray订阅链接
 
-- https://freenetch.github.io/uploads/2024/10/0-20241027.txt
-- https://freenetch.github.io/uploads/2024/10/1-20241027.txt
-- https://freenetch.github.io/uploads/2024/10/2-20241027.txt
-- https://freenetch.github.io/uploads/2024/10/3-20241027.txt
-- https://freenetch.github.io/uploads/2024/10/4-20241027.txt
+- https://freenetch.github.io/uploads/2024/10/0-20241028.txt
+- https://freenetch.github.io/uploads/2024/10/1-20241028.txt
+- https://freenetch.github.io/uploads/2024/10/2-20241028.txt
+- https://freenetch.github.io/uploads/2024/10/3-20241028.txt
+- https://freenetch.github.io/uploads/2024/10/4-20241028.txt
 
 ## 更多clash节点订阅 ：
 
