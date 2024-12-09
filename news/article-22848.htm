@@ -1,0 +1,188 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-22848.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue-seamless-scroll无缝滚动组件使用方法详解_vue.js</title>
+        <meta name="description" content="本文实例为大家分享了vue无缝滚动组件vue-seamless-scroll的具体实现代码，供大家参考，具体内容如下  下载  cnpm i -S vue-seamless-scroll  main." />
+        <link rel="icon" href="__ADDON__/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>vue-seamless-scroll无缝滚动组件使用方法详解_vue.js</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                      				  				  				<p>本文实例为大家分享了vue无缝滚动组件vue-seamless-scroll的具体实现代码，供大家参考，具体内容如下</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/c662af53b239c08d2ef9439512e04522.jpg"></p> <p>下载</p> <div class="ay1code"> <pre class="brush:js;">cnpm i -S vue-seamless-scroll</pre> </div> <p>main.js中引入：</p> <div class="ay1code"> <pre class="brush:js;">import VueSeamlessScroll from 'vue-seamless-scroll'  Vue.use(VueSeamlessScroll)</pre> </div> <p>使用：</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;    &lt;div&gt;        &lt;vue-seamless-scroll          :data="listData"          :class-option="seamlessScrollOption"          style="            border: 1px solid white;            height: 200px;            overflow: hidden;            width: 200px;            color: white;            font-size: 18px;            text-align: center;          "        &gt;          &lt;ul&gt;            &lt;li              v-for="(item, index) in listData"              :key="index"              style="padding: 10px; margin: 5px"            &gt;              &lt;span class="title"&gt;{{ item.title }}：&lt;/span              &gt;&lt;span class="date"&gt;{{ item.time }}&lt;/span&gt;            &lt;/li&gt;          &lt;/ul&gt;        &lt;/vue-seamless-scroll&gt;    &lt;/div&gt;  &lt;/template&gt;     &lt;script&gt;     export default {    props: {},    data() {      return {        listData: [          {            title: "张三",            time: "2021-08-09",          },          {            title: "李四",            time: "2021-08-09",          },          {            title: "王五",            time: "2021-08-09",          },          {            title: "赵六",            time: "2021-08-09",          },          {            title: "前七",            time: "2021-08-09",          },          {            title: "孙八",            time: "2021-08-09",          },        ],      };    },    computed: {      seamlessScrollOption() {        return {          step: 0.2, // 数值越大速度滚动越快          limitMoveNum: 2, // 开始无缝滚动的数据量 this.dataList.length          hoverStop: true, // 是否开启鼠标悬停stop          direction: 1, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 1000, // 单步运动停止的时间(默认值1000ms)        };      },    },  };  &lt;/script&gt;</pre> </div> <p>效果图2：</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/bbf62ca985b423b64a887e85e42c2248.jpg"></p> <div class="ay1code"> <pre class="brush:js;">computed: {    seamlessScrollOption() {        return {          step: 0.5, // 数值越大速度滚动越快          hoverStop: true, // 是否开启鼠标悬停stop          direction: 0, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 40, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 2000, // 单步运动停止的时间(默认值1000ms)        };      },    },</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-22393.htm">知名动物医院有几家（最好的动物医院）</a></p>
+                                        <p>下一个：<a href="/news/article-22849.htm">宠物诊所申请动物诊疗许可证的条件是什么（宠物诊所办理流程）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-subscribe-node.htm" title="9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址">9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-26-node-share-links.htm" title="9月26日→19.8M/S|2024年最新免费节点Free Netch订阅链接地址">9月26日→19.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19642.htm" title="宠物粮食代理 宠物粮食代理需要多少钱">宠物粮食代理 宠物粮食代理需要多少钱</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-31-netch-node.htm" title="10月31日→19M/S|2024年最新免费节点Free Netch订阅链接地址">10月31日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21480.htm" title="动物疫苗注射的途径有哪些（动物疫苗接种方法）">动物疫苗注射的途径有哪些（动物疫苗接种方法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-netch-node.htm" title="12月5日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址">12月5日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-17-netch-node.htm" title="11月17日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址">11月17日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21481.htm" title="广州宠物救助电话（广州 宠物救助电话）">广州宠物救助电话（广州 宠物救助电话）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-27-free-node-subscribe-links.htm" title="9月27日→21.2M/S|2024年最新免费节点Free Netch订阅链接地址">9月27日→21.2M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-3-free-subscribe-node.htm" title="11月3日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">11月3日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
