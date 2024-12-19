@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-27485.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>encodeURI()、encodeURIComponent()区别及使用场景</title>
+        <meta name="description" content="1 区别 1.1encodeURI() encodeURI()通常用于转码整个 URL，不会对URL 元字符以及语义字符进行转码，URL元字符：  URL 元字符：分号（;），逗号（,），斜杠（/），" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>encodeURI()、encodeURIComponent()区别及使用场景</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h3><a id="1__0" rel="nofollow"></a>1 区别</h3> <h4><a id="11_encodeURI_2" rel="nofollow"></a>1.1<code>encodeURI()</code></h4> <p><code>encodeURI()</code>通常用于转码整个 URL，不会对URL 元字符以及语义字符进行转码，URL元字符：</p> <blockquote> <p>URL 元字符：分号（<code>;</code>），逗号（<code>,</code>），斜杠（<code>/</code>），问号（<code>?</code>），冒号（<code>:</code>），at（<code>@</code>），<code>&amp;</code>，等号（<code>=</code>），加号（<code>+</code>），美元符号（<code>$</code>），井号（<code>#</code>）</p> </blockquote> <blockquote> <p>语义字符：<code>a-z</code>，<code>A-Z</code>，<code>0-9</code>，连词号（<code>-</code>），下划线（<code>_</code>），点（<code>.</code>），感叹号（<code>!</code>），波浪线（<code>~</code>），星号（<code>*</code>），单引号（<code>'</code>），圆括号（<code>()</code>）</p> </blockquote> <h4><a id="12_encodeURIComponent_10" rel="nofollow"></a>1.2<code>encodeURIComponent()</code></h4> <p><code>encodeURIComponent()</code>通常只用于转码URL组成部分，如URL中<code>?</code>后的一串；会转码除了语义字符之外的所有字符，即<strong>元字符也会被转码</strong><br /><strong>注：若整个链接被<code>encodeURIComponent()</code>转码，则该链接无法被浏览器访问，需要解码之后才可以正常访问。</strong></p> <h3><a id="2__13" rel="nofollow"></a>2 使用场景</h3> <p>  对于无特殊参数的链接，都可以使用<code>encodeURI()</code>进行转码，那什么特殊情况需要用到<code>encodeURIComponent()</code>呢？通常是链接带着一些特殊参数的时候，就比如以下链接：</p> <pre><code class="prism language-javascript">https<span class="token operator">:</span><span class="token operator">/</span><span class="token operator">/</span>www<span class="token punctuation">.</span>baidu<span class="token punctuation">.</span>com<span class="token operator">/</span>s<span class="token operator">?</span>returnURL<span class="token operator">=</span>http<span class="token operator">:</span><span class="token operator">/</span><span class="token regex"><span class="token regex-delimiter">/</span><span class="token regex-source language-regex">www.test.com</span><span class="token regex-delimiter">/</span></span></code></pre> <p>链接内包含一个回调地址，回调地址是另外一个URL，此时我们就需要使用<code>encodeURIComponent()</code>对回调地址进行转码，这样一来，URL中就不会出现多个<code>http://</code>，多个<code>&amp;</code>这样的特殊字符；方便对回调地址进行处理；以上链接处理如下：</p> <pre><code class="prism language-javascript"><span class="token comment">// 对URL中的回调链接进行转码</span><span class="token string">'https://www.baidu.com/s?returnURL='</span><span class="token operator">+</span><span class="token function">encodeURIComponent</span><span class="token punctuation">(</span><span class="token string">'http://www.test.com/'</span><span class="token punctuation">)</span><span class="token comment">//输出: "https://www.baidu.com/s?returnURL=http%3A%2F%2Fwww.test.com%2F"</span></code></pre> <blockquote> <p>参考博客：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/m0_46309087/article/details/119839043"  rel="nofollow">URL 编码与解码使用详解</a></p> </blockquote> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-27029.htm">动物医院价目表牌子 动物医院价目表牌子图片大全</a></p>
+                                        <p>下一个：<a href="/news/article-27486.htm">设计模式(9) 观察者模式</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-linux-netch-node.htm" title="12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址">12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-28-free-node-subscribe-links.htm" title="10月28日→22M/S|2024年最新免费节点Free Netch订阅链接地址">10月28日→22M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-13-node-share.htm" title="12月13日→20M/S|2024年最新免费节点Free Netch订阅链接地址">12月13日→20M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-4-free-high-speed-nodes.htm" title="10月4日→19.9M/S|2024年最新免费节点Free Netch订阅链接地址">10月4日→19.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20559.htm" title="中国十大宠物粮生产企业排名（中国宠物粮品牌）">中国十大宠物粮生产企业排名（中国宠物粮品牌）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-node-share-links.htm" title="10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址">10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21017.htm" title="宠物粮食名字大全集 宠物粮食名字大全集图片">宠物粮食名字大全集 宠物粮食名字大全集图片</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-29-node-share.htm" title="9月29日→20.8M/S|2024年最新免费节点Free Netch订阅链接地址">9月29日→20.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-25-netch-node.htm" title="11月25日→18.1M/S|2024年最新免费节点Free Netch订阅链接地址">11月25日→18.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-12-free-netch.htm" title="12月12日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址">12月12日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
