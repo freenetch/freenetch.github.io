@@ -7,7 +7,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>vue-seamless-scroll无缝滚动组件使用方法详解_vue.js</title>
         <meta name="description" content="本文实例为大家分享了vue无缝滚动组件vue-seamless-scroll的具体实现代码，供大家参考，具体内容如下  下载  cnpm i -S vue-seamless-scroll  main." />
-        <link rel="icon" href="__ADDON__/img/freenetch/favicon.ico" type="image/x-icon"/>
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- CSS
     ============================================ -->
@@ -93,7 +93,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-9">
-                                      				  				  				<p>本文实例为大家分享了vue无缝滚动组件vue-seamless-scroll的具体实现代码，供大家参考，具体内容如下</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/c662af53b239c08d2ef9439512e04522.jpg"></p> <p>下载</p> <div class="ay1code"> <pre class="brush:js;">cnpm i -S vue-seamless-scroll</pre> </div> <p>main.js中引入：</p> <div class="ay1code"> <pre class="brush:js;">import VueSeamlessScroll from 'vue-seamless-scroll'  Vue.use(VueSeamlessScroll)</pre> </div> <p>使用：</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;    &lt;div&gt;        &lt;vue-seamless-scroll          :data="listData"          :class-option="seamlessScrollOption"          style="            border: 1px solid white;            height: 200px;            overflow: hidden;            width: 200px;            color: white;            font-size: 18px;            text-align: center;          "        &gt;          &lt;ul&gt;            &lt;li              v-for="(item, index) in listData"              :key="index"              style="padding: 10px; margin: 5px"            &gt;              &lt;span class="title"&gt;{{ item.title }}：&lt;/span              &gt;&lt;span class="date"&gt;{{ item.time }}&lt;/span&gt;            &lt;/li&gt;          &lt;/ul&gt;        &lt;/vue-seamless-scroll&gt;    &lt;/div&gt;  &lt;/template&gt;     &lt;script&gt;     export default {    props: {},    data() {      return {        listData: [          {            title: "张三",            time: "2021-08-09",          },          {            title: "李四",            time: "2021-08-09",          },          {            title: "王五",            time: "2021-08-09",          },          {            title: "赵六",            time: "2021-08-09",          },          {            title: "前七",            time: "2021-08-09",          },          {            title: "孙八",            time: "2021-08-09",          },        ],      };    },    computed: {      seamlessScrollOption() {        return {          step: 0.2, // 数值越大速度滚动越快          limitMoveNum: 2, // 开始无缝滚动的数据量 this.dataList.length          hoverStop: true, // 是否开启鼠标悬停stop          direction: 1, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 1000, // 单步运动停止的时间(默认值1000ms)        };      },    },  };  &lt;/script&gt;</pre> </div> <p>效果图2：</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/bbf62ca985b423b64a887e85e42c2248.jpg"></p> <div class="ay1code"> <pre class="brush:js;">computed: {    seamlessScrollOption() {        return {          step: 0.5, // 数值越大速度滚动越快          hoverStop: true, // 是否开启鼠标悬停stop          direction: 0, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 40, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 2000, // 单步运动停止的时间(默认值1000ms)        };      },    },</pre> </div> 			                <div class="clearfix"></div>
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>本文实例为大家分享了vue无缝滚动组件vue-seamless-scroll的具体实现代码，供大家参考，具体内容如下</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/c662af53b239c08d2ef9439512e04522.jpg"></p> <p>下载</p> <div class="ay1code"> <pre class="brush:js;">cnpm i -S vue-seamless-scroll</pre> </div> <p>main.js中引入：</p> <div class="ay1code"> <pre class="brush:js;">import VueSeamlessScroll from 'vue-seamless-scroll'  Vue.use(VueSeamlessScroll)</pre> </div> <p>使用：</p> <div class="ay1code"> <pre class="brush:xhtml;">&lt;template&gt;    &lt;div&gt;        &lt;vue-seamless-scroll          :data="listData"          :class-option="seamlessScrollOption"          style="            border: 1px solid white;            height: 200px;            overflow: hidden;            width: 200px;            color: white;            font-size: 18px;            text-align: center;          "        &gt;          &lt;ul&gt;            &lt;li              v-for="(item, index) in listData"              :key="index"              style="padding: 10px; margin: 5px"            &gt;              &lt;span class="title"&gt;{{ item.title }}：&lt;/span              &gt;&lt;span class="date"&gt;{{ item.time }}&lt;/span&gt;            &lt;/li&gt;          &lt;/ul&gt;        &lt;/vue-seamless-scroll&gt;    &lt;/div&gt;  &lt;/template&gt;     &lt;script&gt;     export default {    props: {},    data() {      return {        listData: [          {            title: "张三",            time: "2021-08-09",          },          {            title: "李四",            time: "2021-08-09",          },          {            title: "王五",            time: "2021-08-09",          },          {            title: "赵六",            time: "2021-08-09",          },          {            title: "前七",            time: "2021-08-09",          },          {            title: "孙八",            time: "2021-08-09",          },        ],      };    },    computed: {      seamlessScrollOption() {        return {          step: 0.2, // 数值越大速度滚动越快          limitMoveNum: 2, // 开始无缝滚动的数据量 this.dataList.length          hoverStop: true, // 是否开启鼠标悬停stop          direction: 1, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 0, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 1000, // 单步运动停止的时间(默认值1000ms)        };      },    },  };  &lt;/script&gt;</pre> </div> <p>效果图2：</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220420/bbf62ca985b423b64a887e85e42c2248.jpg"></p> <div class="ay1code"> <pre class="brush:js;">computed: {    seamlessScrollOption() {        return {          step: 0.5, // 数值越大速度滚动越快          hoverStop: true, // 是否开启鼠标悬停stop          direction: 0, // 0向下 1向上 2向左 3向右          openWatch: true, // 开启数据实时监控刷新dom          singleHeight: 40, // 单步运动停止的高度(默认值0是无缝不停止的滚动) direction =&gt; 0/1          singleWidth: 0, // 单步运动停止的宽度(默认值0是无缝不停止的滚动) direction =&gt; 2/3          waitTime: 2000, // 单步运动停止的时间(默认值1000ms)        };      },    },</pre> </div> 			                <div class="clearfix"></div>
                 <div class="col-md-12 mt-5">
                                         <p>上一个：<a href="/news/article-22393.htm">知名动物医院有几家（最好的动物医院）</a></p>
                                         <p>下一个：<a href="/news/article-22849.htm">宠物诊所申请动物诊疗许可证的条件是什么（宠物诊所办理流程）</a></p>
@@ -106,16 +107,16 @@
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2024-10-23-node-share.htm" title="10月23日→20.6M/S|2024年最新免费节点Free Netch订阅链接地址">10月23日→20.6M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-netch-node.htm" title="11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址">11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-node-subscribe-links.htm" title="11月9日→19M/S|2024年最新免费节点Free Netch订阅链接地址">11月9日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-24-share-netch-node.htm" title="10月24日→20.2M/S|2024年最新免费节点Free Netch订阅链接地址">10月24日→20.2M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-10-19-node-share-links.htm" title="10月19日→20.8M/S|2024年最新免费节点Free Netch订阅链接地址">10月19日→20.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-linux-netch-node.htm" title="11月7日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址">11月7日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21926.htm" title="宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片">宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-5-netch-node.htm" title="12月5日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址">12月5日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-subscribe-node.htm" title="9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址">9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
                         <li class="py-2"><a href="/free-nodes/2024-11-25-netch-node.htm" title="11月25日→18.1M/S|2024年最新免费节点Free Netch订阅链接地址">11月25日→18.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-netch-node.htm" title="11月27日→19.1M/S|2024年最新免费节点Free Netch订阅链接地址">11月27日→19.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-8-free-node-subscribe.htm" title="11月8日→20.1M/S|2024年最新免费节点Free Netch订阅链接地址">11月8日→20.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-24235.htm" title="动物医院叫什么名字啊英文（动物医院 英文）">动物医院叫什么名字啊英文（动物医院 英文）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-14-free-high-speed-nodes.htm" title="10月14日→22.5M/S|2024年最新免费节点Free Netch订阅链接地址">10月14日→22.5M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
                         <li class="py-2"><a href="/news/article-20559.htm" title="中国十大宠物粮生产企业排名（中国宠物粮品牌）">中国十大宠物粮生产企业排名（中国宠物粮品牌）</a></li>
-                        <li class="py-2"><a href="/news/article-21480.htm" title="动物疫苗注射的途径有哪些（动物疫苗接种方法）">动物疫苗注射的途径有哪些（动物疫苗接种方法）</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share.htm" title="11月11日→21.4M/S|2024年最新免费节点Free Netch订阅链接地址">11月11日→21.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
-                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-high-speed-nodes.htm" title="12月1日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址">12月1日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
                     </ul>
     </div>
 </div>
@@ -127,7 +128,7 @@
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+                <h4><span class="badge" style="float: right;">57</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
@@ -155,6 +156,15 @@
                     <!-- Footer Copyright -->
                     <div class="col-lg-6 col-12">
                         <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
                             <p>
                                 <a href="/">Free Netch机场节点分享官网</a> 版权所有
                                 <br />

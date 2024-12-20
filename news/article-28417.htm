@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-28417.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>spring中jdbcTemplate.batchUpdate的几种使用情况_java</title>
+        <meta name="description" content="目录  1，batchUpdate（String[] sqls） 2，batchUpdate（String sql，List &lt;Object[]&gt; parms） 3，适用于我的解决方案  " />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>spring中jdbcTemplate.batchUpdate的几种使用情况_java</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">1，batchUpdate（String[] sqls）</a></li> <li><a href="#_label1" rel="nofollow">2，batchUpdate（String sql，List &lt;Object[]&gt; parms）</a></li> <li><a href="#_label2" rel="nofollow">3，适用于我的解决方案</a></li> </ul> </div> <p>在我做批量插入的过程中，由于数据库做了唯一约束，所以有些重复数据会出错，在我的设想中，除出错的数据，其它数据应该是都会插入的，但事实不是；</p> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>1，batchUpdate（String[] sqls）</h2> <p>这种的sql在于多样化，可以是各种混合sql，在操作时，会一部分一部分的发送到数据库去执行，中途有某条sql报错时，后面的sql则不会执行，之前的sql则全部会执行提交，可在数据库看到变化;</p> <p>暂时没找到让后面sql执行的方法，搜了好久，都说不支持这种操作，都建议在sql之前做判错处理或trycatch后，再将sql一条一条的执行。</p> <div class="ay1code"> <pre class="brush:java;">public void a (){          try {              String[] sql = new String[4];              sql[0] = "insert into TEST(id) values (1)";              sql[1] = "insert into TEST(id) values (2)";              sql[2] = "insert into TEST(id) values (1)";              sql[3] = "insert into TEST(id) values (3)";              jdbcTemplate.batchUpdate(sql);          } catch (DataAccessException e) {              e.printStackTrace();          }  }  </pre> </div> <p>在ID为主键的情况下，这个只会插入1和2，提示批处理中出现错误: ORA-00001: 违反唯一约束条件。</p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>2，batchUpdate（String sql，List &lt;Object[]&gt; parms）</h2> <p>这种的sql在于效率，固定的sql，变化的参数，操作时间会极大减少，默认情况下，当中途有数据报错时，会全部回滚，不提交，所以是全部插入或者全部不插入；</p> <div class="ay1code"> <pre class="brush:java;">public void b (){          try {              String sql = "insert into TEST(id) values (?)";              List&lt;Object[]&gt; list = new ArrayList&lt;&gt;();              for (int i = 0; i &lt; 4; i++) {                  String[] sqls = new String[1];                  sqls[0] = i +"";                  if(i == 2){ // 增加一条异常数据                      sqls[0] = i-1 +"";                  }                  list.add(sqls);              }              jdbcTemplate.batchUpdate(sql,list);          } catch (DataAccessException e) {              e.printStackTrace();          }      }  </pre> </div> <p>这个全部都不会插入，提示批处理中出现错误: ORA-00001: 违反唯一约束条件。</p> <p class="maodian"><a name="_label2" rel="nofollow"></a></p> <h2>3，适用于我的解决方案</h2> <p>对sql处理处理了一下，对要插入的数据做了是否存在判断，如果不存在，则插入；用not EXISTS 判断要插入的数据或有主键约束或有唯一约束的数据是否存在；</p> <div class="ay1code"> <pre class="brush:java;">public void b (){          try {              String[] sql = new String[2];              sql[0] = "insert into TEST(id) values (1)";              sql[1] = "insert into TEST(id) " +                             "select '1' from dual where not EXISTS(SELECT id FROM TEST WHERE id = '1')";              sql[2] = "insert into TEST(id) values (2)";              jdbcTemplate.batchUpdate(sql);          } catch (DataAccessException e) {              e.printStackTrace();          }      }  </pre> </div> <p>会插入1和2。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-27954.htm">动物防疫疫苗种类有哪些品种图片（动物防疫疫苗种类有哪些品种图片及名称）</a></p>
+                                        <p>下一个：<a href="/news/article-28418.htm">成都宠物领养中心官网收容中心电话是多少（成都宠物收容机构）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-27486.htm" title="设计模式(9) 观察者模式">设计模式(9) 观察者模式</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-linux-netch-node.htm" title="12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址">12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-node-share.htm" title="12月2日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">12月2日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-26-node-share-links.htm" title="9月26日→19.8M/S|2024年最新免费节点Free Netch订阅链接地址">9月26日→19.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-1-free-high-speed-nodes.htm" title="12月1日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址">12月1日→18.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-26559.htm" title="宠物领养合同违约金3000元合法吗怎么赔偿 宠物领养合同违约金3000元合法吗怎么赔偿">宠物领养合同违约金3000元合法吗怎么赔偿 宠物领养合同违约金3000元合法吗怎么赔偿</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-4-free-subscribe-node.htm" title="12月4日→18.2M/S|2024年最新免费节点Free Netch订阅链接地址">12月4日→18.2M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-22-free-high-speed-nodes.htm" title="10月22日→19.3M/S|2024年最新免费节点Free Netch订阅链接地址">10月22日→19.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-11-free-netch.htm" title="9月11日→19.3M/S|2024年最新免费节点Free Netch订阅链接地址">9月11日→19.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-16-share-netch-node.htm" title="9月16日→19.9M/S|2024年最新免费节点Free Netch订阅链接地址">9月16日→19.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">60</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
