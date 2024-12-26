@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-31204.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>这些OAuth2客户端的认证方式你未必了解</title>
+        <meta name="description" content="OAuth2客户端按照它们与授权服务器进行安全认证的能力可以分为机密类型（Confidential）和公共类型（Public）。 机密类型的自身会有个密码凭据，比如Web服务器后端程序；而公共类型则没" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>这些OAuth2客户端的认证方式你未必了解</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p><strong>OAuth2</strong>客户端按照它们与授权服务器进行安全认证的能力可以分为机密类型（<strong>Confidential</strong>）和公共类型（<strong>Public</strong>）。</p> <p>机密类型的自身会有个密码凭据，比如Web服务器后端程序；而公共类型则没有密码凭据，纯浏览器前端应用或者移动客户端应用大都属于这一种类型。不管是哪一种，它们都有客户端ID（<strong>client_id</strong>）。</p> <h3 id="oauth2客户端认证">OAuth2客户端认证</h3> <p>客户端在执行<strong>OAuth2</strong>授权的敏感流程中（<strong>相关的流程有令牌请求、令牌自省请求、令牌撤销请求</strong>）必须使用授权服务器进行客户端身份验证，确保客户端中途不会被调包。</p> <h3 id="客户端认证方式">客户端认证方式</h3> <p>目前客户端认证的方式有以下几种:</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/2fac7ae488d49f35ac7813d93c7cca33.jpg" alt="这些OAuth2客户端的认证方式你未必了解"></p> <p>前面<strong>Gitee</strong>的<strong>DEMO</strong>使用的是过时的<strong>POST</strong>方式；微信DEMO使用的是非<strong>OAuth2</strong>标准的方式；<strong>Spring Authorization Server</strong>目前相关的<strong>DEMO</strong>使用的是<strong>client_secret_basic</strong>方式。剩下的方式中<strong>client_secret_jwt</strong>和<strong>private_key_jwt</strong>用的比较多，这两种方式可以很好地保护客户端的认证信息，安全性更高。<strong>Spring Security</strong>和<strong>Spring Authorization Server</strong>目前已经支持这两种方式。</p> <h4 id="client_secret_jwt">client_secret_jwt</h4> <p><code>client_secret_jwt</code>方式是<strong>OAuth2</strong>客户端将自己的密钥作为<code>HmacSHA256</code>算法的<strong>key</strong>生成<code>SecretKey</code>：</p> <pre><code class="language-java">byte[] pin = clientSecret.getBytes(StandardCharsets.UTF_8); SecretKeySpec  secretKey = new SecretKeySpec(pin,"HmacSHA256");</code></pre> <p>然后通过<code>SecretKey</code>生成一个携带<strong>OAuth2</strong>客户端信息的<strong>JWT</strong>，在授权码请求<strong>Token</strong>环节携带该<strong>JWT</strong>以便授权服务器进行客户端认证，请求的报文为:</p> <pre><code class="language-http">     POST /oauth2/token HTTP/1.1      Host: oauth2_client.felord.cn      Content-Type: application/x-www-form-urlencoded       grant_type=authorization_code&amp;      code=n0esc3NRze7LTCu7iYzS6a5acc3f0ogp4&amp;      client_assertion_type=urn:ietf:params:oauth:client-assertion-type:jwt-bearer&amp;      client_assertion=你的JWT</code></pre> <p>授权服务器收到请求后通过<strong>OAuth2</strong>客户端的<code>client_secret</code>对<strong>JWT</strong>进行解码校验以认证客户端。这种方式能很好的保护<code>client_secret</code>在非<strong>HTTPS</strong>环境下的传输。</p> <blockquote> <p>这里OAuth2客户端的密钥（<strong>client_secret</strong>）比特长度必须大于等于<strong>256</strong>。</p> </blockquote> <h4 id="private_key_jwt">private_key_jwt</h4> <p><code>private_key_jwt</code>和<code>client_secret_jwt</code>唯一的区别就是生成<strong>JWT</strong>的方式不同。通过这种方式，<strong>OAuth2</strong>客户端已经不需要<code>client_secret</code>，只需要配置一对<code>RSA</code>或者<code>EC</code>密钥，通过密钥来生成<strong>JWT</strong>，另外还需要向授权服务器提供公钥，通常是一个<strong>jwkSetUrl</strong>。该方式的细节已经在<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://blog.csdn.net/qq_35067322/category_11691173.html"  target="_blank" rel="nofollow">OAuth2专栏</a>中<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://felord.blog.csdn.net/article/details/123540550"  target="_blank" rel="nofollow">JOSE规范</a>一文中进行过详细说明了，这里不再赘述。这种方式让客户端的认证信息更加安全的传输，是我个人比较喜欢的方式。</p> <h4 id="tls_client_auth">tls_client_auth</h4> <p>这个比较高级，嵌入了TLS安全层，在HTTP协议级别来认证<strong>OAuth2</strong>客户端，它涉及的证书来自可信任的<strong>CA</strong>。这种方式基本脱离了应用层，是一种无侵入的方式。</p> <h4 id="self_signed_tls_client_auth">self_signed_tls_client_auth</h4> <p>这个同样也是在TLS安全层，不过它使用了自签名的<strong>X.509</strong>证书。</p> <h3 id="总结">总结</h3> <p>市面上的教程大多只会提到过时的<s>POST</s>方式以及<strong>client_secret_basic</strong>和<strong>client_secret_post</strong>方式，对后面的五种则很少涉及，胖哥已经对<strong>private_key_jwt</strong>和<strong>client_secret_jwt</strong>进行了实现，详细请订阅我的<strong>Spring Security OAuth2</strong>专栏。这些OAuth2客户端认证方式在不同的场景有不同的优势，你可以根据不同的安全级别选择不同的<strong>OAuth2</strong>客户端认证方式。</p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-30792.htm">PHP入门-Window 下利用Nginx+PHP 搭建环境</a></p>
+                                        <p>下一个：<a href="/news/article-31205.htm">动物疫病预防控制中心可以打狂犬疫苗吗多少钱（动物疾病预防中心可以打狂犬疫苗吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-14-free-subscribe-node.htm" title="9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址">9月14日→19.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-16-free-subscribe-node.htm" title="11月16日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">11月16日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-3-linux-netch-node.htm" title="12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址">12月3日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-20104.htm" title="开个宠物诊所大概需要多少钱（开个宠物诊所大概需要多少钱费用）">开个宠物诊所大概需要多少钱（开个宠物诊所大概需要多少钱费用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-9-linux-netch-node.htm" title="10月9日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">10月9日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-16-free-netch.htm" title="10月16日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址">10月16日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-27954.htm" title="动物防疫疫苗种类有哪些品种图片（动物防疫疫苗种类有哪些品种图片及名称）">动物防疫疫苗种类有哪些品种图片（动物防疫疫苗种类有哪些品种图片及名称）</a></li>
+                        <li class="py-2"><a href="/news/article-18753.htm" title="Python中位置参数、关键字参数、默认参数和不定长参数(非固定参数)的简介">Python中位置参数、关键字参数、默认参数和不定长参数(非固定参数)的简介</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-9-free-node-subscribe-links.htm" title="11月9日→19M/S|2024年最新免费节点Free Netch订阅链接地址">11月9日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21926.htm" title="宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片">宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">78</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
