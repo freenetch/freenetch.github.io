@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-31724.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Java中输入与输出的方法总结_java_</title>
+        <meta name="description" content="目录  输入方法  第一种输入方法:scanner 第二种输入方法:JOptionPane 第三种输入方法:io.Console  输出方法  第一种输出方法:System.out.print() 第" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>Java中输入与输出的方法总结_java_</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="navCategory"> <h5 class="catalogue">目录</h5> <ul class="first_class_ul"> <li><a href="#_label0" rel="nofollow">输入方法</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_0_0" rel="nofollow">第一种输入方法:scanner</a></li> <li><a href="#_lab2_0_1" rel="nofollow">第二种输入方法:JOptionPane</a></li> <li><a href="#_lab2_0_2" rel="nofollow">第三种输入方法:io.Console</a></li> </ul> <li><a href="#_label1" rel="nofollow">输出方法</a></li> <ul class="second_class_ul"> <li><a href="#_lab2_1_3" rel="nofollow">第一种输出方法:System.out.print()</a></li> <li><a href="#_lab2_1_4" rel="nofollow">第二种输出方法:System.out.println()</a></li> <li><a href="#_lab2_1_5" rel="nofollow">第三种输出方法:System.out.printf()</a></li> </ul> </ul> </div> <p class="maodian"><a name="_label0" rel="nofollow"></a></p> <h2>输入方法</h2> <p class="maodian"><a name="_lab2_0_0" rel="nofollow"></a></p> <h3>第一种输入方法:scanner</h3> <div class="ay1code"> <pre class="brush:java;">import java.util.Scanner; // 导入java.util.Scanner    public class User {      public static void main(String[] args) {          var sc = new Scanner(System.in); //生成scanner对象          System.out.print("请输入你的姓名:");          String name = sc.nextLine();//输入字符串          System.out.print("请输入你的年龄:");          int age = sc.nextInt();//输入整数          System.out.println("姓名:" + name +"\n" +"年龄:" + age);      }  }</pre> </div> <p>运行结果</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220412/cb09bb4045b4fce7f1c839496fbea226.jpg"></p> <p>常用的next()方法</p> <p>nextInt() 输入整数</p> <p>nextLine() 输入字符串</p> <p>nextDouble() 输入双精度数</p> <p>next() 输入字符串(以空格作为分隔符</p> <p class="maodian"><a name="_lab2_0_1" rel="nofollow"></a></p> <h3>第二种输入方法:JOptionPane</h3> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220412/6d053471935169198dfe615bb576a9b7.jpg"></p> <p>运行结果</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220412/5629930c2b084f6d0946e919072a20fb.jpg"></p> <p class="maodian"><a name="_lab2_0_2" rel="nofollow"></a></p> <h3>第三种输入方法:io.Console</h3> <p>这种输入方法为安全输入方法，只能在cmd控制台运行，不能在IDEA、eclipse等1工具运行</p> <p>创建User.java文件</p> <div class="ay1code"> <pre class="brush:java;">import java.io.Console;//导入java.io.Console  public class User {      public static void main(String[] args) {          Console con = System.console();//建立安全输入          String name = con.readLine("请输入账号:");          String passworld = con.readLine("请输入密码:");          System.out.printf("账号:%s", name);          System.out.printf("%n密码:%s", passworld);      }  }  </pre> </div> <p>cmd进入文件所在目录，运行以下指令</p> <div class="ay1code"> <pre class="brush:bash;">java -Dfile.encoding=UTF-8 User.java</pre> </div> <p>运行结果</p> <p style="text-align:center"><img decoding="async" alt="" src="http://img.555519.xyz/uploads3/20220412/f4a9f138aebfbac166ccdfa3c1ad4959.jpg"></p> <p class="maodian"><a name="_label1" rel="nofollow"></a></p> <h2>输出方法</h2> <p class="maodian"><a name="_lab2_1_3" rel="nofollow"></a></p> <h3>第一种输出方法:System.out.print()</h3> <p>System.out.print()不换行直接输出</p> <div class="ay1code"> <pre class="brush:java;">public class User {      public static void main(String[] args) {      int a = 1;      int b = 2;      System.out.print(a);//print()不换行输出a的值      System.out.print(b);//print()不换行输出b的值      }  }  </pre> </div> <p>运行结果</p> <blockquote> <p>12</p> </blockquote> <p class="maodian"><a name="_lab2_1_4" rel="nofollow"></a></p> <h3>第二种输出方法:System.out.println()</h3> <p>System.out.println()换行输出</p> <div class="ay1code"> <pre class="brush:java;">public class User {      public static void main(String[] args) {      int a = 1;      int b = 2;      System.out.println(a);//println()换行输出a的值      System.out.println(b);//println()换行输出b的值      }  }  </pre> </div> <p>运行结果</p> <blockquote> <p>1<br />2</p> </blockquote> <p class="maodian"><a name="_lab2_1_5" rel="nofollow"></a></p> <h3>第三种输出方法:System.out.printf()</h3> <p>System.out.printf()格式化输出</p> <div class="ay1code"> <pre class="brush:java;">public class User {      public static void main(String[] args) {      int a = 1;      int b = 2;      System.out.printf("a=%d%n",a);//printf()格式化输出      System.out.printf("b=%d",b);//printf()格式化输出      }  }  </pre> </div> <p>运行结果</p> <blockquote> <p>a=1<br />b=2</p> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-31723.htm">FreeRTOS进阶之队列示例完全解析_操作系统</a></p>
+                                        <p>下一个：<a href="/news/article-32206.htm">环形链表方法解决约瑟夫环问题（JAVA）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-21480.htm" title="动物疫苗注射的途径有哪些（动物疫苗接种方法）">动物疫苗注射的途径有哪些（动物疫苗接种方法）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-28-free-subscribe-node.htm" title="9月28日→22.6M/S|2024年最新免费节点Free Netch订阅链接地址">9月28日→22.6M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23300.htm" title="常州美多格宠物医院电话（常州美多格宠物医院怎么样）">常州美多格宠物医院电话（常州美多格宠物医院怎么样）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-10-free-node-subscribe.htm" title="9月10日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址">9月10日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-2-node-share.htm" title="12月2日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">12月2日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-10-free-netch.htm" title="12月10日→19.4M/S|2024年最新免费节点Free Netch订阅链接地址">12月10日→19.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-node-share-links.htm" title="10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址">10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-30-free-node-subscribe.htm" title="11月30日→20.7M/S|2024年最新免费节点Free Netch订阅链接地址">11月30日→20.7M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-13-free-high-speed-nodes.htm" title="10月13日→20.1M/S|2024年最新免费节点Free Netch订阅链接地址">10月13日→20.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-21-free-netch.htm" title="10月21日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址">10月21日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
