@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-33153.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>PHP超全局变量</title>
+        <meta name="description" content="介绍 除了用户定义的变量外，PHP还使用许多称为superglobals的预定义变量填充全局命名空间。始终可以从任何函数或方法中访问它们，而无需指定global关键字。supperglobals的列表" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>PHP超全局变量</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2>介绍</h2> <p>除了用户定义的变量外，PHP还使用许多称为<strong>superglobals</strong>的预定义变量填充全局命名空间。始终可以从任何函数或方法中访问它们，而无需指定<strong>global</strong>关键字。supperglobals的列表在下面给出-</p> <table class="table table-bordered table-striped"> <tbody> <tr class="firstRow"> <td>$全球</td> <td>引用全局范围内的所有可用变量</td> </tr> <tr> <td>$_？SERVER</td> <td>服务器和执行环境信息</td> </tr> <tr> <td>$_？GET</td> <td>HTTP GET变量</td> </tr> <tr> <td>$_？POST</td> <td>HTTP POST变量</td> </tr> <tr> <td>$_？FILES</td> <td>HTTP文件上传变量</td> </tr> <tr> <td>$_？REQUEST</td> <td>HTTP请求变量</td> </tr> <tr> <td>$_？SESSION</td> <td>会话变量</td> </tr> <tr> <td>$_？ENV</td> <td>环境变量</td> </tr> <tr> <td>$_？COOKIE</td> <td>HTTP Cookie</td> </tr> <tr> <td>$php_？errormsg</td> <td>上一条错误消息</td> </tr> <tr> <td>$HTTP_？RAW_？POST_？DATA</td> <td>原始POST数据</td> </tr> <tr> <td>$http_？response_？header</td> <td>HTTP响应头</td> </tr> <tr> <td>$argc</td> <td>传递给脚本的参数数量</td> </tr> <tr> <td>$argv</td> <td>传递给脚本的参数数组</td> </tr> </tbody> </table> <div></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-32689.htm">宠物领养网页设计图片素材（宠物领养网站源码）</a></p>
+                                        <p>下一个：<a href="/news/article-33154.htm">自己能给宠物&#25171;&#38024;吗多少钱（宠物的针可以自己打吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-11-node-share.htm" title="11月11日→21.4M/S|2024年最新免费节点Free Netch订阅链接地址">11月11日→21.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-11-node-share-links.htm" title="10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址">10月11日→18.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-22-linux-netch-node.htm" title="12月22日→20.4M/S|2024年最新免费节点Free Netch订阅链接地址">12月22日→20.4M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-29828.htm" title="Gin增删改查demo">Gin增删改查demo</a></li>
+                        <li class="py-2"><a href="/news/article-28883.htm" title="动物疫苗去哪里买便宜又好 动物疫苗去哪里买便宜又好呢">动物疫苗去哪里买便宜又好 动物疫苗去哪里买便宜又好呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-16-free-subscribe-node.htm" title="12月16日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址">12月16日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-high-speed-nodes.htm" title="12月18日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址">12月18日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-30-free-subscribe-node.htm" title="10月30日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址">10月30日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-15-linux-netch-node.htm" title="12月15日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址">12月15日→18.8M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-7-free-high-speed-nodes.htm" title="12月7日→18.9M/S|2024年最新免费节点Free Netch订阅链接地址">12月7日→18.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,198 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-33636.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ES6基础语法之函数介绍_基础知识</title>
+        <meta name="description" content="一、函数参数的扩展 ES6支持参数的默认值：  function fn(name,age,sex="男")  {  	console.log(`大家好,我是${name},性别${sex},今年${a" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>ES6基础语法之函数介绍_基础知识</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<h2>一、函数参数的扩展</h2> <p>ES6支持参数的默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,age,sex="男")  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>传递undefined,取默认值：</p> <div class="ay1code"> <pre class="brush:js;">function fn(name,sex="男",age)  {  	console.log(`大家好,我是${name},性别${sex},今年${age}岁!`);  }  fn("刘德华",undefined,45); //大家好,我是刘德华,性别男,今年45岁!</pre> </div> <p>不定参数:不定参数用来表示不确定参数个数：</p> <div class="ay1code"> <pre class="brush:js;">function Add(...items)  {  	// let sum = 0;  	// for(let item of items)  	// {  	// 	sum += item;  	// }  	// return sum;  	  	let sum = 0;  	for(var i = 0;i&lt; items.length;i++)  	{  		sum += items[i];  	}  	return sum;  }  let result1 = Add(1,2,3);  let result2 = Add(1,3,5,7,9);  console.log(result1); //6  console.log(result2); //25</pre> </div> <h2>二、箭头函数</h2> <p>箭头函数提供了一种更加简洁的函数书写方式,基本语法是：参数 =&gt; 函数体</p> <p>没有参数的函数(参数部分需要有一对空括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = ()=&gt;{console.log("hello,world!")}  f(); //hello,world</pre> </div> <p>等价于：</p> <div class="ay1code"> <pre class="brush:js;">function f()  {  	console.log("hello,world!");  }  f(); //hello,world</pre> </div> <p>只有一个参数的函数(参数部分不需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = num =&gt;{  	if(num%2 == 0)  		return "偶数";  	else  		return "奇数";  }  console.log(f(50)); //偶数</pre> </div> <p>有多个参数的函数(参数部分需要括号)：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b)=&gt;{  	let c = a+b;  	return c;  }  console.log(f(2,3)); //5</pre> </div> <p>当只有一行语句，并且需要返回结果时，可以省略 {} , 结果会自动返回：</p> <div class="ay1code"> <pre class="brush:js;">let f = (a,b) =&gt; a+b;  console.log(f(2,3)); // 5</pre> </div> <p>当箭头函数要返回对象的时候，为了区分于代码块，要用 () 将对象包裹起来：</p> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {id: id, name: name};  let obj = f("001","刘德华");  // 报错  console.log(obj);</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; {  	return {id: id, name: name};  };  let obj = f("001","刘德华");    console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> <div class="ay1code"> <pre class="brush:js;">let f = (id,name) =&gt; ({id: id, name: name});  let obj = f("001","刘德华");  console.log(obj); //{id:"001",name:"刘德华"}</pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-33154.htm">自己能给宠物&#25171;&#38024;吗多少钱（宠物的针可以自己打吗）</a></p>
+                                        <p>下一个：<a href="/news/article-33637.htm">宠物粮食批发进货渠道有哪些地方可以进（宠物粮从哪里进货便宜）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-netch-node.htm" title="11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址">11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-33637.htm" title="宠物粮食批发进货渠道有哪些地方可以进（宠物粮从哪里进货便宜）">宠物粮食批发进货渠道有哪些地方可以进（宠物粮从哪里进货便宜）</a></li>
+                        <li class="py-2"><a href="/news/article-30303.htm" title="中国动物疫苗生产企业排名榜 中国动物疫苗生产企业排名榜最新">中国动物疫苗生产企业排名榜 中国动物疫苗生产企业排名榜最新</a></li>
+                        <li class="py-2"><a href="/news/article-24235.htm" title="动物医院叫什么名字啊英文（动物医院 英文）">动物医院叫什么名字啊英文（动物医院 英文）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-29-free-node-subscribe.htm" title="10月29日→21.6M/S|2024年最新免费节点Free Netch订阅链接地址">10月29日→21.6M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-29351.htm" title="解决：“/****/kafka_2.13-3.0.0/bin/kafka-run-class.sh: line 342: exec: java: not found ”问题">解决：“/****/kafka_2.13-3.0.0/bin/kafka-run-class.sh: line 342: exec: java: not found ”问题</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-21-free-node-subscribe.htm" title="11月21日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址">11月21日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-28883.htm" title="动物疫苗去哪里买便宜又好 动物疫苗去哪里买便宜又好呢">动物疫苗去哪里买便宜又好 动物疫苗去哪里买便宜又好呢</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-10-17-free-netch.htm" title="10月17日→21.9M/S|2024年最新免费节点Free Netch订阅链接地址">10月17日→21.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-18-free-high-speed-nodes.htm" title="12月18日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址">12月18日→21.5M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
