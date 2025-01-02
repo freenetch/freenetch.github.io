@@ -1,0 +1,201 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-34585.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>vue实现图形验证码</title>
+        <meta name="description" content="效果图：  或 或 或 代码： 验证码组件： src/common/sIdentify.vue &lt;template&gt;   &lt;div class="s-canvas"&gt;     " />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                                                        <a href="/">
+                                <span>Free Netch</span>
+                            </a>
+                                                    </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>vue实现图形验证码</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-light"> <h2><a id="_0" rel="nofollow"></a>效果图：</h2> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220707/ae1a8ffe674b158b08bc7e3f3ca17ef5.jpg" alt="vue实现图形验证码"><br /> 或<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220707/1273437f1f5e03fd1e0a3e927690d1b9.jpg" alt="vue实现图形验证码"><br /> 或<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220707/caaa2cbbdbc4e2332137d5906d078938.jpg" alt="vue实现图形验证码"><br /> 或<br /><img decoding="async" src="http://img.555519.xyz/uploads3/20220707/e95be699daa1308fd14379717656e5cd.jpg" alt="vue实现图形验证码"></p> <h2><a id="_10" rel="nofollow"></a>代码：</h2> <p><strong>验证码组件：</strong><br /> src/common/sIdentify.vue</p> <pre><code>&lt;template&gt;   &lt;div class="s-canvas"&gt;     &lt;canvas id="s-canvas" :width="contentWidth" :height="contentHeight"&gt;&lt;/canvas&gt;   &lt;/div&gt; &lt;/template&gt; &lt;script&gt;   export default {     name: 'SIdentify',     props: {       identifyCode: {         type: String,         default: '1234'       },       fontSizeMin: {         type: Number,         default: 18       },       fontSizeMax: {         type: Number,         default: 40       },       backgroundColorMin: {         type: Number,         default: 180       },       backgroundColorMax: {         type: Number,         default: 240       },       colorMin: {         type: Number,         default: 50       },       colorMax: {         type: Number,         default: 160       },       lineColorMin: {         type: Number,         default: 40       },       lineColorMax: {         type: Number,         default: 180       },       dotColorMin: {         type: Number,         default: 0       },       dotColorMax: {         type: Number,         default: 255       },       contentWidth: {         type: Number,         default: 111       },       contentHeight: {         type: Number,         default: 38       }     },     methods: {       // 生成一个随机数       randomNum(min, max) {         return Math.floor(Math.random() * (max - min) + min)       },       // 生成一个随机的颜色       randomColor(min, max) {         let r = this.randomNum(min, max)         let g = this.randomNum(min, max)         let b = this.randomNum(min, max)         return 'rgb(' + r + ',' + g + ',' + b + ')'       },       drawPic() {         let canvas = document.getElementById('s-canvas')         let ctx = canvas.getContext('2d')         ctx.textBaseline = 'bottom'         // 绘制背景         ctx.fillStyle = this.randomColor(this.backgroundColorMin, this.backgroundColorMax)         ctx.fillRect(0, 0, this.contentWidth, this.contentHeight)         // 绘制文字         for (let i = 0; i &lt; this.identifyCode.length; i++) {           this.drawText(ctx, this.identifyCode[i], i)         }         // this.drawLine(ctx) // 绘制干扰线         // this.drawDot(ctx) // 绘制干扰点       },       // 绘制文本       drawText(ctx, txt, i) {         ctx.fillStyle = this.randomColor(this.colorMin, this.colorMax)         ctx.font = this.randomNum(this.fontSizeMin, this.fontSizeMax) + 'px SimHei'         let x = (i + 1) * (this.contentWidth / (this.identifyCode.length + 1))         let y = this.randomNum(this.fontSizeMax, this.contentHeight - 5)         var deg = this.randomNum(-30, 30) // 字符旋转角度(不超过45度比较好)         // 修改坐标原点和旋转角度         ctx.translate(x, y)         ctx.rotate(deg * Math.PI / 180)         ctx.fillText(txt, 0, 0)         // 恢复坐标原点和旋转角度         ctx.rotate(-deg * Math.PI / 180)         ctx.translate(-x, -y)       },       drawLine(ctx) {         // 绘制干扰线         for (let i = 0; i &lt; 8; i++) {           ctx.strokeStyle = this.randomColor(this.lineColorMin, this.lineColorMax)           ctx.beginPath()           ctx.moveTo(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight))           ctx.lineTo(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight))           ctx.stroke()         }       },       drawDot(ctx) {         // 绘制干扰点         for (let i = 0; i &lt; 100; i++) {           ctx.fillStyle = this.randomColor(0, 255)           ctx.beginPath()           ctx.arc(this.randomNum(0, this.contentWidth), this.randomNum(0, this.contentHeight), 1, 0, 2 * Math.PI)           ctx.fill()         }       }     },     watch: {       identifyCode() {         this.drawPic()       }     },     mounted() {       this.drawPic()     }   } &lt;/script&gt;</code></pre> <p><strong>父组件</strong></p> <pre><code>&lt;template&gt;   &lt;div&gt;     &lt;div&gt;验证码测试&lt;/div&gt;     &lt;div @click="refreshCode()" class="code" style="cursor:pointer;" title="点击切换验证码"&gt;       &lt;s-identify :identifyCode="identifyCode"&gt;&lt;/s-identify&gt;     &lt;/div&gt;   &lt;/div&gt; &lt;/template&gt;  &lt;script&gt; import { defineComponent } from 'vue'; import sIdentify from "@/common/sIdentify.vue"; // import axios from 'axios' export default defineComponent({   name: 'WatermarkTest',   components: { sIdentify },   data() {     return {       identifyCode: "",       identifyCodes: ['0','1','2','3','4','5','6','7','8','9','a','b','c','d'], //根据实际需求加入自己想要的字符     }   },   mounted() {     this.refreshCode() 	}, 	unmounted() {  	},   methods: {     // 生成随机数     randomNum(min, max) {       max = max + 1       return Math.floor(Math.random() * (max - min) + min);     },     // 更新验证码     refreshCode() {       this.identifyCode = "";       this.makeCode(this.identifyCodes, 4);       console.log('当前验证码:',this.identifyCode);     },     // 随机生成验证码字符串     makeCode(data, len) {       console.log('data, len:', data, len)       for (let i = 0; i &lt; len; i++) {         this.identifyCode += this.identifyCodes[this.randomNum(0, this.identifyCodes.length-1)]       }     },   }, }); &lt;/script&gt;</code></pre> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-34111.htm">动物防疫站干嘛的工作（动物防疫站干嘛的工作人员）</a></p>
+                                        <p>下一个：<a href="/news/article-34587.htm">Metalama简介4.使用Fabric操作项目或命名空间</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2024-9-25-share-netch-node.htm" title="9月25日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址">9月25日→20.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-1-node-share-links.htm" title="1月1日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址">1月1日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-23299.htm" title="Redis的数据淘汰策略和数据过期后的删除策略">Redis的数据淘汰策略和数据过期后的删除策略</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-13-free-netch-node.htm" title="9月13日→22.1M/S|2024年最新免费节点Free Netch订阅链接地址">9月13日→22.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-30303.htm" title="中国动物疫苗生产企业排名榜 中国动物疫苗生产企业排名榜最新">中国动物疫苗生产企业排名榜 中国动物疫苗生产企业排名榜最新</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-3-free-subscribe-node.htm" title="11月3日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址">11月3日→20.3M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-24-free-high-speed-nodes.htm" title="9月24日→18.9M/S|2024年最新免费节点Free Netch订阅链接地址">9月24日→18.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-19641.htm" title="宠物领养协议需要身份证复印件吗有效吗安全吗 领养宠物需要签协议吗">宠物领养协议需要身份证复印件吗有效吗安全吗 领养宠物需要签协议吗</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-6-free-netch-node.htm" title="12月6日→19.5M/S|2024年最新免费节点Free Netch订阅链接地址">12月6日→19.5M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-9-17-node-share.htm" title="9月17日→22.2M/S|2024年最新免费节点Free Netch订阅链接地址">9月17日→22.2M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">34</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">31</span> <a href="/date/2024-10/" title="2024-10 归档">2024-10</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2024-09/" title="2024-09 归档">2024-09</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
