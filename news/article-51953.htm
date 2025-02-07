@@ -1,0 +1,225 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-51953.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文</title>
+        <meta name="description" content="人工标注数据集中普遍存在噪声，ReLabel能够自动且低成本地将原本的单标签数据集转化为多标签数据集，并且提出配合random crop使用的高效LabelPooling方法，能够更准确地指导分类网络" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-51953.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/4dc31b95b313166988b35cb9d1cdc418.webp" />
+        <meta property="og:release_date" content="2025-02-06T05:28:36" />
+    <meta property="og:updated_time" content="2025-02-06T05:28:36" />
+        <meta property="og:description" content="人工标注数据集中普遍存在噪声，ReLabel能够自动且低成本地将原本的单标签数据集转化为多标签数据集，并且提出配合random crop使用的高效LabelPooling方法，能够更准确地指导分类网络" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                        <li><a href="#">关于</a></li>
+                                    <li><a href="#">联系</a></li>
+                                </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<blockquote> <p>人工标注数据集中普遍存在噪声，ReLabel能够自动且低成本地将原本的单标签数据集转化为多标签数据集，并且提出配合random crop使用的高效LabelPooling方法，能够更准确地指导分类网络的训练</p> <p>来源：晓飞的算法工程笔记 公众号</p> </blockquote> <p><strong>论文: Re-labeling ImageNet:from Single to Multi-Labels, from Global to Localized Labels</strong></p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/698f8cf3540b2b0ffe9f82039e968746.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <ul> <li><strong>论文地址：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://arxiv.org/abs/2101.05022"  target="_blank" rel="nofollow">https://arxiv.org/abs/2101.05022</a></strong></li> <li><strong>论文代码：<a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://github.com/naver-ai/relabel_imagenet"  target="_blank" rel="nofollow">https://github.com/naver-ai/relabel_imagenet</a></strong></li> </ul> </h1> <hr/> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/9f44ba89b9434ef960dda7318e1bb904.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  ImageNet数据集是图像识别领域很重要的数据集，数据集本身假设图片中只有一个目标，但是目前发现其中包含了很多噪声数据，很多图片实际上可能存在多个类别目标，这种情况就会误导网络的学习。此外，论文发现常用的Random crop数据增强方法会加剧这一现象，对验证集的每张图片进行100次Random crop，统计裁剪图片与原目标之间的IoU，结果如上面的图所示，IoU低于0.5的占比为76.5%，IoU为0的占比甚至高达8%，这显然会给训练带来极大的干扰。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/0a116c93cd0d0e68d3a9d9ea1801df2c.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  为了解决这一问题，论文提出ReLabel，通过一个标注网络(machine annotator)取得图片的pixel-wise多标签标注<span class="math inline">\(L\in \mathbb{R}^{H\times W\times C}\)</span>，该标注包含标签信息和位置信息，然后按该多标签标注信息将原本的单标签标注转化为多标签标注。论文也提出LabelPooling来配合Random crop使用，根据crop的区域与pixel-wise标注输出对应的多标签信息。区别于知识蒸馏，每张图片每次都需要forward计算，ReLabel方法仅需要每张图片进行一次forward计算，后续都是简单的比例计算，计算量较小。</p> </h1> <hr/> <p>  由于人工标注的成本很高，论文采用了一个标注网络(machine annotator)获取pixel-wise标注，网络结构可以为任意sota网络，考虑到训练的耗时，取该网络在Super-ImageNet数据集上预训练模型，然后在ImageNet上进行fine-tuned。根据交叉熵损失函数的特性，虽然该标注网络是在单标签数据集上训练得到的，但由于数据集存在噪声，这使得网络潜在有多标签预测的能力。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/1f4b6c7d367358cf38c92d4c45c38337.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  由于我们希望获取pixel-wise多标签标注，将原网络的全局池化层去掉，并将后续的全连接层替换为<span class="math inline">\(1\times 1\)</span>卷积层，修改后的网络<span class="math inline">\(f(x)\)</span>的输出变为<span class="math inline">\(L\in \mathbb{R}^{W\times H\times C}\)</span>，这便是我们需要的pixel-wise标注信息。</p> </h1> <hr/> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/a5f15bdbdc896647d951307ee54632a6.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  在获得多标签信息<span class="math inline">\(L\)</span>后，训练时通过Label Pooling获取训练目标，如上图所示，与常规方法的主要区别如下：</p> <ul> <li>常规的训练步骤不管random crop的结果，均赋予原图的单标签。</li> <li>Label Pooling先获取图片对应的pixel-wise多标签信息，然后使用RoIAlign对random crop对应的区域进行特征提取，最后使用全局池化和softmax操作进行分类，得到多标签向量<span class="math inline">\([0,1]^C\)</span>。</li> </ul> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/6642f84e5ac778eaa78141e7ed7a303e.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  使用ReLabel的训练流程可参考上面的伪代码，由于pixel-wise多标签标注是预先计算好的，所以采用ReLabel带来额外计算非常小。</p> </h1> <hr/> <h3 id="space-consumption">Space consumption</h3> <p>  当使用EfficientNet-L2作为标注网络时，输入分辨率为<span class="math inline">\(475\times 475\)</span>，输出的pixel-wise标注信息大小<span class="math inline">\(L\in \mathbb{R}^{15\times 15\times 100}\)</span>，保存所有图片的完整标注信息大约需要1TB的存储。对于每一张图片，除了top-k类别外，其它类别的pixel-wise标注信息几乎都为0，所以可以只需要保存每张图片的top-5 pixel-wise标注信息，大约为10GB，相当于ImageNet数据集大小的10%。</p> <h3 id="time-consumption">Time consumption</h3> <p>  ReLabel需要将ImageNet中每张图片进行一次前向计算，大约耗费10 GPU/时，相当于ResNet-50完整训练时间的3.3%。在每个迭代，LabelPooling大约增加每次迭代的0.5%的额外耗时，而知识蒸馏每轮迭代都要teacher网络进行一次完整的前向计算，耗时相当大。</p> <h3 id="which-machine-annotator-should-we-select">Which machine annotator should we select?</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/1edbc41d6f644a37912c899befea2c57.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  不同标注网络对ReLabel的效果影响很大，论文对比了多种网络结构，结果如上图所示，最终论文选择了EfficientNet-L2作为标注网络。</p> <h3 id="factor-analysis-of-relabel">Factor analysis of ReLabel</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/c11a23e9fc2f4deff45ad558359b9566.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  ReLabel是多标签和pixel-wise的，为了对比这两个特性的必要性，增加了以下三种实现的对比：</p> <ul> <li>Localized single labels：跟ReLabel的步骤一样，最后取softmax分数最大的标签，而非多标签。</li> <li>Global multi-labels：不使用RoIAlign，直接将完整的标注信息进行全局池化，最后取多标签。</li> <li>Global single labels：不使用RoIAlign，直接将完整的标注信息进行全局池化，最后softmax分数最大的标签。</li> </ul> <p>  结果如上图所示，论文提出的ReLabel实现方式效果最好。</p> <h3 id="confidence-of-relabel-supervision">Confidence of ReLabel supervision</h3> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/4e15a8606e527b9de98afecca526d8b9.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  论文也对ReLabel在不同IoU情况下的监督能力进行了探讨，记录5百万张random crop的图片与GT的IoU以及ReLabel输出的最大标签分数，结果如上图所示，标签分数与IoU正相关。当IoU非常小时，标签分数也非常小，这就相当于给网络训练提供了一个训练目标不确定的信号。</p> </h1> <hr/> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/29842a0d3e62f545dceab00e6ef09a44.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  多标签pixel-wise标注信息的可视化。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/c31cb4691326610988f148d4058c862e.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  与其它标签监督方法对比。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/55ad59697fe57dd0a58d142bb3ca08db.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  对不同网络结构的性能提升。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/cae6aa02c55173b63b17ec5f047f52b7.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  搭配其它训练技巧的效果。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/31b41ecb879844eec3671e8bbd939640.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  与知识蒸馏的耗时对比。</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220509/da3e284cebc77b865bb463f56f75821f.jpg" alt="ReLabel：自动将ImageNet转化成多标签数据集，更准确地有监督训练 | 2021新文"></p> <p>  作为目标检测主干网络的表现。</p> </h1> <hr/> <p>  人工标注数据集中普遍存在噪声，ReLabel能够自动且低成本地将原本的单标签数据集转化为多标签数据集，并且提出配合random crop使用的高效LabelPooling方法，能够更准确地指导分类网络的训练。</p> </p> <blockquote> <p>如果本文对你有帮助，麻烦点个赞或在看呗～<br /> 更多内容请关注 微信公众号【晓飞的算法工程笔记】</p> </blockquote> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-51436.htm">成都宠物领养中心官网收容中心地址查询（成都宠物收养所在哪里）</a></p>
+                                        <p>下一个：<a href="/news/article-51954.htm">正规动物医院的处方包括哪些内容（正规动物医院的处方包括哪些内容呢）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-32207.htm" title="猫咪领养协议有法律效应吗知乎（宠物猫领养协议书范本）">猫咪领养协议有法律效应吗知乎（宠物猫领养协议书范本）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-28-netch-node.htm" title="1月28日→18.1M/S|2025年最新免费节点Free Netch订阅链接地址">1月28日→18.1M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-46398.htm" title="动物医院大众点评评语怎么写好 动物医院大众点评评语怎么写好看">动物医院大众点评评语怎么写好 动物医院大众点评评语怎么写好看</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-7-linux-netch-node.htm" title="11月7日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址">11月7日→22.9M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-21926.htm" title="宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片">宠物领养协议书范本大全最新版 宠物领养协议书范本大全最新版图片</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-20-free-netch-node.htm" title="11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址">11月20日→19M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-5-free-subscribe-node.htm" title="1月5日→22.1M/S|2025年最新免费节点Free Netch订阅链接地址">1月5日→22.1M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-25165.htm" title="宠物粮在哪里买比较放心呢（宠物粮在哪个网站买）">宠物粮在哪里买比较放心呢（宠物粮在哪个网站买）</a></li>
+                        <li class="py-2"><a href="/news/article-48296.htm" title="狗粮品牌大全图片及价格表（狗粮品牌有哪些品牌）">狗粮品牌大全图片及价格表（狗粮品牌有哪些品牌）</a></li>
+                        <li class="py-2"><a href="/news/article-36179.htm" title="动物疫苗销售公司排名前十（动物疫苗销售公司排名前十有哪些）">动物疫苗销售公司排名前十（动物疫苗销售公司排名前十有哪些）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">24</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
