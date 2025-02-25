@@ -1,0 +1,224 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-62063.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Kotlin中的扩展函数（静态分派）</title>
+        <meta name="description" content="扩展函数  扩展函数可以在已有类中添加新的方法，不会对原类做修改   举例1  对Context进行扩展showToast方法，可以在Fragment、Activity、Application中弹出T" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-62063.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="Kotlin中的扩展函数（静态分派）" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/6ee7bb92262f32bc0e17e846b2f17a5d.webp" />
+        <meta property="og:release_date" content="2025-02-24T09:15:27" />
+    <meta property="og:updated_time" content="2025-02-24T09:15:27" />
+        <meta property="og:description" content="扩展函数  扩展函数可以在已有类中添加新的方法，不会对原类做修改   举例1  对Context进行扩展showToast方法，可以在Fragment、Activity、Application中弹出T" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Kotlin中的扩展函数（静态分派）">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>Kotlin中的扩展函数（静态分派）</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <h2> <a id="_0" rel="nofollow"></a>扩展函数</h2> <ul> <li>扩展函数可以在已有类中添加新的方法，不会对原类做修改</li> </ul> <h2> <a id="1_3" rel="nofollow"></a>举例1</h2> <ul> <li>对Context进行扩展showToast方法，可以在Fragment、Activity、Application中弹出Toast，showToast的定义可以写在任何文件中</li> </ul> <pre><code class="prism language-kotlin"><span class="token comment">//扩展函数可以定义在任意文件中</span> <span class="token keyword">fun</span> Context<span class="token punctuation">.</span><span class="token function">showToast</span><span class="token punctuation">(</span>msg<span class="token operator">:</span> String<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     Toast<span class="token punctuation">.</span><span class="token function">makeText</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">,</span> msg<span class="token punctuation">,</span> Toast<span class="token punctuation">.</span>LENGTH_SHORT<span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">show</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> </code></pre> <ul> <li>调用showToast</li> </ul> <pre><code class="prism language-kotlin"><span class="token keyword">class</span> App <span class="token operator">:</span> <span class="token function">Application</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span><span class="token punctuation">)</span>         <span class="token function">showToast</span><span class="token punctuation">(</span><span class="token string">"123"</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <h2> <a id="2_21" rel="nofollow"></a>举例2</h2> <ul> <li>DensityEx.kt</li> </ul> <pre><code class="prism language-kotlin"><span class="token keyword">package</span> com<span class="token punctuation">.</span>zhangyu<span class="token punctuation">.</span>myapplication  <span class="token keyword">import</span> android<span class="token punctuation">.</span>content<span class="token punctuation">.</span>Context <span class="token keyword">import</span> android<span class="token punctuation">.</span>content<span class="token punctuation">.</span>res<span class="token punctuation">.</span>Resources <span class="token keyword">import</span> android<span class="token punctuation">.</span>util<span class="token punctuation">.</span>TypedValue  <span class="token keyword">fun</span> Float<span class="token punctuation">.</span><span class="token function">toPx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Float <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> TypedValue<span class="token punctuation">.</span><span class="token function">applyDimension</span><span class="token punctuation">(</span>         TypedValue<span class="token punctuation">.</span>COMPLEX_UNIT_DIP<span class="token punctuation">,</span>         <span class="token keyword">this</span><span class="token punctuation">,</span>         Resources<span class="token punctuation">.</span><span class="token function">getSystem</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>displayMetrics     <span class="token punctuation">)</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> Int<span class="token punctuation">.</span><span class="token function">toPx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span>Int<span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> <span class="token function">toFloat</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toPx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toInt</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> Context<span class="token punctuation">.</span><span class="token function">screenWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Int <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> resources<span class="token punctuation">.</span>displayMetrics<span class="token punctuation">.</span>widthPixels <span class="token punctuation">}</span>  <span class="token keyword">fun</span> Context<span class="token punctuation">.</span><span class="token function">screenHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">:</span> Int <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> resources<span class="token punctuation">.</span>displayMetrics<span class="token punctuation">.</span>heightPixels <span class="token punctuation">}</span>  </code></pre> <ul> <li>调用</li> </ul> <pre><code class="prism language-kotlin"><span class="token keyword">class</span> MainActivity <span class="token operator">:</span> <span class="token function">AppCompatActivity</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">override</span> <span class="token keyword">fun</span> <span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token operator">:</span> Bundle<span class="token operator">?</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">super</span><span class="token punctuation">.</span><span class="token function">onCreate</span><span class="token punctuation">(</span>savedInstanceState<span class="token punctuation">)</span>         <span class="token function">setContentView</span><span class="token punctuation">(</span>R<span class="token punctuation">.</span>layout<span class="token punctuation">.</span>activity_main<span class="token punctuation">)</span>         Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"onCreate: screenWidth=<span class="token interpolation"><span class="token delimiter variable">${<!-- --></span><span class="token function">screenWidth</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token delimiter variable">}</span></span>"</span><span class="token punctuation">)</span>         Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"onCreate: screenHeight=<span class="token interpolation"><span class="token delimiter variable">${<!-- --></span><span class="token function">screenHeight</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token delimiter variable">}</span></span>"</span><span class="token punctuation">)</span>         Log<span class="token punctuation">.</span><span class="token function">d</span><span class="token punctuation">(</span>TAG<span class="token punctuation">,</span> <span class="token string">"onCreate: <span class="token interpolation"><span class="token delimiter variable">${<!-- --></span><span class="token number">30</span><span class="token punctuation">.</span><span class="token function">toPx</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token delimiter variable">}</span></span>"</span><span class="token punctuation">)</span>     <span class="token punctuation">}</span> <span class="token punctuation">}</span> </code></pre> <pre><code class="prism language-kotlin"> D<span class="token operator">/</span>MainActivity<span class="token operator">:</span> onCreate<span class="token operator">:</span> screenWidth<span class="token operator">=</span><span class="token number">1080</span>  D<span class="token operator">/</span>MainActivity<span class="token operator">:</span> onCreate<span class="token operator">:</span> screenHeight<span class="token operator">=</span><span class="token number">2210</span>  D<span class="token operator">/</span>MainActivity<span class="token operator">:</span> onCreate<span class="token operator">:</span> <span class="token number">82</span> </code></pre> <h2> <a id="_70" rel="nofollow"></a>扩展函数是静态解析的</h2> <ul> <li>扩展函数是静态解析的，并不是接收者类型的虚拟成员，在调用扩展函数时，具体被调用的的是哪一个函数，由调用函数的的对象表达式来决定的，而不是动态的类型决定的。</li> </ul> <pre><code class="prism language-kotlin"><span class="token keyword">open</span> <span class="token keyword">class</span> C  <span class="token keyword">class</span> D<span class="token operator">:</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token keyword">fun</span> C<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">"c"</span>   <span class="token comment">// 扩展函数 foo</span>  <span class="token keyword">fun</span> D<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token operator">=</span> <span class="token string">"d"</span>   <span class="token comment">// 扩展函数 foo</span>  <span class="token keyword">fun</span> <span class="token function">printFoo</span><span class="token punctuation">(</span>c<span class="token operator">:</span> C<span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token function">println</span><span class="token punctuation">(</span>c<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>  <span class="token comment">// 类型是 C 类</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>arg<span class="token operator">:</span>Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     <span class="token function">printFoo</span><span class="token punctuation">(</span><span class="token function">D</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span> <span class="token comment">// c</span> <span class="token punctuation">}</span> </code></pre> <ul> <li>若扩展函数和成员函数一致，则使用该函数时，会优先使用成员函数。</li> </ul> <pre><code class="prism language-kotlin"><span class="token keyword">class</span> C <span class="token punctuation">{<!-- --></span>     <span class="token keyword">fun</span> <span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"成员函数"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> C<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span> <span class="token function">println</span><span class="token punctuation">(</span><span class="token string">"扩展函数"</span><span class="token punctuation">)</span> <span class="token punctuation">}</span>  <span class="token keyword">fun</span> <span class="token function">main</span><span class="token punctuation">(</span>arg<span class="token operator">:</span>Array<span class="token operator">&lt;</span>String<span class="token operator">&gt;</span><span class="token punctuation">)</span><span class="token punctuation">{<!-- --></span>     <span class="token keyword">var</span> c <span class="token operator">=</span> <span class="token function">C</span><span class="token punctuation">(</span><span class="token punctuation">)</span>     c<span class="token punctuation">.</span><span class="token function">foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token comment">//成员函数</span> <span class="token punctuation">}</span> </code></pre> <h2> <a id="_105" rel="nofollow"></a>参考资料</h2> <ul> <li><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.runoob.com/kotlin/kotlin-extensions.html"  rel="nofollow">Kotlin 扩展 | 菜鸟教程</a></li> </ul> </div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-61461.htm">美联众合动物医院东坝分院价格如何（美联众合动物医院口碑）</a></p>
+                                        <p>下一个：<a href="/news/article-62064.htm">动物医院实践心得5000字内容摘抄怎么写的（动物医院实践心得5000字内容摘抄怎么写的啊）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-55190.htm" title="ElasticSearch学习：springboot集成ElasticSearch">ElasticSearch学习：springboot集成ElasticSearch</a></li>
+                        <li class="py-2"><a href="/news/article-52490.htm" title="C#关键字Check简单介绍_C#教程">C#关键字Check简单介绍_C#教程</a></li>
+                        <li class="py-2"><a href="/news/article-59142.htm" title="北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）">北京开宠物医院需要多少钱（北京开宠物医院需要多少钱费用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-11-27-netch-node.htm" title="11月27日→19.1M/S|2024年最新免费节点Free Netch订阅链接地址">11月27日→19.1M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2024-12-14-node-share-links.htm" title="12月14日→20.6M/S|2024年最新免费节点Free Netch订阅链接地址">12月14日→20.6M/S|2024年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-39948.htm" title="养鱼专家在线咨询电话 养鱼专家在线咨询电话号码">养鱼专家在线咨询电话 养鱼专家在线咨询电话号码</a></li>
+                        <li class="py-2"><a href="/news/article-38954.htm" title="宠物零食制作方法 宠物零食制作方法教程">宠物零食制作方法 宠物零食制作方法教程</a></li>
+                        <li class="py-2"><a href="/news/article-33154.htm" title="自己能给宠物&#25171;&#38024;吗多少钱（宠物的针可以自己打吗）">自己能给宠物&#25171;&#38024;吗多少钱（宠物的针可以自己打吗）</a></li>
+                        <li class="py-2"><a href="/news/article-29829.htm" title="猫咪打针没反应（猫咪打针没反应怎么回事）">猫咪打针没反应（猫咪打针没反应怎么回事）</a></li>
+                        <li class="py-2"><a href="/news/article-20561.htm" title="狗粮颗粒机二手（颗粒机制作狗粮视频）">狗粮颗粒机二手（颗粒机制作狗粮视频）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">75</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">93</span> <a href="/date/2024-12/" title="2024-12 归档">2024-12</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">30</span> <a href="/date/2024-11/" title="2024-11 归档">2024-11</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
