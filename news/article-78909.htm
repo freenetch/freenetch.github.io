@@ -1,0 +1,221 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-78909.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>准确详解：C/C++ float、double数据类型的表示范围及精度</title>
+        <meta name="description" content="本文转载自：https://blog.csdn.net/black_kyatu/article/details/79257346 今天复习C++遇到了float、double数据类型的表示范围及精度问" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-78909.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="准确详解：C/C++ float、double数据类型的表示范围及精度" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/409889d86ff78f44fa13a03963ed57cd.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:47:15" />
+    <meta property="og:updated_time" content="2025-03-22T08:47:15" />
+        <meta property="og:description" content="本文转载自：https://blog.csdn.net/black_kyatu/article/details/79257346 今天复习C++遇到了float、double数据类型的表示范围及精度问" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="准确详解：C/C++ float、double数据类型的表示范围及精度">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>准确详解：C/C++ float、double数据类型的表示范围及精度</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>本文转载自：https://blog.csdn.net/black_kyatu/article/details/79257346</p> <p>今天复习C++遇到了float、double数据类型的表示范围及精度问题，花费了一些时间重新梳理了一遍，鉴于网上很多文章写的并不清晰，并且有不少疏漏错误之处，特结合个人理解仔细整理如下。</p> <p>要弄清楚这个问题，首先要搞清楚浮点数在内存中的存储方式。浮点数，区别于定点数，指的是小数点位不确定的的数据类型，其原理是将一个浮点数a用两个数m（尾数）和e（指数）来表示：a = m × b^e。其中的b为选取的基数。科学计数法就是一种特殊形式的浮点数。</p> <p>在计算机二进制表示中，浮点数采用2作为基数，规定尾数的范围为1.0~2.0之间。</p> <p>以float类型为例，根据最广泛采用的IEEE754标准规定，float数据类型长度为32位，其中最高位为符号位，中间8位为指数位，最后23位作为尾数位。</p> <p>最高位符号位通过0/1来区分正负，0正1负；指数位则规定采用移码的形式存储，这样可以保证指数部分为无符号数，方便比较大小。移码表示法是在数X上增加一个偏移量来定义的，如果机器字长为n，规定偏移量为2<sup>(n-1)，对于8位补码-128~127，可得到对应的阶码表示为0~255，其中全0和全1分别用来表示0和无穷大，故规定1~254用来表示规范数字，即对应指数范围从-126到127；尾数部分统一规定为1.0-2.0之间，最高位必然为1，故可以省略，所以尾数部分从小数点后算起，最小可以取到1，最大则取到二进制1.1…1(小数点后23位)，即取到2-2</sup>-23，可近似约等于2。故得到float绝对值的最大值取到2<sup>127*(2-2</sup>-23)约等于2<sup>128=3.4E+38。加上符号之后可得float表示范围为(-3.4E+38)~(3.4E+38)。当然实际是取不到的，开区间。绝对值最小则可以取到2</sup>-127*1，即为1.175E-38。</p> <p>接下来解释精度。由于尾数部分位数是固定的小数点后23位，23位所能表示的最大数是2^23−1=8388607，所以十进制的尾数部分最大数值是8388607，也就是说尾数数值超过这个值之后，float将无法精确表示，所以float最多能表示小于8388607的小数点后7位，但绝对能保证的为6位，也即float的十进制的精度为为6~7位。</p> <p>double数据类型的推算过程和上述同理，唯一的区别在于尾数由23位扩展到52位，阶码由8位增加到了11位，计算方法不变。所以double的阶码（移码表示）为1<sub>2046，偏移量为1023，故指数范围为-1022</sub>1023，得表示范围为(2<sup>1023*2)~(-2</sup>1023*2)即为-1.7E+308~1.7E+308，绝对值最小可以取到2<sup>-1022，精度则为2</sup>52-1=4503599627370495，为16位。所以精度最高位16位，一定可以保证15位。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78908.htm">C# 扩展方法简介</a></p>
+                                        <p>下一个：<a href="/news/article-79578.htm">国内动物疫苗龙头企业名单公示最新（全球动物疫苗龙头公司）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-2-7-free-node-subscribe-links.htm" title="2月7日→20.7M/S|2025年最新免费节点Free Netch订阅链接地址">2月7日→20.7M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-45428.htm" title="宠物粮加工厂投资多少 宠物粮加工厂投资多少钱">宠物粮加工厂投资多少 宠物粮加工厂投资多少钱</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-10-free-netch-node.htm" title="3月10日→19.5M/S|2025年最新免费节点Free Netch订阅链接地址">3月10日→19.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-54097.htm" title="动物医院出问题如何投诉（举报动物医院打什么电话）">动物医院出问题如何投诉（举报动物医院打什么电话）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-share-netch-node.htm" title="3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址">3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-60883.htm" title="1分钟掌握 Python 函数参数">1分钟掌握 Python 函数参数</a></li>
+                        <li class="py-2"><a href="/news/article-53017.htm" title="国货猫粮排行榜前十名（2021年国产猫粮推荐与测评）">国货猫粮排行榜前十名（2021年国产猫粮推荐与测评）</a></li>
+                        <li class="py-2"><a href="/news/article-68260.htm" title=".NET宝藏API之：IHostedService，后台任务执行">.NET宝藏API之：IHostedService，后台任务执行</a></li>
+                        <li class="py-2"><a href="/news/article-69537.htm" title="国产十大品牌狗粮的排行榜（国产狗粮品牌推荐）">国产十大品牌狗粮的排行榜（国产狗粮品牌推荐）</a></li>
+                        <li class="py-2"><a href="/news/article-52490.htm" title="C#关键字Check简单介绍_C#教程">C#关键字Check简单介绍_C#教程</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

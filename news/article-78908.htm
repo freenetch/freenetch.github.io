@@ -1,0 +1,221 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-78908.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>C# 扩展方法简介</title>
+        <meta name="description" content="C# 中提供一个非常实用的供能，扩展方法（Extension method），通过扩展方法，我们可以对已有类型做自己想做的相关扩展。 扩展方法是通过额外的静态方法扩展现有的类型。 &nbsp; 扩展方" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-78908.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="C# 扩展方法简介" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/4dc31b95b313166988b35cb9d1cdc418.webp" />
+        <meta property="og:release_date" content="2025-03-22T08:47:15" />
+    <meta property="og:updated_time" content="2025-03-22T08:47:15" />
+        <meta property="og:description" content="C# 中提供一个非常实用的供能，扩展方法（Extension method），通过扩展方法，我们可以对已有类型做自己想做的相关扩展。 扩展方法是通过额外的静态方法扩展现有的类型。 &nbsp; 扩展方" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="C# 扩展方法简介">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>C# 扩展方法简介</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <p>C# 中提供一个非常实用的供能，扩展方法（Extension method），通过扩展方法，我们可以对已有类型做自己想做的相关扩展。</p> <p>扩展方法是通过额外的静态方法扩展现有的类型。</p> <p>&nbsp;</p> <p>扩展方法是在一个静态类中定义的，并且扩展方法也要是静态方法，并且扩展方法的第一个参数为要扩展的类型，必须附加一个this关键字。</p> <p>&nbsp;</p> <p>来看一个简单的扩展方法：</p> <pre><code class="language-html">namespace MethodExtend {     static class ExtendMethodTest     {         public static void testExtendMethod(this int i)         {             Console.WriteLine("Extend Method Test");         }          public static void testExtendMethod(this int i, int index)         {             Console.WriteLine(-index);         }          public static void testExten2(this int i)         {             Console.WriteLine("extend method test");         }     } }</code></pre> <p> &nbsp;</p> <p>上面这个类中的三个方法都是扩展方法，this int i表明要扩展的类型为int类型。this 修饰的是 int ,表明这个扩展方法是扩展的int 类型。</p> <p>&nbsp;</p> <p>下面看一下扩展方法的引用：</p> <pre><code class="language-html">using System; using System.Collections.Generic; using System.Linq; using System.Text;  namespace MethodExtend {     class Program     {         static void Main(string[] args)         {             int age = 25;             age.testExtendMethod();              Console.WriteLine("///");             int t = 6;             t.testExtendMethod(t);                 }     } }</code></pre> <p> C#编译器会自动检测当前在作用域中的所有static类，找出为一个给定的类型定义的扩展方法。</p> <p>如果你自己写的扩展方法的命名空间不在当前命名空间中， 只要自己添加相对应的命名空间就可以了。</p> <p>&nbsp;</p> <p>如果扩展方法包含参数，就可以在要扩展的类型（即第一个参数）以后顺序的添加扩展方法对应的参数既可，在调用的时候填写相应参数，不过请记住，第一个参数为要扩展的类型，在填写实参的时候并没有这个参数。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-78218.htm">动物疫苗价格表图片大全集（动物疫苗价格查询）</a></p>
+                                        <p>下一个：<a href="/news/article-78909.htm">准确详解：C/C++ float、double数据类型的表示范围及精度</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-node-share-links.htm" title="3月7日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址">3月7日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-7-free-netch-node.htm" title="1月7日→21.2M/S|2025年最新免费节点Free Netch订阅链接地址">1月7日→21.2M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-57430.htm" title="win11系统怎么更改屏幕刷新率">win11系统怎么更改屏幕刷新率</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-1-4-netch-node.htm" title="1月4日→18.5M/S|2025年最新免费节点Free Netch订阅链接地址">1月4日→18.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-49879.htm" title="正常宠物店一年利润有多少钱（宠物店一年内的收入情况来源）">正常宠物店一年利润有多少钱（宠物店一年内的收入情况来源）</a></li>
+                        <li class="py-2"><a href="/news/article-61461.htm" title="美联众合动物医院东坝分院价格如何（美联众合动物医院口碑）">美联众合动物医院东坝分院价格如何（美联众合动物医院口碑）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-2-4-node-share.htm" title="2月4日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址">2月4日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-5-share-netch-node.htm" title="3月5日→21.5M/S|2025年最新免费节点Free Netch订阅链接地址">3月5日→21.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-56305.htm" title="动物医院有哪些岗位（动物医院属于什么专业）">动物医院有哪些岗位（动物医院属于什么专业）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-node-subscribe-links.htm" title="3月12日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址">3月12日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">72</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-02/" title="2025-02 归档">2025-02</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">84</span> <a href="/date/2025-01/" title="2025-01 归档">2025-01</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                            <p>
+                                <a href="/">首页</a> | 
+                                <a href="/free-node/">免费节点</a> | 
+                                <a href="/news/">新闻资讯</a> |
+                                <a href="/about-us.htm">关于我们</a> |
+                                <a href="/disclaimer.htm">免责申明</a> |
+                                <a href="/privacy.htm">隐私申明</a> |
+                                <a href="/sitemap.xml">网站地图</a>
+                            </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
