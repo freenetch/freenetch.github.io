@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-90304.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Vue混入mixins，让你减少一半代码</title>
+        <meta name="description" content="混入 (mixin) 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。 一个混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被“混合”进入该组件本身的选项。  实" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-90304.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="Vue混入mixins，让你减少一半代码" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/0029b2f8301593911c697472a6f8f9fe.webp" />
+        <meta property="og:release_date" content="2025-04-07T09:01:55" />
+    <meta property="og:updated_time" content="2025-04-07T09:01:55" />
+        <meta property="og:description" content="混入 (mixin) 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。 一个混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被“混合”进入该组件本身的选项。  实" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Vue混入mixins，让你减少一半代码">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>Vue混入mixins，让你减少一半代码</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-atom-one-dark"> <p>混入 (mixin) 提供了一种非常灵活的方式，来分发 Vue 组件中的可复用功能。</p> <p>一个混入对象可以包含任意组件选项。当组件使用混入对象时，所有混入对象的选项将被“混合”进入该组件本身的选项。</p> <h2> <a id="_4" rel="nofollow"></a>实例</h2> <p>web 应用免不了要和表格打交道，特别是管理类或者后台类的应用。</p> <p>多个组件可能都包含有表格组件，但是逻辑基本都一样，比如表格分页、分页数量调整等等操作，这个时候就适用混入来实现。</p> <h2> <a id="_10" rel="nofollow"></a>使用</h2> <p>技术栈使用 Vue 项目 + elementUI</p> <p>在 src 目录下新建 mixins 目录，统一管理混入 js。</p> <p>然后在该目录下新建 pageMixin.js</p> <p><strong>pageMixin.js</strong></p> <pre><code class="prism language-javascript"><span class="token keyword">export</span> <span class="token keyword">const</span> pageMixin <span class="token operator">=</span> <span class="token punctuation">{<!-- --></span>   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span>       <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">''</span><span class="token punctuation">,</span>       <span class="token literal-property property">queryData</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         <span class="token literal-property property">currPage</span><span class="token operator">:</span> <span class="token number">1</span><span class="token punctuation">,</span>         <span class="token literal-property property">pageSize</span><span class="token operator">:</span> <span class="token number">10</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>       <span class="token literal-property property">tableData</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         <span class="token literal-property property">rows</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span>         <span class="token literal-property property">total</span><span class="token operator">:</span> <span class="token number">0</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>       <span class="token literal-property property">loading</span><span class="token operator">:</span> <span class="token boolean">false</span><span class="token punctuation">,</span> <span class="token comment">// 加载列表数据的Loading</span>       <span class="token literal-property property">pageSizes</span><span class="token operator">:</span> <span class="token punctuation">[</span><span class="token number">10</span><span class="token punctuation">,</span> <span class="token number">20</span><span class="token punctuation">,</span> <span class="token number">30</span><span class="token punctuation">,</span> <span class="token number">50</span><span class="token punctuation">,</span> <span class="token number">100</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token comment">// 每页行数列表,用于切换每页行数</span>       <span class="token literal-property property">layout</span><span class="token operator">:</span> <span class="token string">"total, sizes, prev, pager, next, jumper"</span> <span class="token comment">// Element表格组件中使用的功能</span>     <span class="token punctuation">}</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>     <span class="token comment">// 查询列表数据</span>     <span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>       <span class="token keyword">this</span><span class="token punctuation">.</span>$axios<span class="token punctuation">.</span><span class="token function">get</span><span class="token punctuation">(</span><span class="token keyword">this</span><span class="token punctuation">.</span>url<span class="token punctuation">,</span> <span class="token punctuation">{<!-- --></span>         <span class="token literal-property property">params</span><span class="token operator">:</span> <span class="token keyword">this</span><span class="token punctuation">.</span>queryData       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">then</span><span class="token punctuation">(</span><span class="token parameter">res</span> <span class="token operator">=&gt;</span> <span class="token punctuation">{<!-- --></span>         <span class="token keyword">this</span><span class="token punctuation">.</span>tableData <span class="token operator">=</span> res<span class="token punctuation">.</span>data<span class="token punctuation">;</span>       <span class="token punctuation">}</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span><span class="token punctuation">,</span>     <span class="token comment">// 修改当前页</span>     <span class="token function">handleCurrentChange</span><span class="token punctuation">(</span><span class="token parameter">currPage</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>       <span class="token keyword">this</span><span class="token punctuation">.</span>queryData<span class="token punctuation">.</span>currPage <span class="token operator">=</span> currPage<span class="token punctuation">;</span>       <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span><span class="token punctuation">,</span>     <span class="token comment">// 修改每页行数</span>     <span class="token function">handleSizeChange</span><span class="token punctuation">(</span><span class="token parameter">pageSize</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>       <span class="token keyword">this</span><span class="token punctuation">.</span>queryData<span class="token punctuation">.</span>currPage <span class="token operator">=</span> <span class="token number">1</span><span class="token punctuation">;</span>       <span class="token keyword">this</span><span class="token punctuation">.</span>queryData<span class="token punctuation">.</span>pageSize <span class="token operator">=</span> pageSize<span class="token punctuation">;</span>       <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>     <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span> <span class="token punctuation">}</span>  </code></pre> <p>组件引入</p> <pre><code class="prism language-javascript"><span class="token operator">&lt;</span>template<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span>div<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span>el<span class="token operator">-</span>table <span class="token operator">:</span>data<span class="token operator">=</span><span class="token string">"tableData.rows"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column prop<span class="token operator">=</span><span class="token string">"userID"</span> label<span class="token operator">=</span><span class="token string">"ID"</span> width<span class="token operator">=</span><span class="token string">"180"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column prop<span class="token operator">=</span><span class="token string">"account"</span> label<span class="token operator">=</span><span class="token string">"账号"</span> width<span class="token operator">=</span><span class="token string">"180"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column prop<span class="token operator">=</span><span class="token string">"password"</span> label<span class="token operator">=</span><span class="token string">"密码"</span><span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">-</span>column<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>table<span class="token operator">&gt;</span>      <span class="token operator">&lt;</span>div style<span class="token operator">=</span><span class="token string">"text-align:left;margin:10px"</span><span class="token operator">&gt;</span>       <span class="token operator">&lt;</span>el<span class="token operator">-</span>pagination         @size<span class="token operator">-</span>change<span class="token operator">=</span><span class="token string">"handleSizeChange"</span>         @current<span class="token operator">-</span>change<span class="token operator">=</span><span class="token string">"handleCurrentChange"</span>         <span class="token operator">:</span>page<span class="token operator">-</span>sizes<span class="token operator">=</span><span class="token string">"pageSizes"</span>         <span class="token operator">:</span>page<span class="token operator">-</span>size<span class="token operator">=</span><span class="token string">"pageSizes[0]"</span>         <span class="token literal-property property">background</span>         <span class="token operator">:</span>layout<span class="token operator">=</span><span class="token string">"layout"</span>         <span class="token operator">:</span>total<span class="token operator">=</span><span class="token string">"tableData.total"</span>       <span class="token operator">&gt;</span><span class="token operator">&lt;</span><span class="token operator">/</span>el<span class="token operator">-</span>pagination<span class="token operator">&gt;</span>     <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span>   <span class="token operator">&lt;</span><span class="token operator">/</span>div<span class="token operator">&gt;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>template<span class="token operator">&gt;</span>  <span class="token operator">&lt;</span>script<span class="token operator">&gt;</span> <span class="token keyword">import</span> <span class="token punctuation">{<!-- --></span> pageMixin <span class="token punctuation">}</span> <span class="token keyword">from</span> <span class="token string">"@/mixins/pageMixin"</span><span class="token punctuation">;</span>  <span class="token keyword">export</span> <span class="token keyword">default</span> <span class="token punctuation">{<!-- --></span>   <span class="token literal-property property">name</span><span class="token operator">:</span> <span class="token string">"HelloWorld"</span><span class="token punctuation">,</span>   <span class="token literal-property property">mixins</span><span class="token operator">:</span> <span class="token punctuation">[</span>pageMixin<span class="token punctuation">]</span><span class="token punctuation">,</span>   <span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span>       <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"/api/user/list"</span>     <span class="token punctuation">}</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token literal-property property">components</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token function">mounted</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">this</span><span class="token punctuation">.</span><span class="token function">getList</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span>   <span class="token literal-property property">methods</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span><span class="token punctuation">}</span> <span class="token punctuation">}</span><span class="token punctuation">;</span> <span class="token operator">&lt;</span><span class="token operator">/</span>script<span class="token operator">&gt;</span> </code></pre> <p>因各个组件的请求列表 api 不一致，需要对应设置接口变量。</p> <h2> <a id="_109" rel="nofollow"></a>多条件查询</h2> <p>当组件和混入对象含有同名选项时，这些选项将以恰当的方式进行“合并”，发生冲突时以组件数据优先。</p> <p>有些组件可能有多条件查询，而且各个 api 查询字段都不一样。</p> <p>这时候在组件中可以设置 queryData 参数。</p> <pre><code class="prism language-javascript"><span class="token function">data</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{<!-- --></span>     <span class="token keyword">return</span> <span class="token punctuation">{<!-- --></span>       <span class="token literal-property property">queryData</span><span class="token operator">:</span> <span class="token punctuation">{<!-- --></span>         <span class="token literal-property property">title</span><span class="token operator">:</span> <span class="token string">""</span>       <span class="token punctuation">}</span><span class="token punctuation">,</span>       <span class="token literal-property property">url</span><span class="token operator">:</span> <span class="token string">"/api/user/list"</span>     <span class="token punctuation">}</span><span class="token punctuation">;</span>   <span class="token punctuation">}</span><span class="token punctuation">,</span> </code></pre> <p>这时候接口查询时会加上 title 参数。</p> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-89548.htm">开网店去哪里拿货源好（开网店去哪里进货）</a></p>
+                                        <p>下一个：<a href="/news/article-90306.htm">同安猫咪领养（同安猫咪领养中心地址）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-89547.htm" title="去宠物医院绝育会不会被感染（去宠物医院绝育会不会被感染艾滋病）">去宠物医院绝育会不会被感染（去宠物医院绝育会不会被感染艾滋病）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-5-free-node-subscribe-links.htm" title="4月5日→18.6M/S|2025年最新免费节点Free Netch订阅链接地址">4月5日→18.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-76858.htm" title="动物疫苗本怎么办 动物疫苗本怎么办理">动物疫苗本怎么办 动物疫苗本怎么办理</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-21-free-subscribe-node.htm" title="3月21日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址">3月21日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-85940.htm" title="沧州宠物服务平台（沧州宠物吧）">沧州宠物服务平台（沧州宠物吧）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-12-free-node-subscribe-links.htm" title="3月12日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址">3月12日→19.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-74827.htm" title="三国杀武将台词语音包下载（三国杀角色台词语音）">三国杀武将台词语音包下载（三国杀角色台词语音）</a></li>
+                        <li class="py-2"><a href="/news/article-66982.htm" title="领养宠物后要办什么手续（领养宠物需要哪些手续）">领养宠物后要办什么手续（领养宠物需要哪些手续）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-17-linux-netch-node.htm" title="3月17日→20.1M/S|2025年最新免费节点Free Netch订阅链接地址">3月17日→20.1M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-netch-node.htm" title="3月30日→19.1M/S|2025年最新免费节点Free Netch订阅链接地址">3月30日→19.1M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-88112.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>DataLoader 和 Dataset</title>
+        <meta name="description" content="Dataset是一个包装类，用来将数据包装为Dataset类，然后传入DataLoader中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。 DataLoader是一个比较重要的类，" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-88112.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="DataLoader 和 Dataset" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/6bf05f250f955b5c11937f0020fca2ab.webp" />
+        <meta property="og:release_date" content="2025-04-04T09:06:52" />
+    <meta property="og:updated_time" content="2025-04-04T09:06:52" />
+        <meta property="og:description" content="Dataset是一个包装类，用来将数据包装为Dataset类，然后传入DataLoader中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。 DataLoader是一个比较重要的类，" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="DataLoader 和 Dataset">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>DataLoader 和 Dataset</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="markdown_views prism-dracula"> <p><strong>Dataset</strong>是一个<strong>包装类</strong>，用来将数据包装为Dataset类，然后传入<strong>DataLoader</strong>中，我们再使用DataLoader这个类来更加快捷的对数据进行操作。</p> <p>DataLoader是一个比较重要的类，它为我们提供的常用操作有：batch_size(每个batch的大小), shuffle(是否进行shuffle操作), num_workers(加载数据的时候使用几个子进程)<br /> 当我们集成了一个 Dataset类之后，我们需要重写 len 方法，该方法提供了dataset的大小； getitem 方法， 该方法支持从 0 到 len(self)的索引</p> <pre><code class="prism language-python"><span class="token keyword">from</span> torch<span class="token punctuation">.</span>utils<span class="token punctuation">.</span>data <span class="token keyword">import</span> Dataset <span class="token keyword">class</span> <span class="token class-name">PTB</span><span class="token punctuation">(</span>Dataset<span class="token punctuation">)</span><span class="token punctuation">:</span>     <span class="token triple-quoted-string string">"""battery dataset."""</span>     <span class="token keyword">def</span> <span class="token function">__init__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> data_dir<span class="token punctuation">,</span> split<span class="token punctuation">,</span>battery_dataset<span class="token operator">=</span><span class="token punctuation">[</span><span class="token punctuation">]</span><span class="token punctuation">,</span><span class="token operator">**</span>kwargs<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token triple-quoted-string string">"""         Args:             csv_file (string): Path to the csv file with annotations.             data_dir (string): data path0         """</span>         <span class="token builtin">super</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span>__init__<span class="token punctuation">(</span><span class="token punctuation">)</span>         self<span class="token punctuation">.</span>data_dir <span class="token operator">=</span> data_dir         <span class="token keyword">try</span><span class="token punctuation">:</span>             <span class="token keyword">for</span> <span class="token builtin">file</span> <span class="token keyword">in</span> os<span class="token punctuation">.</span>listdir<span class="token punctuation">(</span>self<span class="token punctuation">.</span>data_dir<span class="token punctuation">)</span><span class="token punctuation">:</span>                 <span class="token comment"># print("file",os.path.join(data_dir,file))</span>                 df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>os<span class="token punctuation">.</span>path<span class="token punctuation">.</span>join<span class="token punctuation">(</span>data_dir<span class="token punctuation">,</span><span class="token builtin">file</span><span class="token punctuation">)</span><span class="token punctuation">,</span> encoding<span class="token operator">=</span><span class="token string">"gbk"</span><span class="token punctuation">)</span>                  <span class="token comment"># self.battery_frame = df.values</span>                 <span class="token comment"># # print("self.battery_frame",self.battery_frame)</span>                 <span class="token comment"># # print("self.battery_frame",self.battery_frame.shape)</span>                 <span class="token comment"># battery_dataset.append(self.battery_frame)</span>                  windows<span class="token operator">=</span><span class="token number">32</span>                 windows_move<span class="token operator">=</span><span class="token number">1</span>                 <span class="token keyword">if</span> df<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">&gt;=</span>windows<span class="token punctuation">:</span>                     self<span class="token punctuation">.</span>battery_frame <span class="token operator">=</span> df<span class="token punctuation">.</span>values                     <span class="token comment"># print("self.battery_frame",self.battery_frame)</span>                     <span class="token comment"># print("self.battery_frame",self.battery_frame.shape)</span>                                          feature_num <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_frame<span class="token punctuation">.</span>shape<span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">]</span><span class="token operator">-</span>windows<span class="token operator">+</span>windows_move                     <span class="token keyword">for</span> index <span class="token keyword">in</span> <span class="token builtin">range</span><span class="token punctuation">(</span><span class="token number">0</span><span class="token punctuation">,</span>feature_num<span class="token punctuation">,</span>windows_move<span class="token punctuation">)</span><span class="token punctuation">:</span>                         feature_df <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_frame<span class="token punctuation">[</span>index<span class="token punctuation">:</span><span class="token punctuation">(</span>index <span class="token operator">+</span> windows<span class="token punctuation">)</span><span class="token punctuation">]</span>                                         battery_dataset<span class="token punctuation">.</span>append<span class="token punctuation">(</span>feature_df<span class="token punctuation">)</span>                     self<span class="token punctuation">.</span>battery_dataset <span class="token operator">=</span> battery_dataset         <span class="token keyword">except</span> RuntimeError<span class="token punctuation">:</span>             <span class="token keyword">pass</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>     <span class="token keyword">def</span> <span class="token function">__len__</span><span class="token punctuation">(</span>self<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#返回文件数据的数目</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span><span class="token punctuation">)</span>         <span class="token keyword">return</span> <span class="token builtin">len</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">)</span>         <span class="token comment"># return 1800000</span>     <span class="token keyword">def</span> <span class="token function">__getitem__</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> idx<span class="token punctuation">)</span><span class="token punctuation">:</span>         <span class="token comment">#接收一个索引，返回一个样本(tensor维度相同)</span>         <span class="token keyword">print</span> <span class="token punctuation">(</span>idx<span class="token punctuation">)</span>         <span class="token comment"># battery = self.battery_frame.get_chunk(128).as_matrix().astype('float')</span>         <span class="token comment"># battery = self.battery_dataset[idx].as_matrix().astype('float')</span>         battery <span class="token operator">=</span> self<span class="token punctuation">.</span>battery_dataset<span class="token punctuation">[</span>idx<span class="token punctuation">]</span>         <span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">"__getitem__"</span><span class="token punctuation">,</span>battery<span class="token punctuation">.</span>shape<span class="token punctuation">)</span>          <span class="token keyword">return</span> battery </code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-88111.htm">JS &#8211;引用数据类型</a></p>
+                                        <p>下一个：<a href="/news/article-88804.htm">开宠物店会亏本吗现在（开宠物店会不会赔本）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-74828.htm" title="2021公务员国考报名公告（2021国考公务员招考公告）">2021公务员国考报名公告（2021国考公务员招考公告）</a></li>
+                        <li class="py-2"><a href="/news/article-66345.htm" title="宠物粮加工厂赚钱吗现在 宠物粮加工厂赚钱吗现在怎么样">宠物粮加工厂赚钱吗现在 宠物粮加工厂赚钱吗现在怎么样</a></li>
+                        <li class="py-2"><a href="/news/article-65733.htm" title="天津宠物猫领养中心电话（天津宠物领养 猫）">天津宠物猫领养中心电话（天津宠物领养 猫）</a></li>
+                        <li class="py-2"><a href="/news/article-72156.htm" title="动物打疫苗能管用多长时间的药（动物打疫苗有什么用）">动物打疫苗能管用多长时间的药（动物打疫苗有什么用）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-11-free-node-subscribe.htm" title="3月11日→18.7M/S|2025年最新免费节点Free Netch订阅链接地址">3月11日→18.7M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-69539.htm" title="给动物打疫苗多少钱一针啊（给动物打的疫苗是什么）">给动物打疫苗多少钱一针啊（给动物打的疫苗是什么）</a></li>
+                        <li class="py-2"><a href="/news/article-76188.htm" title="养狗最忌讳的三个属相是什么（养狗养不活是什么兆头）">养狗最忌讳的三个属相是什么（养狗养不活是什么兆头）</a></li>
+                        <li class="py-2"><a href="/news/article-72814.htm" title="动物疫苗在哪买便宜（动物疫苗价格查询）">动物疫苗在哪买便宜（动物疫苗价格查询）</a></li>
+                        <li class="py-2"><a href="/news/article-77531.htm" title="成都宠物领养中心官网电话是多少啊（成都领养宠物中心在哪）">成都宠物领养中心官网电话是多少啊（成都领养宠物中心在哪）</a></li>
+                        <li class="py-2"><a href="/news/article-80983.htm" title="宠物店不好做（宠物店开不下去了）">宠物店不好做（宠物店开不下去了）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>

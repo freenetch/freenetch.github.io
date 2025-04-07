@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-88111.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>JS &#8211;引用数据类型</title>
+        <meta name="description" content="JS数据类型三大类： 1.原始数据类型：数值类型number 字符串类型string，boolean类型，存放在栈内存 2.特殊数据类型：null,undifined,存放在栈内存3.引用数据类型：对" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-88111.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="JS &#8211;引用数据类型" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/0cdbb171f8d1d7104a29a47c2be5e046.webp" />
+        <meta property="og:release_date" content="2025-04-04T09:06:52" />
+    <meta property="og:updated_time" content="2025-04-04T09:06:52" />
+        <meta property="og:description" content="JS数据类型三大类： 1.原始数据类型：数值类型number 字符串类型string，boolean类型，存放在栈内存 2.特殊数据类型：null,undifined,存放在栈内存3.引用数据类型：对" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="JS &#8211;引用数据类型">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>JS &#8211;引用数据类型</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <h3>JS数据类型三大类：</h3> <p>1.原始数据类型：数值类型number 字符串类型string，boolean类型，存放在<span style="color:#fe2c24;"><strong>栈内存</strong></span><br /> 2.特殊数据类型：null,undifined,存放在<span style="color:#fe2c24;"><strong>栈内存</strong></span><br /><strong><span style="color:#0d0016;">3.引用数据类型：对象数据类型object，array数组，function函数。存放在</span><span style="color:#fe2c24;">堆内存</span><span style="color:#0d0016;">里面</span></strong></p> <table border="1" cellpadding="1" cellspacing="1" style="width:541px;"> <tbody> <tr> <td style="width:243px;"> <p><strong><span style="color:#ff9900;">栈内存 &nbsp; &nbsp; &nbsp;</span></strong></p> <p><strong>number /&nbsp;string /&nbsp;boolean </strong></p> <p><strong>null / undifined&nbsp;</strong></p> <p> 1.声明变量就会在栈内存中开辟内存空间，变量则是对应的内存地址</p> <p>2.变量的赋值则是存放在对应的内存空间中的具体</p> <p>3.如果变量的值是<span style="color:#be191c;">原始数据类型</span>或者<span style="color:#be191c;">特殊数据类型</span><span style="color:#0d0016;">直接存放在栈内存</span></p> </td> <td style="width:294px;"> <p><strong><span style="color:#ff9900;">堆内存</span> </strong></p> <p><strong>object / array / function</strong></p> <p>4.<span style="color:#be191c;">引用数据类型</span>存放在堆内存，引用数据类型赋值给变量，是把<strong><u>引用数据类型在堆内存地址赋值给变量</u></strong></p> </td> </tr> </tbody> </table> <blockquote> <p>var a = { &nbsp; // --&gt; 会在栈中创建一个a内存空间 ，在堆中创建一个内存地址</p> <p>name: "nana",</p> <p>age: 14,</p> <p>}&nbsp;</p> <p>var b // &nbsp;--&gt;&nbsp;创建一个b对象</p> <p>b = a // --&gt; &nbsp;把a变量存的内存地址赋值给b ，这时b和a变量都是指向同一个堆内存地址</p> </blockquote> <p><span style="color:#fe2c24;"><strong>对于引用数据类型，直接赋值是一种<u><span style="background-color:#ffd900;">浅拷贝</span></u>，只拷贝了内存地址。<br /> &nbsp;&nbsp; &nbsp; &nbsp; 堆内存的数据变化之后，其他引用该内存地址的数据也会发生变化。</strong></span></p> <blockquote> <pre><code class="language-html">    &lt;script&gt;         var p1 = {             name: "nana",             age: 14,             addr: "xxx号",         }         var p2 = p1; //把p1的内存地址赋值给p2         console.log(p1)         // 判断p1和p2的内存地址是否相等         console.log(p1 === p2); //true  --&gt;  应用数据类型比较的是内存地址         p2.name = "li"; //单修改了p2中name属性的值，但是内存地址没有改变         console.log(p2);     //由于p2浅拷贝了p1的内存地址，p2的值发生变化时，p1对应的对象值也会改变         console.log(p1);          console.log(p1 === p2); //true  --&gt;  应用数据类型比较的是内存地址     &lt;/script&gt;</code></pre> </blockquote> <p><span style="color:#fe2c24;">如果不想要浅拷贝（拷贝内存地址）。<br /> &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;需要创建一个新的内存地址，然后拷贝对象的属性和值<strong><u>即深拷贝</u></strong></span></p> <pre><code class="language-html">   &lt;script&gt;         var p1 = {             name: "nana",             age: 14,             addr: "xxx号",         }         var p3 = {}; //在堆中创建一个新的内存地址存放对象         for (var a in p1) { //遍历p1中的属性             p3[a] = p1[a]; //把p1中的属性赋值给p3中的属性         }         console.log(p1 === p3); //false --&gt; p3和p1的内存地址不一样         p3.name = "nananan"; //修改了p3中的name值         console.log(p3); //输出的name值为nananan         console.log(p1); //输出的name值为nana 因为内存地址不一样     &lt;/script&gt;</code></pre> </p></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-87371.htm">宠物领养需要带什么证件去国外（领养宠物需要办理哪些手续）</a></p>
+                                        <p>下一个：<a href="/news/article-88112.htm">DataLoader 和 Dataset</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-81657.htm" title="宠物粮市场调查 宠物粮市场调查报告">宠物粮市场调查 宠物粮市场调查报告</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-6-netch-node.htm" title="3月6日→21.4M/S|2025年最新免费节点Free Netch订阅链接地址">3月6日→21.4M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-74139.htm" title="猫养多久才会亲人（猫要养多久才会亲人）">猫养多久才会亲人（猫要养多久才会亲人）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-14-node-share.htm" title="3月14日→22.3M/S|2025年最新免费节点Free Netch订阅链接地址">3月14日→22.3M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-82373.htm" title="JavaScript如何将字符串的字母映射到数组的对象">JavaScript如何将字符串的字母映射到数组的对象</a></li>
+                        <li class="py-2"><a href="/news/article-78908.htm" title="C# 扩展方法简介">C# 扩展方法简介</a></li>
+                        <li class="py-2"><a href="/news/article-67596.htm" title="宠物猫疫苗费用（宠物猫接种疫苗多少钱）">宠物猫疫苗费用（宠物猫接种疫苗多少钱）</a></li>
+                        <li class="py-2"><a href="/news/article-66347.htm" title="宠物领养协议书范本最新图片（宠物领养协议是否有法律效力）">宠物领养协议书范本最新图片（宠物领养协议是否有法律效力）</a></li>
+                        <li class="py-2"><a href="/news/article-72156.htm" title="动物打疫苗能管用多长时间的药（动物打疫苗有什么用）">动物打疫苗能管用多长时间的药（动物打疫苗有什么用）</a></li>
+                        <li class="py-2"><a href="/news/article-67595.htm" title="天津宠物救助站领养宠物（天津正规宠物救助站）">天津宠物救助站领养宠物（天津正规宠物救助站）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">18</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
