@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-91363.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>设计模式学习笔记桥接模式及其应用</title>
+        <meta name="description" content="桥接（Bridge）模式是指将抽象部分与实现部分相分离，使它们都可以独立的发生变化。 一、桥接模式介绍 我们知道，抽象部分一般与实现部分连接有两种方式：继承和实现。那么如何将其解耦分离，桥接模式提供一" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-91363.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="设计模式学习笔记桥接模式及其应用" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/09d18c7c66bcd5cdb6be185eb4661962.webp" />
+        <meta property="og:release_date" content="2025-04-08T09:56:00" />
+    <meta property="og:updated_time" content="2025-04-08T09:56:00" />
+        <meta property="og:description" content="桥接（Bridge）模式是指将抽象部分与实现部分相分离，使它们都可以独立的发生变化。 一、桥接模式介绍 我们知道，抽象部分一般与实现部分连接有两种方式：继承和实现。那么如何将其解耦分离，桥接模式提供一" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="设计模式学习笔记桥接模式及其应用">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>设计模式学习笔记桥接模式及其应用</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<p>桥接（Bridge）模式是指将抽象部分与实现部分相分离，使它们都可以独立的发生变化。</p> <h2 id="一桥接模式介绍">一、桥接模式介绍</h2> <p>我们知道，抽象部分一般与实现部分连接有两种方式：继承和实现。那么如何将其解耦分离，桥接模式提供一种方式，也就是将强关联转为弱关联，将继承转换为组合关系。如下图所示，取消两者的继承关系，改用组合关系：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/4bf53d4fec0ed0b4a79395feef675558.jpg" alt="设计模式学习笔记桥接模式及其应用"></p> <h3 id="11-桥接模式的结构">1.1 桥接模式的结构</h3> <p>我们可以看看桥接模式是怎么解耦，利用组合连接抽象和实现部分，如下所示：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/d34c1492bb4ab48d3e8839c4e7c18913.jpg" alt="设计模式学习笔记桥接模式及其应用"></p> <p>其结构中包含如下角色：</p> <ul> <li><code>Abstraction</code>：抽象化角色，定义抽象类，包含一个对实现化对象的引用（组合）</li> <li><code>RefinedAbstraction</code>：扩展抽象化角色，实现抽象化角色的子类，由此通过组合关系调用实现化角色中的业务方法</li> <li><code>Implementor</code>：实现化角色的接口，供扩展抽象化角色调用</li> <li><code>ImplementorA、ImplementorB</code>：实现化角色的具体实现</li> </ul> <h3 id="12-桥接模式的实现">1.2 桥接模式的实现</h3> <p>我们可以根据上面的UML图实现对应的代码：</p> <pre><code class="language-java">//客户端类 public class Client {     public static void main(String[] args) {         Implementor imple = new ImplementorA();         Abstraction abs = new RefinedAbstraction(imple);         abs.Operation();     } } //实现化角色 interface Implementor {     public void OperationImpl(); } //具体的实现化角色 class ImplementorA implements Implementor {     public void OperationImpl() {         System.out.println("我是具体实现化角色A");     } } class ImplementorB implements Implementor {     public void OperationImpl() {         System.out.println("我是具体实现化角色B");     } } //抽象化角色 abstract class Abstraction {     protected Implementor imple;          protected Abstraction(Implementor imple) {         this.imple = imple;     }          public abstract void Operation(); } //扩展抽象化角色 class RefinedAbstraction extends Abstraction {     protected RefinedAbstraction(Implementor imple) {         super(imple);     }          public void Operation() {         System.out.println("扩展抽象化角色被访问");         imple.OperationImpl();     } }</code></pre> <p>实现结果：</p> <pre><code>扩展抽象化角色被访问 我是具体实现化角色A</code></pre> <h2 id="二桥接模式的应用场景">二、桥接模式的应用场景</h2> <h3 id="21-jdbc-驱动器">2.1 JDBC 驱动器</h3> <p>JDBC为所有的关系型数据库提供一个通用的标准，这就是一个桥接模式的典型应用。我们先回顾一下JDBC的使用，用JDBC连接MySQL数据库主要分为这样几步：</p> <pre><code class="language-java">//1.加载MySQL驱动注入到DriverManager Class.forName("com.mysql.cj.jdbc.Driver"); //2.提供JDBC连接的URL、用户名和密码 String url = "jdbc:mysql://localhost:3306/test_db?"; String username = "root"; String password = "root"; //3.创建数据库的连接 Connection connection = DriverManager.getConnection(url, username, password); //4.创建statement实例 Statement statement = connection.createStatement(); //5.执行SQL语句 String query = "select * from test";  //查询语句，也可以换成CRUD的其他语句 ResultSet resultSet = statement.executeQuery(query); //6.关闭连接对象 connection.close();</code></pre> <p>我们一步步来看，先看步骤1：</p> <pre><code class="language-java">Class.forName("com.mysql.cj.jdbc.Driver");</code></pre> <p>查看对应的<code>com.mysql.cj.jdbc.Driver</code>路径下的源码：</p> <pre><code class="language-java">package com.mysql.cj.jdbc;  import java.sql.DriverManager; import java.sql.SQLException;  public class Driver extends NonRegisteringDriver implements java.sql.Driver {     public Driver() throws SQLException {     }      static {         try {             DriverManager.registerDriver(new Driver());         } catch (SQLException var1) {             throw new RuntimeException("Can't register driver!");         }     } }</code></pre> <p>是通过静态方法调用<code>registerDriver()</code>方法来将MySQL驱动注入到<code>DriverManager</code>，<code>registerDriver()</code>方法具体如下：</p> <pre><code class="language-java">public static synchronized void registerDriver(java.sql.Driver driver)     throws SQLException { 	//直接调用下面的同名静态方法     registerDriver(driver, null); }  public static synchronized void registerDriver(java.sql.Driver driver,DriverAction da)throws SQLException {     /* registeredDrivers是一个list,用DriverInfo实例封装Driver */     if(driver != null) {         registeredDrivers.addIfAbsent(new DriverInfo(driver, da));     } else {         // This is for compatibility with the original DriverManager         throw new NullPointerException();     }     println("registerDriver: " + driver);  }</code></pre> <p><code>registeredDrivers</code>静态变量其实是一个list：</p> <pre><code class="language-java">public class DriverManager {     // List of registered JDBC drivers     private final static CopyOnWriteArrayList&lt;DriverInfo&gt; registeredDrivers = new CopyOnWriteArrayList&lt;&gt;();     //... }</code></pre> <p>而<code>DriverInfo</code>类中封装了<code>java.sql.Driver</code>接口:</p> <pre><code class="language-java">class DriverInfo {      final Driver driver;     DriverAction da;     DriverInfo(Driver driver, DriverAction action) {         this.driver = driver;         da = action;     }     //... }</code></pre> <p>再看步骤2、3，重点是步骤3</p> <pre><code class="language-java">Connection connection = DriverManager.getConnection(url, username, password);</code></pre> <p><code>Connection</code>接口是和特定数据库的连接会话，不同的数据库的连接会话都不相同：</p> <pre><code class="language-java">public interface Connection  extends Wrapper, AutoCloseable {      Statement createStatement() throws SQLException;     //... }</code></pre> <p>是通过<code>DriverManager</code>中的<code>getConnection</code>方法，从<code>registeredDrivers</code>进行选择对应数据库驱动下的连接实例：</p> <pre><code class="language-java">public static Connection getConnection(String url,String user, String password) throws SQLException {     java.util.Properties info = new java.util.Properties();      if (user != null) {         info.put("user", user);     }     if (password != null) {         info.put("password", password);     }      return (getConnection(url, info, Reflection.getCallerClass())); } // 实际上调用的是下面的静态方法getConnection //  Worker method called by the public getConnection() methods. private static Connection getConnection(     String url, java.util.Properties info, Class&lt;?&gt; caller) throws SQLException {     /*          * When callerCl is null, we should check the application's          * (which is invoking this class indirectly)          * classloader, so that the JDBC driver class outside rt.jar          * can be loaded from here.          */     ClassLoader callerCL = caller != null ? caller.getClassLoader() : null;     synchronized(DriverManager.class) {         // synchronize loading of the correct classloader.         if (callerCL == null) {             callerCL = Thread.currentThread().getContextClassLoader();         }     }      if(url == null) {         throw new SQLException("The url cannot be null", "08001");     }      println("DriverManager.getConnection(\"" + url + "\")");      // Walk through the loaded registeredDrivers attempting to make a connection.     // Remember the first exception that gets raised so we can reraise it.     SQLException reason = null;      for(DriverInfo aDriver : registeredDrivers) {         // If the caller does not have permission to load the driver then         // skip it.         if(isDriverAllowed(aDriver.driver, callerCL)) {             try {                 println("    trying " + aDriver.driver.getClass().getName());                 Connection con = aDriver.driver.connect(url, info);                 if (con != null) {                     // Success!                     println("getConnection returning " + aDriver.driver.getClass().getName());                     return (con);                 }             } catch (SQLException ex) {                 if (reason == null) {                     reason = ex;                 }             }          } else {             println("    skipping: " + aDriver.getClass().getName());         }     }      // if we got here nobody could connect.     if (reason != null)    {         println("getConnection failed: " + reason);         throw reason;     }      println("getConnection: no suitable driver found for "+ url);     throw new SQLException("No suitable driver found for "+ url, "08001"); }</code></pre> <p>在<code>Connection</code>接口的具体实现部分，MySQL的连接是通过两层实现完成抽象部分的实现：</p> <pre><code class="language-java">public class ConnectionImpl implements JdbcConnection, SessionEventListener, Serializable {     private static final long serialVersionUID = 4009476458425101761L;     private static final SQLPermission SET_NETWORK_TIMEOUT_PERM = new SQLPermission("setNetworkTimeout");     //... } public interface JdbcConnection extends Connection, MysqlConnection, TransactionEventHandler {     JdbcPropertySet getPropertySet();      void changeUser(String var1, String var2) throws SQLException;     //... }</code></pre> <p>综上我们可以画出对应的类图：</p> <p><img decoding="async" src="http://img.555519.xyz/uploads3/20220510/cde6328eeb41ab8605a8ccbaca316555.jpg" alt="设计模式学习笔记桥接模式及其应用"></p> <h2 id="参考资料">参考资料</h2> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=http://c.biancheng.net/view/1364.html"  target="_blank" rel="nofollow">http://c.biancheng.net/view/1364.html</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://jishuin.proginn.com/p/763bfbd68968"  target="_blank" rel="nofollow">https://jishuin.proginn.com/p/763bfbd68968</a></p> <p><a href="http://www.m6000.cn/wp-content/themes/begin%20lts/inc/go.php?url=https://www.cnblogs.com/kuluo/p/13038076.html"  target="_blank" rel="nofollow">https://www.cnblogs.com/kuluo/p/13038076.html</a></p> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-91362.htm">Vue2 中封装组件-消息提示 Message</a></p>
+                                        <p>下一个：<a href="/news/article-91820.htm">红烧肉丸子怎么做?</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-72157.htm" title="动物注射疫苗简报怎么写好看（兽医打疫苗简报）">动物注射疫苗简报怎么写好看（兽医打疫苗简报）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-7-node-share-links.htm" title="3月7日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址">3月7日→22.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-30-netch-node.htm" title="3月30日→19.1M/S|2025年最新免费节点Free Netch订阅链接地址">3月30日→19.1M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-3-free-high-speed-nodes.htm" title="4月3日→20.5M/S|2025年最新免费节点Free Netch订阅链接地址">4月3日→20.5M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-83075.htm" title="被猫咬了怎么判断有没有得狂犬病（被猫咬了怎么判断有没有得狂犬病毒）">被猫咬了怎么判断有没有得狂犬病（被猫咬了怎么判断有没有得狂犬病毒）</a></li>
+                        <li class="py-2"><a href="/news/article-78218.htm" title="动物疫苗价格表图片大全集（动物疫苗价格查询）">动物疫苗价格表图片大全集（动物疫苗价格查询）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-4-10-node-share.htm" title="4月10日→21.8M/S|2025年最新免费节点Free Netch订阅链接地址">4月10日→21.8M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-share-netch-node.htm" title="3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址">3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-81656.htm" title="宠物领养平台的设计与实现方案怎么写好（宠物领养网站的设计与实现）">宠物领养平台的设计与实现方案怎么写好（宠物领养网站的设计与实现）</a></li>
+                        <li class="py-2"><a href="/news/article-70846.htm" title="安泰家禽育种有限公司有多大 安泰家禽育种有限公司有多大面积">安泰家禽育种有限公司有多大 安泰家禽育种有限公司有多大面积</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">33</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
