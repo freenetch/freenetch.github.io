@@ -1,0 +1,220 @@
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
+<head>
+        <link rel="canonical" href="https://freenetch.github.io/news/article-94815.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>CompletableFuture的使用介绍, CompletableFuture与FutureTask的区别</title>
+        <meta name="description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompletableFuture实现了CompletionStage接口和Future接口，前者是对后" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
+
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/news/article-94815.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="CompletableFuture的使用介绍, CompletableFuture与FutureTask的区别" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/91fe0c32cb57005cfadc0dfb716fb1c5.webp" />
+        <meta property="og:release_date" content="2025-04-13T07:18:27" />
+    <meta property="og:updated_time" content="2025-04-13T07:18:27" />
+        <meta property="og:description" content="&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompletableFuture实现了CompletionStage接口和Future接口，前者是对后" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="CompletableFuture的使用介绍, CompletableFuture与FutureTask的区别">
+    <meta name="format-detection" content="telephone=no">
+
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854"
+     crossorigin="anonymous"></script>
+</head>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>Free Netch</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
+                </div>
+            </div>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>CompletableFuture的使用介绍, CompletableFuture与FutureTask的区别</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/news/">新闻资讯</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="" data-url="">
+                  				  				  				<div id="content_views" class="htmledit_views"> <blockquote> <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CompletableFuture实现了CompletionStage接口和Future接口，前者是对后者的一个扩展，增加了异步回调、流式处理、多个Future组合处理的能力，使Java在处理多任务的协同工作时更加顺畅便利。</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 总的来说简洁了FutureTask与线程池的配合使用</p> <p>&nbsp; &nbsp; &nbsp; &nbsp; 没啥太大区别吧我觉得, 使用方法不一样, 多了一些方法 ???</p> </blockquote> <h2>futureTask 创建异步任务</h2> <pre><code class="language-java">        FutureTask&lt;String&gt; stringFutureTask = new FutureTask&lt;&gt;(() -&gt; {             return "aa";         });         executorService.execute(stringFutureTask);         System.out.println(stringFutureTask.get());          CompletableFuture&lt;String&gt; future1 = CompletableFuture.supplyAsync(() -&gt; {             return "aa";         }, executorService); // 不用手动提交了         System.out.println(future1.get());</code></pre> <blockquote> <p>&nbsp;还有很多异步回调, 组合处理</p> </blockquote> <h2>创建任务</h2> <h3>1. .supplyAsync</h3> <blockquote> <p>&nbsp;创建一个带返回值的任务</p> </blockquote> <h3>&nbsp;2. .runAsync</h3> <blockquote> <p>&nbsp;创建一个不带返回值的任务</p> </blockquote> <pre><code class="language-java">        ExecutorService executorService = Executors.newFixedThreadPool(1);          // 带返回值         CompletableFuture future = CompletableFuture.supplyAsync(() -&gt; {             try {                 System.out.println("future　" + new Date());                 Thread.sleep(2000);             } catch (InterruptedException e) {                 e.printStackTrace();             }             return "aaa";         }, executorService); // 推荐使用</code></pre> <p>&nbsp;以上两个方法都有两个构造方法, 默认不指定自定义线程池, 他会指定默认的提交任务的方法</p> <pre><code class="language-java">    // 查看cpu的核数是否大于1核     private static final boolean useCommonPool =         (ForkJoinPool.getCommonPoolParallelism() &gt; 1);      // 如果大于1核 则调用execute方法, 每次创建一个线程     private static final Executor asyncPool = useCommonPool ?         ForkJoinPool.commonPool() : new ThreadPerTaskExecutor();      static final class ThreadPerTaskExecutor implements Executor {         public void execute(Runnable r) { new Thread(r).start(); }     }</code></pre> <p>所以推荐自定义线程池的方式</p> <h2>异步回调</h2> <blockquote> <p>指的是 异步任务结束后调用的任务</p> </blockquote> <h3>1. .thenApply</h3> <blockquote> <p>带返回值的异步调用函数, 有入参, 有出参</p> </blockquote> <h3>2. .thenAccept</h3> <blockquote> <p>&nbsp;不带返回值的异步回调函数, 有入参</p> </blockquote> <pre><code class="language-java">         CompletableFuture future = CompletableFuture.supplyAsync(() -&gt; {             try {                 System.out.println("future　" + new Date());                 Thread.sleep(2000);             } catch (InterruptedException e) {                 e.printStackTrace();             }             return "aaa";         }, executorService);          // future执行完之后执行的异步任务         CompletableFuture&lt;String&gt; thenApply = future.thenApply((result) -&gt; {             System.out.println("future2　" +new Date());             System.out.println(result);             return "bbb" + result;         });</code></pre> <h3>3. .exceptionally</h3> <blockquote> <p>异步任务出现异常调用的回调方法</p> </blockquote> <pre><code class="language-java">        CompletableFuture future = CompletableFuture.supplyAsync(() -&gt; {             try {                 System.out.println("future　" + new Date());                 Thread.sleep(2000);                 int a = 1 / 0;             } catch (InterruptedException e) {                 e.printStackTrace();             }             return "aaa";         }, executorService);          CompletableFuture&lt;String&gt; exceptionally = future.exceptionally((result) -&gt; {             System.out.println("future3 " + result);             return "bbb" + result;         });                  // 出现异常则返回异常, 没异常则返回future的返回值         System.out.println(exceptionally.get());</code></pre> <p><img fetchpriority="high" decoding="async" alt="" height="97" src="http://img.555519.xyz/uploads/20230205/2b3c3225244a100b0684723621403945.jpg"></p> <p>&nbsp;去掉异常</p> <p><img decoding="async" alt="" height="81" src="http://img.555519.xyz/uploads/20230205/84b908a2b419f60edd6025b07503341d.jpg"></p> <h3>4. .whenComplete</h3> <blockquote> <p>&nbsp;当主任务出现异常时, 会终止任务,get的时候会抛出主任务的异常,&nbsp; 入参值为null, 否则正常运行</p> </blockquote> <pre><code class="language-java">        CompletableFuture future = CompletableFuture.supplyAsync(() -&gt; {             try {                 System.out.println("future　" + new Date());                 Thread.sleep(2000);                 int a = 1/0;             } catch (InterruptedException e) {                 e.printStackTrace();             }             return "aaa";         }, executorService);          CompletableFuture&lt;String&gt; exceptionally = future.whenComplete((result, error) -&gt; {             System.out.println("future3 " + result);             System.out.println("future3 " + error);         });         System.out.println(exceptionally.get());</code></pre> <p><img decoding="async" alt="" height="205" src="http://img.555519.xyz/uploads/20230205/8cc37a9e72120e09446d58af4195957c.jpg"></p> <p>&nbsp;去掉异常</p> <p><img loading="lazy" decoding="async" alt="" height="131" src="http://img.555519.xyz/uploads/20230205/cc41952905b50ae9e919ead674a0833d.jpg"></p> <h2 id="%E4%B8%89%E3%80%81%E7%BB%84%E5%90%88%E5%A4%84%E7%90%86">组合处理</h2> <p>....</p> <blockquote> <p>就是将多个任务组合起来执行, 时间原因, 这里我就不介绍了, 大家另行百度吧</p> </blockquote></div> 			                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/news/article-94257.htm">菠萝蜜切了一半怎么保存不会坏(菠萝蜜切了一半怎么保存没有冰箱)</a></p>
+                                        <p>下一个：<a href="/news/article-94819.htm">动物疫苗和人体疫苗的区别是什么呢图片（动物疫苗对人体有害吗）</a></p>
+                                    </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/news/article-94256.htm" title="开一家宠物医院要多少钱（开一家宠物医院需要什么资质）">开一家宠物医院要多少钱（开一家宠物医院需要什么资质）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-29-free-netch.htm" title="3月29日→22.9M/S|2025年最新免费节点Free Netch订阅链接地址">3月29日→22.9M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-68902.htm" title="梦见自己抱别的女人老婆生气了啥意思（梦见抱着别人的女人）">梦见自己抱别的女人老婆生气了啥意思（梦见抱着别人的女人）</a></li>
+                        <li class="py-2"><a href="/news/article-96991.htm" title="动物医院有宠物卖吗知乎（动物医院看病）">动物医院有宠物卖吗知乎（动物医院看病）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-15-share-netch-node.htm" title="3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址">3月15日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-78908.htm" title="C# 扩展方法简介">C# 扩展方法简介</a></li>
+                        <li class="py-2"><a href="/news/article-90304.htm" title="Vue混入mixins，让你减少一半代码">Vue混入mixins，让你减少一半代码</a></li>
+                        <li class="py-2"><a href="/news/article-96990.htm" title="附近宠物领养基地（附近宠物领养基地电话）">附近宠物领养基地（附近宠物领养基地电话）</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-3-31-free-node-subscribe.htm" title="3月31日→21.2M/S|2025年最新免费节点Free Netch订阅链接地址">3月31日→21.2M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/news/article-85941.htm" title="动物医院好评语100字通用版图片（动物医院好评语100字通用版图片高清）">动物医院好评语100字通用版图片（动物医院好评语100字通用版图片高清）</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">47</span> <a href="/date/2025-04/" title="2025-04 归档">2025-04</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">90</span> <a href="/date/2025-03/" title="2025-03 归档">2025-03</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
+        </div>
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                            <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
+    
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
+
+</html>
