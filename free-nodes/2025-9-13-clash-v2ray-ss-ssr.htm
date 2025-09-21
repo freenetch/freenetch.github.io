@@ -1,878 +1,470 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="zh-CN">
+
 <head>
-    <meta charset="UTF-8">
-    <title>System Error</title>
-    <meta name="robots" content="noindex,nofollow" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <style>
-        /* Base */
-        body {
-            color: #333;
-            font: 14px Verdana, "Helvetica Neue", helvetica, Arial, 'Microsoft YaHei', sans-serif;
-            margin: 0;
-            padding: 0 20px 20px;
-            word-break: break-word;
-        }
-        h1{
-            margin: 10px 0 0;
-            font-size: 28px;
-            font-weight: 500;
-            line-height: 32px;
-        }
-        h2{
-            color: #4288ce;
-            font-weight: 400;
-            padding: 6px 0;
-            margin: 6px 0 0;
-            font-size: 18px;
-            border-bottom: 1px solid #eee;
-        }
-        h3.subheading {
-            color: #4288ce;
-            margin: 6px 0 0;
-            font-weight: 400;
-        }
-        h3{
-            margin: 12px;
-            font-size: 16px;
-            font-weight: bold;
-        }
-        abbr{
-            cursor: help;
-            text-decoration: underline;
-            text-decoration-style: dotted;
-        }
-        a{
-            color: #868686;
-            cursor: pointer;
-        }
-        a:hover{
-            text-decoration: underline;
-        }
-        .line-error{
-            background: #f8cbcb;
-        }
+        <link rel="canonical" href="https://freenetch.github.io/free-nodes/2025-9-13-clash-v2ray-ss-ssr.htm" />
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Free Netch - 9月13日19.2M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐 - Free Netch机场节点分享官网</title>
+        <meta name="keywords" content="9月13日Clash订阅链接, SSR订阅, Shadowrocket订阅链接Free Netch机场节点分享官网" />
+        <meta name="description" content="9月13日节点订阅更新,V2ray/SSR/Shadowrocket/Clash免费节点订阅链接,我们专注免费节点每天更新,这一次的节点更新覆盖了日本、新加坡、香港、美国、韩国、欧洲、加拿大等地区,最高速度可达19.2 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。" />
+        <link rel="icon" href="/assets/website/img/freenetch/favicon.ico" type="image/x-icon"/>
 
-        .echo table {
-            width: 100%;
-        }
+    <meta name="author" content="Free Netch机场节点分享官网">
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://freenetch.github.io/free-nodes/2025-9-13-clash-v2ray-ss-ssr.htm" />
+    <meta property="og:site_name" content="Free Netch机场节点分享官网" />
+    <meta property="og:title" content="Free Netch - 9月13日19.2M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐 - Free Netch机场节点分享官网" />
+    <meta property="og:image" content="https://freenetch.github.io/uploads/20240908-3/49bd97f8e50a136f5abee650a6b745bd.webp" />
+        <meta property="og:release_date" content="2025-09-13T09:36:00" />
+    <meta property="og:updated_time" content="2025-09-13T09:36:00" />
+        <meta property="og:description" content="9月13日节点订阅更新,V2ray/SSR/Shadowrocket/Clash免费节点订阅链接,我们专注免费节点每天更新,这一次的节点更新覆盖了日本、新加坡、香港、美国、韩国、欧洲、加拿大等地区,最高速度可达19.2 M/S。只需复制下方的Clash/v2ray订阅链接,在客户端添加后即可正常使用。" />
+        
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .echo pre {
-            padding: 16px;
-            overflow: auto;
-            font-size: 85%;
-            line-height: 1.45;
-            background-color: #f7f7f7;
-            border: 0;
-            border-radius: 3px;
-            font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
-        }
+    <meta name="applicable-device" content="pc,mobile" />
+    <meta name="renderer" content="webkit" />
+    <meta name="force-rendering" content="webkit" />
+    <meta http-equiv="Cache-Control" content="no-transform" />
+    <meta name="robots" content="max-image-preview:large" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Free Netch - 9月13日19.2M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐 - Free Netch机场节点分享官网">
+    <meta name="format-detection" content="telephone=no">
 
-        .echo pre > pre {
-            padding: 0;
-            margin: 0;
-        }
-        /* Layout */
-        .col-md-3 {
-            width: 25%;
-        }
-        .col-md-9 {
-            width: 75%;
-        }
-        [class^="col-md-"] {
-            float: left;
-        }
-        .clearfix {
-            clear:both;
-        }
-        @media only screen 
-        and (min-device-width : 375px) 
-        and (max-device-width : 667px) { 
-            .col-md-3,
-            .col-md-9 {
-                width: 100%;
-            }
-        }
-        /* Exception Info */
-        .exception {
-            margin-top: 20px;
-        }
-        .exception .message{
-            padding: 12px;
-            border: 1px solid #ddd;
-            border-bottom: 0 none;
-            line-height: 18px;
-            font-size:16px;
-            border-top-left-radius: 4px;
-            border-top-right-radius: 4px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
+    <link rel="dns-prefetch" href="https:/www.googletagmanager.com">
+    <link rel="dns-prefetch" href="https://www.googleadservices.com">
+    <link rel="dns-prefetch" href="https://www.google-analytics.com">
+    <link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+    <link rel="dns-prefetch" href="https://cm.g.doubleclick.net">
+    
+    <!-- CSS
+    ============================================ -->
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/bootstrap.min.css">
+    <!-- Icon Font CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/icon-font.min.css">
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/plugins.css">
+    <!-- Main Style CSS -->
+    <link rel="stylesheet" href="/assets/website/css/freenetch/style.css">
+    <link rel="stylesheet" href="/assets/website/css/G.css" />
+    <!-- Modernizer JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/modernizr-2.8.3.min.js"></script>
+    
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJN687PNRB"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-        .exception .code{
-            float: left;
-            text-align: center;
-            color: #fff;
-            margin-right: 12px;
-            padding: 16px;
-            border-radius: 4px;
-            background: #999;
-        }
-        .exception .source-code{
-            padding: 6px;
-            border: 1px solid #ddd;
-
-            background: #f9f9f9;
-            overflow-x: auto;
-
-        }
-        .exception .source-code pre{
-            margin: 0;
-        }
-        .exception .source-code pre ol{
-            margin: 0;
-            color: #4288ce;
-            display: inline-block;
-            min-width: 100%;
-            box-sizing: border-box;
-        font-size:14px;
-            font-family: "Century Gothic",Consolas,"Liberation Mono",Courier,Verdana;
-            padding-left: 56px;
-        }
-        .exception .source-code pre li{
-            border-left: 1px solid #ddd;
-            height: 18px;
-            line-height: 18px;
-        }
-        .exception .source-code pre code{
-            color: #333;
-            height: 100%;
-            display: inline-block;
-            border-left: 1px solid #fff;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace{
-            padding: 6px;
-            border: 1px solid #ddd;
-            border-top: 0 none;
-            line-height: 16px;
-        font-size:14px;
-            font-family: Consolas,"Liberation Mono",Courier,Verdana,"微软雅黑";
-        }
-        .exception .trace ol{
-            margin: 12px;
-        }
-        .exception .trace ol li{
-            padding: 2px 4px;
-        }
-        .exception div:last-child{
-            border-bottom-left-radius: 4px;
-            border-bottom-right-radius: 4px;
-        }
-
-        /* Exception Variables */
-        .exception-var table{
-            width: 100%;
-            margin: 12px 0;
-            box-sizing: border-box;
-            table-layout:fixed;
-            word-wrap:break-word;            
-        }
-        .exception-var table caption{
-            text-align: left;
-            font-size: 16px;
-            font-weight: bold;
-            padding: 6px 0;
-        }
-        .exception-var table caption small{
-            font-weight: 300;
-            display: inline-block;
-            margin-left: 10px;
-            color: #ccc;
-        }
-        .exception-var table tbody{
-            font-size: 13px;
-            font-family: Consolas,"Liberation Mono",Courier,"微软雅黑";
-        }
-        .exception-var table td{
-            padding: 0 6px;
-            vertical-align: top;
-            word-break: break-all;
-        }
-        .exception-var table td:first-child{
-            width: 28%;
-            font-weight: bold;
-            white-space: nowrap;
-        }
-        .exception-var table td pre{
-            margin: 0;
-        }
-
-        /* Copyright Info */
-        .copyright{
-            margin-top: 24px;
-            padding: 12px 0;
-            border-top: 1px solid #eee;
-        }
-
-        /* SPAN elements with the classes below are added by prettyprint. */
-        pre.prettyprint .pln { color: #000 }  /* plain text */
-        pre.prettyprint .str { color: #080 }  /* string content */
-        pre.prettyprint .kwd { color: #008 }  /* a keyword */
-        pre.prettyprint .com { color: #800 }  /* a comment */
-        pre.prettyprint .typ { color: #606 }  /* a type name */
-        pre.prettyprint .lit { color: #066 }  /* a literal value */
-        /* punctuation, lisp open bracket, lisp close bracket */
-        pre.prettyprint .pun, pre.prettyprint .opn, pre.prettyprint .clo { color: #660 }
-        pre.prettyprint .tag { color: #008 }  /* a markup tag name */
-        pre.prettyprint .atn { color: #606 }  /* a markup attribute name */
-        pre.prettyprint .atv { color: #080 }  /* a markup attribute value */
-        pre.prettyprint .dec, pre.prettyprint .var { color: #606 }  /* a declaration; a variable name */
-        pre.prettyprint .fun { color: red }  /* a function name */
-    </style>
+  gtag('config', 'G-MJN687PNRB');
+</script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3332997411212854" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div class="echo">
-            </div>
-        <div class="exception">
-    <div class="message">
-        
-            <div class="info">
-                <div>
-                    <h2>[2]&nbsp;<abbr title="think\exception\ErrorException">ErrorException</abbr> in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php line 202">82aca8cd07e1f9e9c875a67d0608a091.php line 202</a></h2>
+
+<body data-page="detail">
+        <!-- Header Section Start -->
+    <div class="header-section section">
+        <!-- Header Bottom Start -->
+        <div class="header-bottom header-bottom-one header-sticky">
+            <div class="container">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col mt-15 mb-15">
+                        <!-- Logo Start -->
+                        <div class="header-logo">
+                            <a href="/">
+                                                        <span>免费科学上网节点更新</span>
+                                                        </a>
+                        </div><!-- Logo End -->
+                    </div>
+                    <div class="col order-12 order-lg-2 order-xl-2 d-none d-lg-block">
+                        <!-- Main Menu Start -->
+                        <div class="main-menu">
+                            <nav>
+                                <ul>
+                                                                        <li><a href="/">首页</a></li>
+                                                                        <li><a href="/free-nodes/">免费节点</a></li>
+                                                                        <li><a href="/paid-subscribe/">推荐机场</a></li>
+                                                                        <li><a href="/client.htm">客户端</a></li>
+                                                                        <li><a href="/news/">新闻资讯</a></li>
+                                                                    </ul>
+                            </nav>
+                        </div><!-- Main Menu End -->
+                    </div>
+                    <!-- Mobile Menu -->
+                    <div class="mobile-menu order-12 d-block d-lg-none col"></div>
                 </div>
-                <div><h1>count(): Parameter must be an array or an object that implements Countable</h1></div>
             </div>
-        
-    </div>
-	        <div class="source-code">
-            <pre class="prettyprint lang-php"><ol start="193"><li class="line-193"><code>                                                &lt;p&gt;
-</code></li><li class="line-194"><code>                        &lt;?php if(is_array($menu_list) || $menu_list instanceof \think\Collection || $menu_list instanceof \think\Paginator): $i = 0; $__LIST__ = $menu_list;if( count($__LIST__)==0 ) : echo &quot;&quot; ;else: foreach($__LIST__ as $key=&gt;$item): $mod = ($i % 2 );++$i;?&gt;
-</code></li><li class="line-195"><code>                        &lt;a href=&quot;&lt;?php echo $item['url']; ?&gt;&quot;&gt;&lt;?php echo $item['name']; ?&gt;&lt;/a&gt; |
-</code></li><li class="line-196"><code>                        &lt;?php endforeach; endif; else: echo &quot;&quot; ;endif; ?&gt;
-</code></li><li class="line-197"><code>                        &lt;a href=&quot;/about-us.htm&quot;&gt;关于我们&lt;/a&gt; |
-</code></li><li class="line-198"><code>                        &lt;a href=&quot;/disclaimer.htm&quot;&gt;免责申明&lt;/a&gt; |
-</code></li><li class="line-199"><code>                        &lt;a href=&quot;/privacy.htm&quot;&gt;隐私申明&lt;/a&gt; |
-</code></li><li class="line-200"><code>                        &lt;a href=&quot;/sitemap.xml&quot;&gt;网站地图&lt;/a&gt;
-</code></li><li class="line-201"><code>                    &lt;/p&gt;
-</code></li><li class="line-202"><code>                    &lt;?php if(count($site_config['friendship_links_rows']) &gt; 0): ?&gt;
-</code></li><li class="line-203"><code>                    &lt;p&gt;
-</code></li><li class="line-204"><code>                        &lt;b&gt;友情链接：&lt;/b&gt;
-</code></li><li class="line-205"><code>                        &lt;?php if(is_array($site_config['friendship_links_rows']) || $site_config['friendship_links_rows'] instanceof \think\Collection || $site_config['friendship_links_rows'] instanceof \think\Paginator): $i = 0; $__LIST__ = $site_config['friendship_links_rows'];if( count($__LIST__)==0 ) : echo &quot;&quot; ;else: foreach($__LIST__ as $key=&gt;$item): $mod = ($i % 2 );++$i;?&gt;
-</code></li><li class="line-206"><code>                        &lt;a href=&quot;&lt;?php echo $item['url']; ?&gt;&quot; target=&quot;_blank&quot; title=&quot;&lt;?php echo $item['name']; ?&gt;&quot;&gt;&lt;?php echo $item['name']; ?&gt;&lt;/a&gt;
-</code></li><li class="line-207"><code>                        &lt;?php endforeach; endif; else: echo &quot;&quot; ;endif; ?&gt;
-</code></li><li class="line-208"><code>                    &lt;/p&gt;
-</code></li><li class="line-209"><code>                    &lt;?php endif; ?&gt;
-</code></li><li class="line-210"><code>                            &lt;p&gt;
-</code></li><li class="line-211"><code>                                &lt;a href=&quot;/&quot;&gt;&lt;?php echo $site_config['name']; ?&gt;&lt;/a&gt; 版权所有
-</code></li></ol></pre>
+        </div><!-- Header Bottom End -->
+    </div><!-- Header Section End -->
+    <!-- Page Banner Section Start -->
+    <div class="page-banner-section section">
+        <div class="page-banner-wrap row row-0 d-flex align-items-center ">
+            <!-- Page Banner -->
+            <div class="col-12 d-flex align-items-center justify-content-center">
+                <div class="page-banner">
+                    <h1>Free Netch - 9月13日19.2M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</h1>
+                    <div class="breadcrumb">
+                        <ul>
+                            <li><a href="/">首页</a></li>
+                            <li><a href="/free-nodes/">免费节点</a></li>
+                            <li>正文</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
-	        <div class="trace">
-            <h2>Call Stack</h2>
-            <ol>
-                <li>in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php line 202">82aca8cd07e1f9e9c875a67d0608a091.php line 202</a></li>
-                                <li>
-                at <abbr title="think\Error">Error</abbr>::appError(2, '<a class="toggle" title="count(): Parameter must be an array or an object that implements Countable">count(): Parameter m...</a>', '<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php">E:\SVNRepositories\C...</a>', 202, ['cacheFile' => '<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php">E:\SVNRepositories\C...</a>', 'vars' => ['user' => <em>null</em>, 'site' => ['name' => '我的网站', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => '我的网站', 'cdnurl' => '', 'version' => 1758423203, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...], 'user' => <em>null</em>, ...]) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php line 202">82aca8cd07e1f9e9c875a67d0608a091.php line 202</a>                </li>
-                                <li>
-                at include('<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php">E:\SVNRepositories\C...</a>') in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\template\driver\File.php line 53">File.php line 53</a>                </li>
-                                <li>
-                at <abbr title="think\template\driver\File">File</abbr>->read('<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\runtime\temp\82aca8cd07e1f9e9c875a67d0608a091.php">E:\SVNRepositories\C...</a>', ['user' => <em>null</em>, 'site' => ['name' => '我的网站', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => '我的网站', 'cdnurl' => '', 'version' => 1758423203, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...]) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\Template.php line 188">Template.php line 188</a>                </li>
-                                <li>
-                at <abbr title="think\Template">Template</abbr>->fetch('<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\public/../application/index\view\freenetch\index\url_blog.html">E:\SVNRepositories\C...</a>', ['user' => <em>null</em>, 'site' => ['name' => '我的网站', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => '我的网站', 'cdnurl' => '', 'version' => 1758423203, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...], []) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\view\driver\Think.php line 86">Think.php line 86</a>                </li>
-                                <li>
-                at <abbr title="think\view\driver\Think">Think</abbr>->fetch('<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\public/../application/index\view\freenetch\index\url_blog.html">E:\SVNRepositories\C...</a>', ['user' => <em>null</em>, 'site' => ['name' => '我的网站', 'beian' => '', 'cdnurl' => '', ...], 'config' => ['site' => ['name' => '我的网站', 'cdnurl' => '', 'version' => 1758423203, ...], 'upload' => ['cdnurl' => '', 'uploadurl' => '<a class="toggle" title="/index.php/index/ajax/upload">/index.php/index/aja...</a>', 'bucket' => 'local', ...], 'modulename' => 'index', ...], ...], []) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\View.php line 163">View.php line 163</a>                </li>
-                                <li>
-                at <abbr title="think\View">View</abbr>->fetch('<a class="toggle" title="freenetch/index/url_blog">freenetch/index/url_...</a>') in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\application\index\controller\Index.php line 334">Index.php line 334</a>                </li>
-                                <li>
-                at <abbr title="app\index\controller\Index">Index</abbr>->url_blog()                </li>
-                                <li>
-                at <abbr title="ReflectionMethod">ReflectionMethod</abbr>->invokeArgs(<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), []) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\App.php line 343">App.php line 343</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::invokeMethod([<em>object</em>(<abbr title="app\index\controller\Index">Index</abbr>), 'url_blog'], []) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\App.php line 611">App.php line 611</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::module(['index', 'index', 'url_blog'], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...], <em>true</em>) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\App.php line 456">App.php line 456</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::exec(['type' => 'module', 'module' => ['index', 'index', 'url_blog']], ['app_host' => '', 'app_debug' => <em>true</em>, 'app_trace' => <em>false</em>, ...]) in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\App.php line 139">App.php line 139</a>                </li>
-                                <li>
-                at <abbr title="think\App">App</abbr>::run() in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\start.php line 19">start.php line 19</a>                </li>
-                                <li>
-                at require('<a class="toggle" title="E:\SVNRepositories\ClashGitPages2\thinkphp\start.php">E:\SVNRepositories\C...</a>') in <a class="toggle" title="E:\SVNRepositories\ClashGitPages2\public\index.php line 23">index.php line 23</a>                </li>
-                            </ol>
+    </div><!-- Page Banner Section End -->
+    <div class="feature-section section mt-60 mb-60">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                                    <input type="hidden" id="share-website-info" data-name="Clash Node官网订阅站" data-url="https://clashnode.github.io">
+                <div class="xcblog-blog-detail xcblog-blog-detail-defined">
+                    <p>今天是2025年9月13日，继续给大家带来最新免费节点，已全部合并到下方的订阅链接中，添加到客户端即可使用，节点数量一共22个，地区包含了日本、新加坡、香港、美国、韩国、欧洲、加拿大，最高速度达19.2M/S。</p><h3>高端机场推荐1 「<a href="javascript:;" class="js_to" data-url="https://www.112112789.xyz/?path=" data-type="FeiniaoJiasu" data-code="11wam8Ig" rel="nofollow noopener" style="color:red;">飞鸟加速</a>」</h3><p>🚀 飞鸟加速 · 高速·稳定·无限可能</p><p>&nbsp;1. 多地专线高速节点，极速跨境体验，告别卡顿与延迟！</p><p>&nbsp;2. 一键解锁Netflix、Disney+、TikTok等全球流媒体，尽享自由精彩！</p><p>&nbsp;3. GPT专属线路支持，保障ChatGPT等AI服务高可用，稳定流畅！</p><p>&nbsp;4. 支持多设备同时使用，无限制，畅连全球！</p><p>&nbsp;5. 自有机房专柜，全球多地接入，安全可靠！</p><p>&nbsp;6. 专业客服团队7x24小时响应，使用无忧！</p>
+
+<p style="margin-bottom: 20px; padding: 0px; line-height: 1.8; overflow-wrap: break-word; font-size: 15px; color: rgb(96, 98, 102); font-family: &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, STHeiti, &quot;WenQuanYi Micro Hei&quot;, Helvetica, Arial, sans-serif;">网站注册地址：【<a href="javascript:;" class="js_to" data-url="https://www.112112789.xyz/?path=" data-type="FeiniaoJiasu" data-code="11wam8Ig" rel="nofollow noopener" style="margin: 0px; padding: 0px; color: #ff0000;">飞鸟加速（点击注册）</a>】</p>
+
+<p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><h3>高端机场推荐2 「<a href="javascript:;" class="js_to" data-url="https://www.dginv.click/#/register?code=" data-type="Gougou" data-code="TEAyo1QK" rel="nofollow noopener" style="color:red;">狗狗加速</a>」</h3><p>狗狗加速作为第一家上线Hysteria1协议的机场，目前已经全面上线Hysteria2协议；不同于hy1，hy2全面优化了链接速度(0-RTT)，进一步降低延迟；同时使用全新的带宽控制方式；能发挥您带宽的最大潜能！全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！</p>
+<p>网站注册地址：【<a href="javascript:;" class="js_to" data-url="https://www.dginv.click/#/register?code=" data-type="Gougou" data-code="TEAyo1QK" rel="nofollow noopener" style="color:red">狗狗加速（点击注册）</a>】<br></p>
+<p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><h3>高端机场推荐3 「<a href="javascript:;" class="js_to" data-url="https://c.xcvpn.me/?path=" data-type="Xingchen" data-code="tlc6gYYx" rel="nofollow noopener" style="color:red;">星辰机场</a>」</h3><p style="margin-bottom: 20px; padding: 0px; line-height: 1.8; overflow-wrap: break-word; font-size: 15px; color: rgb(96, 98, 102); font-family: &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, STHeiti, &quot;WenQuanYi Micro Hei&quot;, Helvetica, Arial, sans-serif;">无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！
+IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！</p>
+
+
+
+<p style="margin-bottom: 20px; padding: 0px; line-height: 1.8; overflow-wrap: break-word; font-size: 15px; color: rgb(96, 98, 102); font-family: &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, STHeiti, &quot;WenQuanYi Micro Hei&quot;, Helvetica, Arial, sans-serif;">网站注册地址：【<a href="javascript:;" class="js_to" data-url="https://c.xcvpn.me/?path=" data-type="Xingchen" data-code="tlc6gYYx" rel="nofollow noopener" style="margin: 0px; padding: 0px; color: #ff0000;">星辰VPN（点击注册）</a>】</p>
+
+<p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><h3>高端机场推荐4 「<a href="javascript:;" class="js_to" data-url="https://www.nfsq.us/#/register?code=" data-type="Nongfu" data-code="UTg5SIHV" rel="nofollow noopener" style="color:red;">农夫山泉</a>」</h3><p style="margin-bottom: 20px; padding: 0px; line-height: 1.8; overflow-wrap: break-word; font-size: 15px; color: rgb(96, 98, 102); font-family: &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, STHeiti, &quot;WenQuanYi Micro Hei&quot;, Helvetica, Arial, sans-serif;">无视高峰，全天4K秒开，机房遍布全球，IP多多益善，99%流媒体解锁，油管、葫芦、奈菲，小电影丝般顺滑！
+IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选择，现在注册即可免费试用！</p>
+
+
+
+<p style="margin-bottom: 20px; padding: 0px; line-height: 1.8; overflow-wrap: break-word; font-size: 15px; color: rgb(96, 98, 102); font-family: &quot;PingFang SC&quot;, &quot;Hiragino Sans GB&quot;, &quot;Microsoft YaHei&quot;, STHeiti, &quot;WenQuanYi Micro Hei&quot;, Helvetica, Arial, sans-serif;">网站注册地址：【<a href="javascript:;" class="js_to" data-url="https://www.nfsq.us/#/register?code=" data-type="Nongfu" data-code="UTg5SIHV" rel="nofollow noopener" style="margin: 0px; padding: 0px; color: #ff0000;">农夫山泉（点击注册）</a>】</p>
+
+<p style="margin-bottom:3rem;color:#999;font-style:italic;">注：跳转链接可能会 <b style="color:red;">被墙</b> ，如多次打开失败，请先使用下面不稳定免费订阅后，再尝试点击链接</p><p>&nbsp;</p><p></p><h2>订阅文件链接</h2><p>&nbsp;</p><p><strong>Clash订阅链接</strong></p><p>https://freenetch.github.io/uploads/2025/09/0-20250913.yaml</p><p>https://freenetch.github.io/uploads/2025/09/1-20250913.yaml</p><p>https://freenetch.github.io/uploads/2025/09/2-20250913.yaml</p><p>https://freenetch.github.io/uploads/2025/09/4-20250913.yaml</p><p>&nbsp;</p><p><strong>V2ray订阅链接:</strong></p><p>https://freenetch.github.io/uploads/2025/09/1-20250913.txt</p><p>https://freenetch.github.io/uploads/2025/09/3-20250913.txt</p><p><strong>Sing-Box订阅链接</strong></p><p>https://freenetch.github.io/uploads/2025/09/20250913.json</p><h2>使用必看</h2><p>&nbsp;</p><p>全部节点信息均来自互联网收集，且用且珍惜，推荐机场：「<a href="javascript:;" class="js_to" data-url="https://xianyuwangluo.top/#/register?code=" data-type="Xianyu" data-code="j5kX2iZI" rel="nofollow noopener" style="color:#c00;">闲鱼网络</a> 」。仅针对用于学习研究的用户分享，请勿随意传播其他信息。免费节点有效时间比较短，遇到失效是正常现象。</p><h2>Clash图形客户端完全指南：配置技巧、应用场景与实战解析</h2>
+<h2 data-start="33" data-end="38" class="">引言</h2>
+<p data-start="40" data-end="192" class="">在全球网络环境日益复杂的今天，科学上网与网络优化已成为众多用户的刚需。从技术人员、远程办公者，到海外内容的普通消费者，谁不希望有一个既稳定、快速，又可高度自定义的网络代理工具？在这一需求背景下，**Clash人民（Clash for Windows）**应运而生，并迅速成为科学上网领域的一款明星级工具。</p>
+<p data-start="194" data-end="290" class="">本文将全面解析Clash人民的核心功能、安装步骤、配置方法及应用技巧。无论你是技术小白，还是网络高手，这份指南都能助你快速掌握Clash人民的精髓，构建属于你自己的智能、自由、安全的上网环境。</p>
+<hr data-start="292" data-end="295" class="">
+<h2 data-start="297" data-end="313" class="">一、Clash人民是什么？</h2>
+<p data-start="315" data-end="453" class="">Clash人民是<strong data-start="323" data-end="354">Clash项目在Windows系统上的图形化客户端版本</strong>，由开源社区开发并持续更新维护。其本质是一个以<strong data-start="377" data-end="392">反向代理和规则分流机制</strong>为核心的网络工具，支持多种代理协议，拥有强大的节点管理和自定义规则配置能力，是实现科学上网、区域解锁、网络加速的得力助手。</p>
+<p data-start="455" data-end="542" class="">Clash人民的“人民”二字，并非官方命名，而是中文用户对其Windows客户端的昵称，用以区分其他平台版本如ClashX（macOS）和Clash.Meta（进阶核心）等。</p>
+<hr data-start="544" data-end="547" class="">
+<h2 data-start="549" data-end="568" class="">二、Clash人民的主要功能特点</h2>
+<h3 data-start="570" data-end="583" class="">2.1 多协议支持</h3>
+<p data-start="585" data-end="621" class="">Clash人民支持多种主流代理协议，满足不同用户的服务器来源和连接需求：</p>
+<ul data-start="623" data-end="752">
+<li data-start="623" data-end="645" class="">
+<p data-start="625" data-end="645" class=""><strong data-start="625" data-end="645">Shadowsocks (SS)</strong></p>
+</li>
+<li data-start="646" data-end="670" class="">
+<p data-start="648" data-end="670" class=""><strong data-start="648" data-end="670">ShadowsocksR (SSR)</strong></p>
+</li>
+<li data-start="671" data-end="696" class="">
+<p data-start="673" data-end="696" class=""><strong data-start="673" data-end="696">Vmess (VMess/V2Ray)</strong></p>
+</li>
+<li data-start="697" data-end="709" class="">
+<p data-start="699" data-end="709" class=""><strong data-start="699" data-end="709">Trojan</strong></p>
+</li>
+<li data-start="710" data-end="727" class="">
+<p data-start="712" data-end="727" class=""><strong data-start="712" data-end="721">Snell</strong>（部分版本）</p>
+</li>
+<li data-start="728" data-end="749" class="">
+<p data-start="730" data-end="749" class=""><strong data-start="730" data-end="749">Socks5 / HTTP代理</strong></p>
+</li>
+</ul>
+<p data-start="753" data-end="791" class="">这种高度兼容性意味着，无论你购买的是哪家机场的服务，Clash几乎都能胜任。</p>
+<h3 data-start="793" data-end="812" class="">2.2 智能节点分流与规则管理</h3>
+<p data-start="814" data-end="867" class="">Clash最核心的优势就是<strong data-start="827" data-end="835">分流功能</strong>，通过自定义规则自动判断并分配不同类型的流量走不同的节点。例如：</p>
+<ul data-start="869" data-end="910">
+<li data-start="869" data-end="877" class="">
+<p data-start="871" data-end="877" class="">国内流量直连</p>
+</li>
+<li data-start="878" data-end="887" class="">
+<p data-start="880" data-end="887" class="">国际流量走代理</p>
+</li>
+<li data-start="888" data-end="901" class="">
+<p data-start="890" data-end="901" class="">特定网站强制走某个节点</p>
+</li>
+<li data-start="902" data-end="910" class="">
+<p data-start="904" data-end="910" class="">广告流量屏蔽</p>
+</li>
+</ul>
+<p data-start="912" data-end="964" class="">这些配置全部由一个<strong data-start="921" data-end="933">YAML配置文件</strong>控制，使用户能够自由定制网络行为，减少冗余代理、提升上网体验。</p>
+<h3 data-start="966" data-end="984" class="">2.3 图形化界面，易于操作</h3>
+<p data-start="986" data-end="1018" class="">相较于命令行版本，Clash人民拥有完善、直观的用户界面，包括：</p>
+<ul data-start="1020" data-end="1068">
+<li data-start="1020" data-end="1031" class="">
+<p data-start="1022" data-end="1031" class="">节点列表和延迟测试</p>
+</li>
+<li data-start="1032" data-end="1051" class="">
+<p data-start="1034" data-end="1051" class="">代理模式选择（全局、规则、自定义）</p>
+</li>
+<li data-start="1052" data-end="1058" class="">
+<p data-start="1054" data-end="1058" class="">日志查看</p>
+</li>
+<li data-start="1059" data-end="1068" class="">
+<p data-start="1061" data-end="1068" class="">配置导入与切换</p>
+</li>
+</ul>
+<p data-start="1070" data-end="1094" class="">新手用户无需写代码，通过点击就能完成配置和连接。</p>
+<h3 data-start="1096" data-end="1113" class="">2.4 性能强劲，稳定性高</h3>
+<p data-start="1115" data-end="1184" class="">得益于Clash核心的轻量架构和多线程处理能力，Clash人民在长时间运行、频繁切换节点或大规模数据下载时，依然表现稳定，不易崩溃或掉线。</p>
+<hr data-start="1186" data-end="1189" class="">
+<h2 data-start="1191" data-end="1210" class="">三、Clash人民安装与入门配置</h2>
+<h3 data-start="1212" data-end="1224" class="">3.1 安装准备</h3>
+<p data-start="1226" data-end="1231" class="">系统要求：</p>
+<ul data-start="1232" data-end="1276">
+<li data-start="1232" data-end="1251" class="">
+<p data-start="1234" data-end="1251" class="">支持Windows 10或更高版本</p>
+</li>
+<li data-start="1252" data-end="1276" class="">
+<p data-start="1254" data-end="1276" class="">建议具备基础的科学上网服务（如购买机场节点）</p>
+</li>
+</ul>
+<h3 data-start="1278" data-end="1292" class="">3.2 安装步骤详解</h3>
+<ol data-start="1294" data-end="1649">
+<li data-start="1294" data-end="1398" class="">
+<p data-start="1297" data-end="1398" class=""><strong data-start="1297" data-end="1306">下载客户端</strong><br data-start="1306" data-end="1309">
+访问 <a data-start="1315" data-end="1388" class="" rel="noopener" target="_new" href="https://github.com/Fndroid/clash_for_windows_pkg">Clash for Windows 项目页</a> 下载最新版压缩包。</p>
+</li>
+<li data-start="1400" data-end="1445" class="">
+<p data-start="1403" data-end="1445" class=""><strong data-start="1403" data-end="1411">解压文件</strong><br data-start="1411" data-end="1414">
+将压缩包解压至任意文件夹（建议英文路径），无需安装过程。</p>
+</li>
+<li data-start="1447" data-end="1510" class="">
+<p data-start="1450" data-end="1510" class=""><strong data-start="1450" data-end="1458">运行程序</strong><br data-start="1458" data-end="1461">
+双击 <code data-start="1467" data-end="1490">Clash for Windows.exe</code> 启动程序，首次运行会自动创建配置目录。</p>
+</li>
+<li data-start="1512" data-end="1601" class="">
+<p data-start="1515" data-end="1601" class=""><strong data-start="1515" data-end="1525">导入配置文件</strong><br data-start="1525" data-end="1528">
+点击左侧菜单 <code data-start="1538" data-end="1548">Profiles</code> → 选择 <code data-start="1554" data-end="1564">Download</code> 或 <code data-start="1567" data-end="1575">Import</code> 导入你的YAML配置链接或文件（一般由机场提供）。</p>
+</li>
+<li data-start="1603" data-end="1649" class="">
+<p data-start="1606" data-end="1649" class=""><strong data-start="1606" data-end="1614">启动代理</strong><br data-start="1614" data-end="1617">
+在主界面点击“启动”，再勾选“系统代理”，即完成初步配置。</p>
+</li>
+</ol>
+<hr data-start="1651" data-end="1654" class="">
+<h2 data-start="1656" data-end="1671" class="">四、深入配置与个性化优化</h2>
+<h3 data-start="1673" data-end="1688" class="">4.1 自定义规则分流</h3>
+<p data-start="1690" data-end="1707" class="">Clash人民默认支持规则组，如：</p>
+<ul data-start="1708" data-end="1754">
+<li data-start="1708" data-end="1722" class="">
+<p data-start="1710" data-end="1722" class=""><code data-start="1710" data-end="1717">Proxy</code>：国际流量</p>
+</li>
+<li data-start="1723" data-end="1738" class="">
+<p data-start="1725" data-end="1738" class=""><code data-start="1725" data-end="1733">Direct</code>：国内流量</p>
+</li>
+<li data-start="1739" data-end="1754" class="">
+<p data-start="1741" data-end="1754" class=""><code data-start="1741" data-end="1749">Reject</code>：拦截广告</p>
+</li>
+</ul>
+<p data-start="1756" data-end="1782" class="">你可以根据自己的需求编辑YAML文件，添加规则，如：</p>
+<pre class="overflow-visible!" data-start="1784" data-end="1945"><div class="contain-inline-size rounded-md border-[0.5px] border-token-border-medium relative bg-token-sidebar-surface-primary"><div class="flex items-center text-token-text-secondary px-4 py-2 text-xs font-sans justify-between h-9 bg-token-sidebar-surface-primary dark:bg-token-main-surface-secondary select-none rounded-t-[5px]">yaml</div><div class="sticky top-9"><div class="absolute end-0 bottom-0 flex h-9 items-center pe-2"><div class="bg-token-sidebar-surface-primary text-token-text-secondary dark:bg-token-main-surface-secondary flex items-center rounded-sm px-2 font-sans text-xs"><span class="" data-state="closed"></span></div></div></div><div class="overflow-y-auto p-4" dir="ltr"><code class="whitespace-pre! language-yaml"><span><span><span class="hljs-attr">rules:</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-string">DOMAIN-SUFFIX,google.com,Proxy</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-string">DOMAIN-SUFFIX,baidu.com,Direct</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-string">DOMAIN-SUFFIX,facebook.com,Proxy</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-string">GEOIP,CN,Direct</span></span><span>
+  </span><span><span class="hljs-bullet">-</span></span><span> </span><span><span class="hljs-string">MATCH,Proxy</span></span><span>
+</span></span></code></div></div></pre>
+<h3 data-start="1947" data-end="1962" class="">4.2 添加或切换节点</h3>
+<p data-start="1964" data-end="1971" class="">如需添加节点：</p>
+<ul data-start="1972" data-end="2039">
+<li data-start="1972" data-end="1993" class="">
+<p data-start="1974" data-end="1993" class="">打开配置文件（通常是 <code data-start="1985" data-end="1992">.yaml</code>）</p>
+</li>
+<li data-start="1994" data-end="2016" class="">
+<p data-start="1996" data-end="2016" class="">在 <code data-start="1998" data-end="2007">proxies</code> 部分增加节点信息</p>
+</li>
+<li data-start="2017" data-end="2039" class="">
+<p data-start="2019" data-end="2039" class="">刷新配置文件后，Clash自动加载新节点</p>
+</li>
+</ul>
+<p data-start="2041" data-end="2066" class="">使用订阅链接的用户，只需定期点击“更新配置”即可。</p>
+<h3 data-start="2068" data-end="2088" class="">4.3 设置延迟优先级与故障转移</h3>
+<p data-start="2090" data-end="2173" class="">Clash可以测试每个节点的响应时间。你可以手动选择最快的节点，或者设置 <code data-start="2127" data-end="2137">Fallback</code>、<code data-start="2138" data-end="2152">Load-balance</code> 模式，实现断线自动切换，提高连接稳定性。</p>
+<h3 data-start="2175" data-end="2193" class="">4.4 PAC和全局模式切换</h3>
+<p data-start="2195" data-end="2209" class="">Clash支持三种代理模式：</p>
+<ul data-start="2210" data-end="2275">
+<li data-start="2210" data-end="2228" class="">
+<p data-start="2212" data-end="2228" class=""><strong data-start="2212" data-end="2220">全局模式</strong>：所有流量走代理</p>
+</li>
+<li data-start="2229" data-end="2250" class="">
+<p data-start="2231" data-end="2250" class=""><strong data-start="2231" data-end="2239">规则模式</strong>：根据规则决定是否代理</p>
+</li>
+<li data-start="2251" data-end="2275" class="">
+<p data-start="2253" data-end="2275" class=""><strong data-start="2253" data-end="2261">直连模式</strong>：不走任何代理，适合本地使用</p>
+</li>
+</ul>
+<hr data-start="2277" data-end="2280" class="">
+<h2 data-start="2282" data-end="2303" class="">五、使用Clash人民下载数据的优势</h2>
+<ol data-start="2305" data-end="2470">
+<li data-start="2305" data-end="2358" class="">
+<p data-start="2308" data-end="2358" class=""><strong data-start="2308" data-end="2318">突破地区限制</strong>：Clash能轻松访问如Google、YouTube、GitHub等被封锁平台。</p>
+</li>
+<li data-start="2359" data-end="2399" class="">
+<p data-start="2362" data-end="2399" class=""><strong data-start="2362" data-end="2372">高速稳定连接</strong>：对科研论文、文献、海外资源等大文件下载提供稳定支撑。</p>
+</li>
+<li data-start="2400" data-end="2434" class="">
+<p data-start="2403" data-end="2434" class=""><strong data-start="2403" data-end="2413">灵活节点分配</strong>：根据目标网站选择最优节点，提高下载速度。</p>
+</li>
+<li data-start="2435" data-end="2470" class="">
+<p data-start="2438" data-end="2470" class=""><strong data-start="2438" data-end="2447">提升安全性</strong>：多层加密保障隐私，防止中间人攻击与数据泄露。</p>
+</li>
+</ol>
+<hr data-start="2472" data-end="2475" class="">
+<h2 data-start="2477" data-end="2494" class="">六、常见问题与解答（FAQ）</h2>
+<p data-start="2496" data-end="2585" class=""><strong data-start="2496" data-end="2517">Q1：Clash和VPN有何区别？</strong><br data-start="2517" data-end="2520">
+A：VPN通常是“全局代理”，Clash可实现<strong data-start="2543" data-end="2557">精细化流量管理和分流</strong>。此外，Clash的可扩展性和自定义能力远超传统VPN。</p>
+<p data-start="2587" data-end="2659" class=""><strong data-start="2587" data-end="2604">Q2：配置文件怎么看不懂？</strong><br data-start="2604" data-end="2607">
+A：Clash使用YAML格式配置文件，但多数机场提供“订阅链接”，用户不需手动编辑，直接导入即可使用。</p>
+<p data-start="2661" data-end="2731" class=""><strong data-start="2661" data-end="2678">Q3：更新订阅失败怎么办？</strong><br data-start="2678" data-end="2681">
+A：检查链接有效性，或尝试使用Clash.Meta核心。有时网络波动也会导致拉取失败，稍后重试即可。</p>
+<p data-start="2733" data-end="2807" class=""><strong data-start="2733" data-end="2753">Q4：是否需要配合其他软件使用？</strong><br data-start="2753" data-end="2756">
+A：可结合Proxifier、浏览器插件等实现更复杂的流量分流，也可以通过TUN模式直接代理整个系统。</p>
+<p data-start="2809" data-end="2871" class=""><strong data-start="2809" data-end="2827">Q5：如何防止泄露真实IP？</strong><br data-start="2827" data-end="2830">
+A：确保关闭WebRTC、配置DNS代理并开启系统代理，即可最大程度避免IP暴露。</p>
+<hr data-start="2873" data-end="2876" class="">
+<h2 data-start="2878" data-end="2892" class="">七、实用技巧与社区资源</h2>
+<ul data-start="2894" data-end="3008">
+<li data-start="2894" data-end="2938" class="">
+<p data-start="2896" data-end="2938" class="">加入Telegram、GitHub等Clash相关社区，获取最新订阅规则和软件更新。</p>
+</li>
+<li data-start="2939" data-end="2960" class="">
+<p data-start="2941" data-end="2960" class="">使用YAML格式校验工具避免配置错误。</p>
+</li>
+<li data-start="2961" data-end="2981" class="">
+<p data-start="2963" data-end="2981" class="">定期测试节点速度，手动移除失效节点。</p>
+</li>
+<li data-start="2982" data-end="3008" class="">
+<p data-start="2984" data-end="3008" class="">学习自建代理服务器，实现完全自主的科学上网方案。</p>
+</li>
+</ul>
+<hr data-start="3010" data-end="3013" class="">
+<h2 data-start="3015" data-end="3020" class="">结语</h2>
+<p data-start="3022" data-end="3096" class="">Clash人民不是一款一键式的“傻瓜工具”，但正是它所具备的<strong data-start="3052" data-end="3072">强大灵活性、规则分流能力与开放性</strong>，才让它在科学上网领域拥有如此高的地位与认可度。</p>
+<p data-start="3098" data-end="3195" class="">无论你是刚入门的小白，还是追求极致控制的资深用户，只要掌握了Clash人民的使用逻辑和配置策略，都能搭建出一个稳定、智能、高效的代理网络环境。它不仅仅是一款软件，更是一种掌控网络自由的解决方案。</p>
+<hr data-start="3197" data-end="3200" class="">
+<h3 data-start="3202" data-end="3210" class="">精彩点评</h3>
+<p data-start="3212" data-end="3324" class="">这篇文章不仅详尽梳理了Clash人民的基本构成和高级功能，更在用户导向、实用配置和常见问题解答中体现出极强的实操指导价值。语言表达清晰、结构严谨，每一部分都直击用户使用痛点，尤其对规则分流和配置细节的深入解析，令人耳目一新。</p>
+<p data-start="3326" data-end="3440" class="">作者兼具技术深度与用户思维，用通俗易懂的方式展现了一个相对复杂的网络工具体系。对于初次接触Clash的用户，这是一份启蒙宝典；对进阶玩家而言，更是一份值得收藏的参考手册。堪称科学上网领域中，兼具权威性与可读性的<strong data-start="3431" data-end="3439">精品指南</strong>。</p>                </div>
+                <div class="clearfix"></div>
+                <div class="col-md-12 mt-5">
+                                        <p>上一个：<a href="/free-nodes/2025-9-12-clash-verge-rev-node.htm">Free Netch - 9月12日20.4M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</a></p>
+                                        <p>下一个：<a href="/free-nodes/2025-9-14-clash-verge-rev-nodes.htm">Free Netch - 9月14日22.7M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</a></p>
+                                    </div>
+                                <div class="panel panel-default mt-5">
+                    <div class="panel-heading">
+                        <h3 class="m-0">推荐文章</h3>
+                    </div>
+                    <div class="panel-body">
+                        <ul class="p-0 x-0">
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-12-clash-verge-rev-node.htm">Free Netch - 9月12日20.4M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-11-clash-meta-github.htm">Free Netch - 9月11日22.5M/S|免费Clash/Shadowrocket/V2ray/SSR节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-10-clash-stash.htm">Free Netch - 9月10日21M/S|免费V2ray/Shadowrocket/SSR/Clash节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-9-node-share.htm">Free Netch - 9月9日18.3M/S|免费SSR/V2ray/Clash/Shadowrocket节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-8-clash-verge-rev-nodes.htm">Free Netch - 9月8日22.2M/S|免费SSR/V2ray/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-7-free-node-subscribe.htm">Free Netch - 9月7日22.9M/S|免费V2ray/Shadowrocket/Clash/SSR节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-6-clash-stash.htm">Free Netch - 9月6日20.7M/S|免费V2ray/SSR/Clash/Shadowrocket节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-5-clash-stash-node.htm">Free Netch - 9月5日18.3M/S|免费Shadowrocket/SSR/V2ray/Clash节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-4-node-share.htm">Free Netch - 9月4日18.5M/S|免费SSR/Clash/Shadowrocket/V2ray节点推荐，Netch梯子购买推荐</a></li>
+                                                        <li class="py-2"><a href="/free-nodes/2025-9-3-clash-node.htm">Free Netch - 9月3日18.2M/S|免费SSR/Clash/Shadowrocket/V2ray节点推荐，Netch梯子购买推荐</a></li>
+                                                    </ul>
+                    </div>
+                </div>
+                                </div>
+                <div class="col-md-3">
+                    <div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">热门文章</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2"><a href="/free-nodes/2025-8-7-share-netch-node.htm" title="8月7日→18.4M/S|2025年最新免费节点Free Netch订阅链接地址">8月7日→18.4M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-11-clash-meta-github.htm" title="Free Netch - 9月11日22.5M/S|免费Clash/Shadowrocket/V2ray/SSR节点推荐，Netch梯子购买推荐">Free Netch - 9月11日22.5M/S|免费Clash/Shadowrocket/V2ray/SSR节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-29-clash-verge-rev-node.htm" title="Free Netch - 8月29日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR节点推荐，Netch梯子购买推荐">Free Netch - 8月29日18.2M/S|免费Shadowrocket/Clash/V2ray/SSR节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-9-free-netch-node.htm" title="8月9日→22M/S|2025年最新免费节点Free Netch订阅链接地址">8月9日→22M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-4-node-share.htm" title="Free Netch - 9月4日18.5M/S|免费SSR/Clash/Shadowrocket/V2ray节点推荐，Netch梯子购买推荐">Free Netch - 9月4日18.5M/S|免费SSR/Clash/Shadowrocket/V2ray节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-12-clash-verge-rev-node.htm" title="Free Netch - 9月12日20.4M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐">Free Netch - 9月12日20.4M/S|免费V2ray/SSR/Shadowrocket/Clash节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-9-1-clash-stash-node.htm" title="Free Netch - 9月1日18.2M/S|免费Clash/V2ray/Shadowrocket/SSR节点推荐，Netch梯子购买推荐">Free Netch - 9月1日18.2M/S|免费Clash/V2ray/Shadowrocket/SSR节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-8-node-share.htm" title="8月8日→18.9M/S|2025年最新免费节点Free Netch订阅链接地址">8月8日→18.9M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-21-free-high-speed-nodes.htm" title="8月21日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址">8月21日→19.8M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-8-16-node-share-links.htm" title="8月16日→21.6M/S|2025年最新免费节点Free Netch订阅链接地址">8月16日→21.6M/S|2025年最新免费节点Free Netch订阅链接地址</a></li>
+                    </ul>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">归纳</h3>
+    </div>
+    <div class="panel-body">
+        <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">21</span> <a href="/date/2025-09/" title="2025-09 归档">2025-09</a></h4>
+            </li>
+                        <li class="py-2">
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2025-08/" title="2025-08 归档">2025-08</a></h4>
+            </li>
+                    </ul>
+    </div>
+</div>
+
+                </div>
+            </div>
         </div>
-    </div>
-        
+    </div><!-- Feature Section End -->
+        <!-- Footer Section Start -->
+    <div class="footer-section section bg-ivory">
+        <!-- Footer Bottom Section Start -->
+        <div class="footer-bottom-section section">
+            <div class="container">
+                <div class="row">
+                    <!-- Footer Copyright -->
+                    <div class="col-lg-6 col-12">
+                        <div class="footer-copyright">
+                                                <p>
+                                                <a href="/">首页</a> |
+                                                <a href="/free-nodes/">免费节点</a> |
+                                                <a href="/paid-subscribe/">推荐机场</a> |
+                                                <a href="/client.htm">客户端</a> |
+                                                <a href="/news/">新闻资讯</a> |
+                                                <a href="/about-us.htm">关于我们</a> |
+                        <a href="/disclaimer.htm">免责申明</a> |
+                        <a href="/privacy.htm">隐私申明</a> |
+                        <a href="/sitemap.xml">网站地图</a>
+                    </p>
+                                                <p>
+                                <a href="/">Free Netch机场节点分享官网</a> 版权所有
+                                <br />
+                                Powered by WordPress
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- Footer Bottom Section Start -->
+    </div><!-- Footer Section End -->
+    <!-- Popup Subscribe Section Start -->
     
-        <div class="exception-var">
-        <h2>Environment Variables</h2>
-                <div>
-                        <h3 class="subheading">GET Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>website_id</strong></div>
-                    <div class="col-md-9"><small>
-                        116                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>id</strong></div>
-                    <div class="col-md-9"><small>
-                        155524                    </small></div>
-                </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>POST Data</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Files</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Cookies</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Session</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">Server/Request Data</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ALLUSERSPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Roaming                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CommonProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\Common Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>COMPUTERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ComSpec</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\cmd.exe                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DriverData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\System32\Drivers\DriverData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOCALAPPDATA</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile\AppData\Local                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>NUMBER_OF_PROCESSORS</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>OS</strong></div>
-                    <div class="col-md-9"><small>
-                        Windows_NT                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>Path</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATHEXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_ARCHITECTURE</strong></div>
-                    <div class="col-md-9"><small>
-                        AMD64                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_IDENTIFIER</strong></div>
-                    <div class="col-md-9"><small>
-                        Intel64 Family 6 Model 158 Stepping 10, GenuineIntel                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_LEVEL</strong></div>
-                    <div class="col-md-9"><small>
-                        6                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PROCESSOR_REVISION</strong></div>
-                    <div class="col-md-9"><small>
-                        9e0a                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramData</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\ProgramData                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramFiles(x86)</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files (x86)                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ProgramW6432</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PSModulePath</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Program Files\WindowsPowerShell\Modules;C:\Windows\system32\WindowsPowerShell\v1.0\Modules                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PUBLIC</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Users\Public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemDrive</strong></div>
-                    <div class="col-md-9"><small>
-                        C:                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SystemRoot</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TMP</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\TEMP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERDOMAIN</strong></div>
-                    <div class="col-md-9"><small>
-                        WORKGROUP                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERNAME</strong></div>
-                    <div class="col-md-9"><small>
-                        DESKTOP-NSJC0E1$                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>USERPROFILE</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows\system32\config\systemprofile                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>windir</strong></div>
-                    <div class="col-md-9"><small>
-                        C:\Windows                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_ACCEPT</strong></div>
-                    <div class="col-md-9"><small>
-                        */*                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_USER_AGENT</strong></div>
-                    <div class="col-md-9"><small>
-                        Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/45.0.2454.98 Safari/537.36                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTTP_HOST</strong></div>
-                    <div class="col-md-9"><small>
-                        cgp2-b.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REDIRECT_STATUS</strong></div>
-                    <div class="col-md-9"><small>
-                        200                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        cgp2-b.com                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        80                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_PORT</strong></div>
-                    <div class="col-md-9"><small>
-                        54070                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REMOTE_ADDR</strong></div>
-                    <div class="col-md-9"><small>
-                        127.0.0.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_SOFTWARE</strong></div>
-                    <div class="col-md-9"><small>
-                        nginx/1.15.11                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>GATEWAY_INTERFACE</strong></div>
-                    <div class="col-md-9"><small>
-                        CGI/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_SCHEME</strong></div>
-                    <div class="col-md-9"><small>
-                        http                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SERVER_PROTOCOL</strong></div>
-                    <div class="col-md-9"><small>
-                        HTTP/1.1                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_ROOT</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/ClashGitPages2/public                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DOCUMENT_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/url_blog                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_URI</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/url_blog?website_id=116&amp;id=155524                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_NAME</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_LENGTH</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONTENT_TYPE</strong></div>
-                    <div class="col-md-9"><small>
-                                            </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_METHOD</strong></div>
-                    <div class="col-md-9"><small>
-                        GET                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>QUERY_STRING</strong></div>
-                    <div class="col-md-9"><small>
-                        website_id=116&amp;id=155524                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_TRANSLATED</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/ClashGitPages2/public/index/index/url_blog                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PATH_INFO</strong></div>
-                    <div class="col-md-9"><small>
-                        /index/index/url_blog                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>SCRIPT_FILENAME</strong></div>
-                    <div class="col-md-9"><small>
-                        E:/SVNRepositories/ClashGitPages2/public/index.php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FCGI_ROLE</strong></div>
-                    <div class="col-md-9"><small>
-                        RESPONDER                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>PHP_SELF</strong></div>
-                    <div class="col-md-9"><small>
-                        /index.php/index/index/url_blog                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME_FLOAT</strong></div>
-                    <div class="col-md-9"><small>
-                        1758423203.2424                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>REQUEST_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1758423203                    </small></div>
-                </div>
-                            </div>
-                    </div>
-                <div>
-                        <div class="clearfix">
-                <div class="col-md-3"><strong>Environment Variables</strong></div>
-                <div class="col-md-9"><small>empty</small></div>
-            </div>
-                    </div>
-                <div>
-                        <h3 class="subheading">ThinkPHP Constants</h3>
-            <div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>APP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_VERSION</strong></div>
-                    <div class="col-md-9"><small>
-                        5.0.28                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_TIME</strong></div>
-                    <div class="col-md-9"><small>
-                        1758423203.2428                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_START_MEM</strong></div>
-                    <div class="col-md-9"><small>
-                        408864                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>DS</strong></div>
-                    <div class="col-md-9"><small>
-                        \                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>THINK_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\thinkphp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LIB_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\thinkphp\library\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CORE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\thinkphp\library\think\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TRAIT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\thinkphp\library\traits\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ROOT_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>EXTEND_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\extend\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>VENDOR_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\vendor\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>RUNTIME_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\runtime\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>LOG_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\runtime\log\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CACHE_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\runtime\cache\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>TEMP_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\runtime\temp\                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\public/../application/                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>CONF_EXT</strong></div>
-                    <div class="col-md-9"><small>
-                        .php                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ENV_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        PHP_                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_CLI</strong></div>
-                    <div class="col-md-9"><small>
-                        false                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>IS_WIN</strong></div>
-                    <div class="col-md-9"><small>
-                        true                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>FILTER_VALIDATE_BOOL</strong></div>
-                    <div class="col-md-9"><small>
-                        258                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>HTMLPURIFIER_PREFIX</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\vendor\ezyang\htmlpurifier\library                    </small></div>
-                </div>
-                                <div class="clearfix">
-                    <div class="col-md-3"><strong>ADDON_PATH</strong></div>
-                    <div class="col-md-9"><small>
-                        E:\SVNRepositories\ClashGitPages2\addons\                    </small></div>
-                </div>
-                            </div>
-                    </div>
-            </div>
-    
-    <div class="copyright">
-        <a title="官方网站" href="http://www.thinkphp.cn">ThinkPHP</a> 
-        <span>V5.0.28</span> 
-        <span>{ 十年磨一剑-为API开发设计的高性能框架 }</span>
-    </div>
-        <script>
-        var LINE = 202;
+    <!-- JS
+============================================ -->
+    <!-- jQuery JS -->
+    <script src="/assets/website/js/frontend/freenetch/vendor/jquery-1.12.4.min.js"></script>
+    <!-- Popper JS -->
+    <script src="/assets/website/js/frontend/freenetch/popper.min.js"></script>
+    <!-- Bootstrap JS -->
+    <script src="/assets/website/js/frontend/freenetch/bootstrap.min.js"></script>
+    <!-- Plugins JS -->
+    <script src="/assets/website/js/frontend/freenetch/plugins.js"></script>
+    <!-- Ajax Mail -->
+    <script src="/assets/website/js/frontend/freenetch/ajax-mail.js"></script>
+    <!-- Main JS -->
+    <script src="/assets/website/js/frontend/freenetch/main.js"></script>
+    <script src="https://www.freeclashnode.com/assets/js/frontend/invite-url.js"></script><script src="/assets/website/js/frontend/G.js"></script>
+</body>
 
-        function $(selector, node){
-            var elements;
-
-            node = node || document;
-            if(document.querySelectorAll){
-                elements = node.querySelectorAll(selector);
-            } else {
-                switch(selector.substr(0, 1)){
-                    case '#':
-                        elements = [node.getElementById(selector.substr(1))];
-                        break;
-                    case '.':
-                        if(document.getElementsByClassName){
-                            elements = node.getElementsByClassName(selector.substr(1));
-                        } else {
-                            elements = get_elements_by_class(selector.substr(1), node);
-                        }
-                        break;
-                    default:
-                        elements = node.getElementsByTagName();
-                }
-            }
-            return elements;
-
-            function get_elements_by_class(search_class, node, tag) {
-                var elements = [], eles, 
-                    pattern  = new RegExp('(^|\\s)' + search_class + '(\\s|$)');
-
-                node = node || document;
-                tag  = tag  || '*';
-
-                eles = node.getElementsByTagName(tag);
-                for(var i = 0; i < eles.length; i++) {
-                    if(pattern.test(eles[i].className)) {
-                        elements.push(eles[i])
-                    }
-                }
-
-                return elements;
-            }
-        }
-
-        $.getScript = function(src, func){
-            var script = document.createElement('script');
-            
-            script.async  = 'async';
-            script.src    = src;
-            script.onload = func || function(){};
-            
-            $('head')[0].appendChild(script);
-        }
-
-        ;(function(){
-            var files = $('.toggle');
-            var ol    = $('ol', $('.prettyprint')[0]);
-            var li    = $('li', ol[0]);   
-
-            // 短路径和长路径变换
-            for(var i = 0; i < files.length; i++){
-                files[i].ondblclick = function(){
-                    var title = this.title;
-
-                    this.title = this.innerHTML;
-                    this.innerHTML = title;
-                }
-            }
-
-            // 设置出错行
-            var err_line = $('.line-' + LINE, ol[0])[0];
-            err_line.className = err_line.className + ' line-error';
-
-            $.getScript('//lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/prettify/r298/prettify.min.js', function(){
-                prettyPrint();
-
-                // 解决Firefox浏览器一个很诡异的问题
-                // 当代码高亮后，ol的行号莫名其妙的错位
-                // 但是只要刷新li里面的html重新渲染就没有问题了
-                if(window.navigator.userAgent.indexOf('Firefox') >= 0){
-                    ol[0].innerHTML = ol[0].innerHTML;
-                }
-            });
-
-        })();
-    </script>
-    </body>
 </html>
