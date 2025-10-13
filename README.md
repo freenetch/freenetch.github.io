@@ -1,4 +1,4 @@
-# Free Netch - 10月7日20.4M/S|免费V2ray节点/SSR节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐  更新时间 2025-10-07 09:04:04
+# Free Netch - 10月13日20.3M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，Netch梯子购买推荐  更新时间 2025-10-13 05:13:03
 所有免费clash节点都爬取自网络，请勿用于非法用途 。节点地址：<a href="https://freenetch.github.io" target="_blank">点击跳转</a>
 
 ## clash使用教程：
@@ -9,23 +9,23 @@
 
 ### 免费Clash节点订阅链接
 
-- https://freenetch.github.io/uploads/2025/10/0-20251007.yaml
-- https://freenetch.github.io/uploads/2025/10/1-20251007.yaml
-- https://freenetch.github.io/uploads/2025/10/2-20251007.yaml
-- https://freenetch.github.io/uploads/2025/10/3-20251007.yaml
-- https://freenetch.github.io/uploads/2025/10/4-20251007.yaml
+- https://freenetch.github.io/uploads/2025/10/0-20251013.yaml
+- https://freenetch.github.io/uploads/2025/10/1-20251013.yaml
+- https://freenetch.github.io/uploads/2025/10/2-20251013.yaml
+- https://freenetch.github.io/uploads/2025/10/3-20251013.yaml
+- https://freenetch.github.io/uploads/2025/10/4-20251013.yaml
 
 ### 免费V2ray节点订阅链接
 
-- https://freenetch.github.io/uploads/2025/10/0-20251007.txt
-- https://freenetch.github.io/uploads/2025/10/1-20251007.txt
-- https://freenetch.github.io/uploads/2025/10/2-20251007.txt
-- https://freenetch.github.io/uploads/2025/10/3-20251007.txt
-- https://freenetch.github.io/uploads/2025/10/4-20251007.txt
+- https://freenetch.github.io/uploads/2025/10/0-20251013.txt
+- https://freenetch.github.io/uploads/2025/10/1-20251013.txt
+- https://freenetch.github.io/uploads/2025/10/2-20251013.txt
+- https://freenetch.github.io/uploads/2025/10/3-20251013.txt
+- https://freenetch.github.io/uploads/2025/10/4-20251013.txt
 
 ### 免费Sing-box节点订阅链接
 
-- https://freenetch.github.io/uploads/2025/10/20251007.json
+- https://freenetch.github.io/uploads/2025/10/20251013.json
 
 ## 更多Clash节点订阅 ：
 
