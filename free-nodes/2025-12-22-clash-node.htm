@@ -349,34 +349,9 @@ opkg install v2ray-core
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 在新版 iOS 上无法连接怎么办？</h5></div>
+    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择最适合的？</h5></div>
     <div class="panel-body">
-        苹果系统更新后，Potatso Lite 可能需要重新授权 VPN 权限。请删除旧的 VPN 配置，重新安装并导入节点。若仍无法使用，可尝试更换网络模式或等待开发者更新兼容版本。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>为什么使用 CDN 后仍然能被封？如何规避？</h5></div>
-    <div class="panel-body">
-        若 CDN 回源 IP 或配置不当可能泄露真实服务器信息，或者 CDN 本身被目标防火墙识别。应启用完整的反向代理配置、隐藏源站 IP 与禁用不必要的服务，必要时使用多级中转或更换 CDN 供应商。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Shadowrocket 的重写功能有什么用途？</h5></div>
-    <div class="panel-body">
-        Shadowrocket 的重写功能允许用户在请求阶段修改 HTTP 头、响应内容或重定向 URL。这一功能常用于屏蔽广告、解锁区域限制或调试网页请求，非常灵活强大。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 策略组如何优化视频访问？</h5></div>
-    <div class="panel-body">
-        通过策略组将视频流量分配到低延迟、高带宽节点，Surfboard 可自动切换到最佳节点。减少缓冲和卡顿，提高在线视频播放流畅性和整体网络体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
-    <div class="panel-body">
-        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
-    <div class="panel-body">
-        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
+        选择模拟 HTTPS 或 HTTP 的混淆方式，再搭配 AEAD 或协议插件，可以隐藏流量特征并提高抗封锁能力。不同网络环境需测试，选择最稳定和可靠的组合。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Mihomo 节点分组如何保证低延迟访问？</h5></div>
@@ -384,14 +359,39 @@ opkg install v2ray-core
         将节点按延迟、地区或用途分组，并启用策略组，系统会根据节点健康和延迟自动选择最佳节点。保证网页浏览、视频播放和游戏流量的低延迟稳定连接。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 的协议和混淆组合如何选择最适合的？</h5></div>
+    <div class="panel-heading"><h5>Sing-box 如何实现精确域名分流？</h5></div>
     <div class="panel-body">
-        选择模拟 HTTPS 或 HTTP 的混淆方式，再搭配 AEAD 或协议插件，可以隐藏流量特征并提高抗封锁能力。不同网络环境需测试，选择最稳定和可靠的组合。<hr />    </div>
+        Sing-box 可以按域名设置分流规则，将不同流量发送到指定节点。结合策略组使用，可实现网页、视频和游戏流量精准分配，提高访问速度和网络稳定性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Shadowrocket 的重写功能有什么用途？</h5></div>
+    <div class="panel-body">
+        Shadowrocket 的重写功能允许用户在请求阶段修改 HTTP 头、响应内容或重定向 URL。这一功能常用于屏蔽广告、解锁区域限制或调试网页请求，非常灵活强大。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Shadowrocket 的节点测速结果如何应用？</h5></div>
     <div class="panel-body">
         节点测速结果可用于策略组选择和自动切换，程序会根据延迟和丢包率选择最优节点。这样访问海外网站或流媒体时，可以保持高速和稳定的网络体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Matsuri 日志太多如何调整日志级别？</h5></div>
+    <div class="panel-body">
+        在 Matsuri 或其内核配置中修改日志级别参数（如从 debug 降为 info 或 warning），同时限制日志轮转与最大文件大小。生产环境建议关闭 debug 日志以减少磁盘 I/O 与性能影响。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>为什么使用 CDN 后仍然能被封？如何规避？</h5></div>
+    <div class="panel-body">
+        若 CDN 回源 IP 或配置不当可能泄露真实服务器信息，或者 CDN 本身被目标防火墙识别。应启用完整的反向代理配置、隐藏源站 IP 与禁用不必要的服务，必要时使用多级中转或更换 CDN 供应商。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 在新版 iOS 上无法连接怎么办？</h5></div>
+    <div class="panel-body">
+        苹果系统更新后，Potatso Lite 可能需要重新授权 VPN 权限。请删除旧的 VPN 配置，重新安装并导入节点。若仍无法使用，可尝试更换网络模式或等待开发者更新兼容版本。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Surfboard 策略组如何优化视频访问？</h5></div>
+    <div class="panel-body">
+        通过策略组将视频流量分配到低延迟、高带宽节点，Surfboard 可自动切换到最佳节点。减少缓冲和卡顿，提高在线视频播放流畅性和整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VMess 连接不稳定的常见原因有哪些？</h5></div>
@@ -425,16 +425,16 @@ opkg install v2ray-core
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2025-12-27-clash-meta-github.htm" title="Free Netch - 12月27日18.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 12月27日18.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-15-clash-verge-rev-github.htm" title="Free Netch - 11月15日19.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 11月15日19.6M/S|免费Singbox节点/Clash节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-12-2-clash-verge-rev-nodes.htm" title="Free Netch - 12月2日18.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 12月2日18.2M/S|免费Clash节点/Singbox节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-8-free-node-subscribe.htm" title="Free Netch - 11月8日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 11月8日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-17-clash-verge-rev-node-github.htm" title="Free Netch - 11月17日21M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 11月17日21M/S|免费SSR节点/Shadowrocket节点/Singbox节点/Clash节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-19-clash-meta-github.htm" title="Free Netch - 11月19日20.7M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 11月19日20.7M/S|免费Singbox节点/Clash节点/Shadowrocket节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-21-free-node-subscribe.htm" title="Free Netch - 11月21日21M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 11月21日21M/S|免费Clash节点/SSR节点/Singbox节点/Shadowrocket节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-7-clash-verge-rev-windows.htm" title="Free Netch - 11月7日21.7M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 11月7日21.7M/S|免费V2ray节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-5-clash-verge-rev-nodes.htm" title="Free Netch - 11月5日20.6M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 11月5日20.6M/S|免费SSR节点/Clash节点/V2ray节点/Shadowrocket节点/Singbox节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2025-11-13-clash-stash-node.htm" title="Free Netch - 11月13日19.3M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 11月13日19.3M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-24-clash-verge-rev-windows.htm" title="Free Netch - 12月24日23M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 12月24日23M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-26-clash-meta-github.htm" title="Free Netch - 12月26日23M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 12月26日23M/S|免费V2ray节点/SSR节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-15-clash-verge-rev-nodes.htm" title="Free Netch - 12月15日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 12月15日20.5M/S|免费Clash节点/V2ray节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-21-clash-verge-rev-node.htm" title="Free Netch - 12月21日19M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 12月21日19M/S|免费V2ray节点/Clash节点/SSR节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-7-clash-node.htm" title="Free Netch - 1月7日22M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 1月7日22M/S|免费V2ray节点/Singbox节点/SSR节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-1-4-clash-verge-rev-github.htm" title="Free Netch - 1月4日21.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 1月4日21.8M/S|免费SSR节点/V2ray节点/Clash节点/Singbox节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-9-free-node-subscribe.htm" title="Free Netch - 12月9日21.7M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 12月9日21.7M/S|免费V2ray节点/Shadowrocket节点/SSR节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-20-clash-verge-rev-node-github.htm" title="Free Netch - 12月20日22.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 12月20日22.2M/S|免费Shadowrocket节点/SSR节点/Clash节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-17-node-share.htm" title="Free Netch - 12月17日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 12月17日19.9M/S|免费Singbox节点/V2ray节点/Clash节点/Shadowrocket节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2025-12-23-clash-verge-rev-node-share.htm" title="Free Netch - 12月23日19.3M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 12月23日19.3M/S|免费Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -446,10 +446,10 @@ opkg install v2ray-core
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">27</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
+                <h4><span class="badge" style="float: right;">7</span> <a href="/date/2026-01/" title="2026-01 归档">2026-01</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">23</span> <a href="/date/2025-11/" title="2025-11 归档">2025-11</a></h4>
+                <h4><span class="badge" style="float: right;">19</span> <a href="/date/2025-12/" title="2025-12 归档">2025-12</a></h4>
             </li>
                     </ul>
     </div>
