@@ -161,9 +161,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         Surfboard 支持通过策略组和规则文件按应用分流，将不同应用的流量分配到不同节点。这样可保证游戏或视频走低延迟节点，提高访问速度并优化网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
     <div class="panel-body">
-        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。<hr />    </div>
+        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>VLESS + XTLS 模式相比普通 VLESS 有哪些优势？</h5></div>
@@ -176,9 +176,9 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         策略组会根据节点延迟和丢包率自动选择最优节点。结合路由规则，可保证国内流量直连、海外流量走最佳节点，提高访问速度和连接稳定性，优化整体网络体验。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Trojan-go 与原版 Trojan 有什么不同？</h5></div>
+    <div class="panel-heading"><h5>V2Ray 的 outbound freedom 模式有什么作用？</h5></div>
     <div class="panel-body">
-        Trojan-go 在原版 Trojan 基础上扩展了多协议支持、WebSocket、gRPC、mux 多路复用等特性，同时优化性能并支持更丰富的客户端。相比原版，它更灵活，适合高级用户或多平台部署需求。<hr />    </div>
+        freedom 是直连模块，可用于分流策略中实现部分流量直连。用户可在 routing 中设置匹配规则，将国内域名或局域网 IP 指向 freedom 出口，从而减少代理开销和延迟。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Vmess 的安全加密方式推荐使用哪种？</h5></div>
@@ -186,19 +186,19 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
         目前推荐使用 auto 或 none（结合 TLS 加密）以提升性能。旧版 AEAD 加密已被废弃，使用 TLS/XTLS 层提供的加密即可确保安全。过度加密反而增加 CPU 占用与延迟。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 在 iOS 上无法连接时如何调试？</h5></div>
-    <div class="panel-body">
-        检查 iOS 的 VPN 配置权限是否授予，确认订阅链接或手动配置填写无误；查看 Surfboard 的日志或诊断页面，查看是否为 DNS 问题、TLS 错误或节点超时，并尝试切换节点或重启应用。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 的 outbound freedom 模式有什么作用？</h5></div>
-    <div class="panel-body">
-        freedom 是直连模块，可用于分流策略中实现部分流量直连。用户可在 routing 中设置匹配规则，将国内域名或局域网 IP 指向 freedom 出口，从而减少代理开销和延迟。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Hiddify Next 如何设置用户带宽与流量配额？</h5></div>
     <div class="panel-body">
-        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。    </div>
+        管理员可为每个用户单独设置带宽和流量上限。超出限制时，可自动降速或阻止访问，确保服务器资源合理分配，避免单用户占用过多带宽，提高整体网络公平性和效率。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Trojan-go 与原版 Trojan 有什么不同？</h5></div>
+    <div class="panel-body">
+        Trojan-go 在原版 Trojan 基础上扩展了多协议支持、WebSocket、gRPC、mux 多路复用等特性，同时优化性能并支持更丰富的客户端。相比原版，它更灵活，适合高级用户或多平台部署需求。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 是否支持 Vless？</h5></div>
+    <div class="panel-body">
+        目前 Potatso Lite 仅支持 Shadowsocks 和 Vmess 协议，不支持 Vless。但开发者正在逐步扩展功能，未来可能加入更多现代代理协议支持。    </div>
 </div>
 <div class="panel panel-default mt-5">
     <div class="panel-heading">
@@ -227,16 +227,16 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/2026-4-11-clash-stash-node.htm" title="Free Netch - 4月11日18.5M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点节点推荐，Netch梯子购买推荐">Free Netch - 4月11日18.5M/S|免费Shadowrocket节点/SSR节点/V2ray节点/Clash节点/Singbox节点/Trojan节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-2-clash-verge-rev-node-share.htm" title="Free Netch - 4月2日22.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐">Free Netch - 4月2日22.7M/S|免费SSR节点/Singbox节点/Shadowrocket节点/V2ray节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-29-clash-verge-rev-nodes.htm" title="Free Netch - 3月29日18.6M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 3月29日18.6M/S|免费Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-16-clash-verge-rev-nodes.htm" title="Free Netch - 3月16日19.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 3月16日19.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-28-clash-node-github.htm" title="Free Netch - 3月28日22.3M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月28日22.3M/S|免费Singbox节点/SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-18-clash-verge-rev-windows.htm" title="Free Netch - 3月18日19.6M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月18日19.6M/S|免费Trojan节点/Clash节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-23-clash-verge-rev-github.htm" title="Free Netch - 3月23日19.5M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月23日19.5M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-20-node-share.htm" title="Free Netch - 4月20日19.4M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 4月20日19.4M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/V2ray节点/SSR节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-9-clash-verge-rev-node.htm" title="Free Netch - 4月9日20.1M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 4月9日20.1M/S|免费SSR节点/V2ray节点/Trojan节点/Shadowrocket节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-22-clash-verge-rev-windows.htm" title="Free Netch - 3月22日20.9M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 3月22日20.9M/S|免费Singbox节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-12-clash-verge-rev-github.htm" title="Free Netch - 4月12日18.8M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 4月12日18.8M/S|免费Singbox节点/SSR节点/Clash节点/Trojan节点/V2ray节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a></li>
                         <li class="py-2"><a href="/free-nodes/2026-3-4-clash-verge-rev-windows.htm" title="Free Netch - 3月4日20.7M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月4日20.7M/S|免费Trojan节点/Clash节点/Singbox节点/Shadowrocket节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-14-clash-verge-rev-github.htm" title="Free Netch - 3月14日19.6M/S|免费Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点节点推荐，Netch梯子购买推荐">Free Netch - 3月14日19.6M/S|免费Clash节点/Shadowrocket节点/Singbox节点/V2ray节点/SSR节点/Trojan节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-3-13-free-node-subscribe.htm" title="Free Netch - 3月13日21M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月13日21M/S|免费Shadowrocket节点/Trojan节点/Clash节点/SSR节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
-                        <li class="py-2"><a href="/free-nodes/2026-4-13-clash-v2ray-ss-ssr.htm" title="Free Netch - 4月13日18.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 4月13日18.2M/S|免费SSR节点/Clash节点/Shadowrocket节点/Singbox节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-16-clash-verge-rev-nodes.htm" title="Free Netch - 3月16日19.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 3月16日19.4M/S|免费SSR节点/V2ray节点/Shadowrocket节点/Trojan节点/Singbox节点/Clash节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-30-clash-meta-github.htm" title="Free Netch - 3月30日22.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐">Free Netch - 3月30日22.7M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-3-19-clash-verge-rev-node-github.htm" title="Free Netch - 3月19日20.3M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 3月19日20.3M/S|免费Clash节点/Trojan节点/SSR节点/Shadowrocket节点/Singbox节点/V2ray节点节点推荐，Netch梯子购买推荐</a></li>
+                        <li class="py-2"><a href="/free-nodes/2026-4-18-clash-verge-rev-github.htm" title="Free Netch - 4月18日21.5M/S|免费Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 4月18日21.5M/S|免费Singbox节点/Trojan节点/Clash节点/SSR节点/V2ray节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a></li>
                     </ul>
     </div>
 </div>
@@ -248,7 +248,7 @@ IPLC、IEPL中转，点对点专线连接。高速冲浪，科学上网不二选
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">6</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
+                <h4><span class="badge" style="float: right;">13</span> <a href="/date/2026-04/" title="2026-04 归档">2026-04</a></h4>
             </li>
                         <li class="py-2">
                 <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-03/" title="2026-03 归档">2026-03</a></h4>
