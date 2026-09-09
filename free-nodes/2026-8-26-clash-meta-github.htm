@@ -279,24 +279,14 @@ SSR的加密方式多样，用户可以根据自己的需求选择最适合的�
     </div>
 <h4>FAQ</h4>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
-    <div class="panel-body">
-        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
-    <div class="panel-body">
-        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。<hr />    </div>
-</div>
-<div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 是否支持多配置文件切换？</h5></div>
     <div class="panel-body">
         支持。Nekobox 允许用户创建多个配置文件并快速切换，适合在不同网络环境下使用不同规则。例如家用网络与移动数据可使用独立的配置方案。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
+    <div class="panel-heading"><h5>Surfboard 支持哪些类型的节点导入？</h5></div>
     <div class="panel-body">
-        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
+        Surfboard 支持 VMess、VLESS、Trojan、Shadowsocks 等节点类型。用户可通过 YAML 或 JSON 文件导入，配置策略组和规则，实现自动分流和节点管理。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Netch 的 TCP/UDP 分流适合哪些应用？</h5></div>
@@ -304,9 +294,19 @@ SSR的加密方式多样，用户可以根据自己的需求选择最适合的�
         TCP 分流适合网页、下载和视频播放，UDP 分流适合游戏、语音和实时视频。Netch 可同时代理 TCP 和 UDP 流量，实现精准分流，保证不同应用的最佳性能。<hr />    </div>
 </div>
 <div class="panel panel-default">
-    <div class="panel-heading"><h5>SSR 是什么？它与 Shadowsocks 有何不同？</h5></div>
+    <div class="panel-heading"><h5>Matsuri 的节点自动测速功能如何配置？</h5></div>
     <div class="panel-body">
-        SSR（ShadowsocksR）是 Shadowsocks 的增强版本，增加了多种混淆与加密方式，提高了抗封锁能力。与原版相比，SSR 的兼容性更强，但目前已停止维护，许多用户正逐渐迁移到更先进的 V2Ray 或 Trojan 协议上。<hr />    </div>
+        Matsuri 可以设置测速周期和节点列表，程序会自动测试延迟和速度并排序。用户可根据测试结果选择最佳节点，提高网络访问速度和使用体验。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>V2Ray 中的 alterId 是什么，现在还有必要配置吗？</h5></div>
+    <div class="panel-body">
+        alterId 曾用于 VMess 的用户混淆机制以防止重放攻击，但在 V2Ray 新版本与 VLess 出现后，alterId 已不再推荐使用。现代配置多使用 UUID 或直接迁移至 VLess/XTLS 以获得更好性能与安全性。<hr />    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading"><h5>Potatso Lite 支持订阅链接导入吗？</h5></div>
+    <div class="panel-body">
+        Potatso Lite 不支持自动订阅功能，用户需手动添加节点。如果想批量导入订阅，可使用其他客户端生成节点二维码，再手动扫描添加。适合轻量使用者。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>Nekobox 是否支持多客户端同时管理节点？</h5></div>
@@ -314,14 +314,14 @@ SSR的加密方式多样，用户可以根据自己的需求选择最适合的�
         支持。Nekobox 可以独立管理多个客户端，如 Shadowsocks 和 Clash 节点，互不干扰。结合策略组，可实现多客户端流量分流和网络优化，提高便利性和效率。<hr />    </div>
 </div>
 <div class="panel panel-default">
+    <div class="panel-heading"><h5>SSR 是什么？它与 Shadowsocks 有何不同？</h5></div>
+    <div class="panel-body">
+        SSR（ShadowsocksR）是 Shadowsocks 的增强版本，增加了多种混淆与加密方式，提高了抗封锁能力。与原版相比，SSR 的兼容性更强，但目前已停止维护，许多用户正逐渐迁移到更先进的 V2Ray 或 Trojan 协议上。<hr />    </div>
+</div>
+<div class="panel panel-default">
     <div class="panel-heading"><h5>QuantumultX 如何实现按协议类型分流？</h5></div>
     <div class="panel-body">
         QuantumultX 可根据 TCP、UDP 或特定应用协议分流流量，结合策略组选择节点。这样可以为游戏、视频或广告屏蔽等应用提供最佳网络体验，提高访问速度和稳定性。<hr />    </div>
-</div>
-<div class="panel panel-default">
-    <div class="panel-heading"><h5>Potatso Lite 支持订阅链接导入吗？</h5></div>
-    <div class="panel-body">
-        Potatso Lite 不支持自动订阅功能，用户需手动添加节点。如果想批量导入订阅，可使用其他客户端生成节点二维码，再手动扫描添加。适合轻量使用者。<hr />    </div>
 </div>
 <div class="panel panel-default">
     <div class="panel-heading"><h5>WinXray 节点健康检测如何提升网络体验？</h5></div>
@@ -374,16 +374,16 @@ SSR的加密方式多样，用户可以根据自己的需求选择最适合的�
     </div>
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-27.htm" title="Free Netch - 8月27日21.5M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 8月27日21.5M/S|免费V2ray节点/SSR节点/Singbox节点/Trojan节点/Shadowrocket节点/Clash节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/node-share-2026-8-29.htm" title="Free Netch - 8月29日22M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，Netch梯子购买推荐">Free Netch - 8月29日22M/S|免费SSR节点/Trojan节点/Shadowrocket节点/Singbox节点/V2ray节点/Clash节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-23.htm" title="Free Netch - 8月23日21M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 8月23日21M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-30-clash-node-daily-updates.htm" title="Free Netch - 8月30日19.5M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月30日19.5M/S|免费Shadowrocket节点/V2ray节点/Trojan节点/Clash节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-stash-node.htm" title="Free Netch - 8月14日19.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月14日19.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-21.htm" title="Free Netch - 8月21日20.5M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月21日20.5M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-26-clash-meta-github.htm" title="Free Netch - 8月26日20M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 8月26日20M/S|免费Trojan节点/Singbox节点/Shadowrocket节点/Clash节点/SSR节点/V2ray节点节点推荐，Netch梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/clash-verge-rev-github-2026-8-9.htm" title="Free Netch - 8月9日22.5M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 8月9日22.5M/S|免费V2ray节点/Singbox节点/Clash节点/Shadowrocket节点/Trojan节点/SSR节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-14-clash-stash-node.htm" title="Free Netch - 8月14日19.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月14日19.5M/S|免费Clash节点/Trojan节点/Shadowrocket节点/V2ray节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-8-20-clash-meta-github.htm" title="Free Netch - 8月20日18.5M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月20日18.5M/S|免费Clash节点/V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-21.htm" title="Free Netch - 8月21日20.5M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月21日20.5M/S|免费V2ray节点/SSR节点/Trojan节点/Shadowrocket节点/Clash节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-7.htm" title="Free Netch - 8月7日18M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月7日18M/S|免费SSR节点/Clash节点/Shadowrocket节点/Trojan节点/V2ray节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/2026-9-4-clash-node-daily-updates.htm" title="Free Netch - 9月4日22.1M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点节点推荐，Netch梯子购买推荐">Free Netch - 9月4日22.1M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/Trojan节点/Clash节点/SSR节点节点推荐，Netch梯子购买推荐</a><hr /></li>
                         <li class="py-2"><a href="/free-nodes/2026-8-12-free-node-subscribe.htm" title="Free Netch - 8月12日23M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐">Free Netch - 8月12日23M/S|免费Shadowrocket节点/Singbox节点/Clash节点/SSR节点/Trojan节点/V2ray节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/clash-v2ray-ss-ssr-2026-8-11.htm" title="Free Netch - 8月11日20.7M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 8月11日20.7M/S|免费Singbox节点/Trojan节点/V2ray节点/Clash节点/SSR节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a><hr /></li>
-                        <li class="py-2"><a href="/free-nodes/2026-8-8-clash-node.htm" title="Free Netch - 8月8日20M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐">Free Netch - 8月8日20M/S|免费Shadowrocket节点/V2ray节点/Singbox节点/SSR节点/Clash节点/Trojan节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-stash-2026-8-23.htm" title="Free Netch - 8月23日21M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，Netch梯子购买推荐">Free Netch - 8月23日21M/S|免费SSR节点/Clash节点/Singbox节点/V2ray节点/Trojan节点/Shadowrocket节点节点推荐，Netch梯子购买推荐</a><hr /></li>
+                        <li class="py-2"><a href="/free-nodes/clash-node-github-2026-8-17.htm" title="Free Netch - 8月17日18.2M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐">Free Netch - 8月17日18.2M/S|免费V2ray节点/Clash节点/Trojan节点/Shadowrocket节点/SSR节点/Singbox节点节点推荐，Netch梯子购买推荐</a><hr /></li>
                     </ul>
     </div>
 </div>
@@ -395,10 +395,10 @@ SSR的加密方式多样，用户可以根据自己的需求选择最适合的�
     <div class="panel-body">
         <ul class="p-0 x-0" style="list-style: none;margin: 0;padding: 0;">
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">2</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
+                <h4><span class="badge" style="float: right;">4</span> <a href="/date/2026-09/" title="2026-09 归档">2026-09</a></h4>
             </li>
                         <li class="py-2">
-                <h4><span class="badge" style="float: right;">29</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
+                <h4><span class="badge" style="float: right;">26</span> <a href="/date/2026-08/" title="2026-08 归档">2026-08</a></h4>
             </li>
                     </ul>
     </div>
